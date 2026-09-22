@@ -17,7 +17,13 @@ Google Workspace の営業向けに、判定結果から **見込み度（◎ �
 
 ## 使い方
 
-1. **貼り付け**: 1 行 1 件で URL / メールアドレス / ドメインを貼る。Excel の列（会社名,URL など）をそのまま貼っても、ドメインの列を自動で見つけ、他の列は結果に引き継ぎます。
+1. **貼り付け**: URL / メールアドレス / ドメインを貼る。1 行 1 件でなくても構いません。
+
+   - 区切りが無いまま URL がつながっていても 1 件ずつ取り出します（`…co.jp/https://…`、`…co.jpwww.…`、`…co.jpb-corp.co.jp`）
+   - Excel の列（会社名, URL など）をそのまま貼れば、ドメインの列を自動で見つけ、他の列は結果に引き継ぎます
+   - 全角の URL、日本語の読点・かっこ・全角スペース混じりでも解釈します
+   - ファイル名（`一覧.xlsx`）やバージョン番号（`Ver.1.2`）はドメインとして拾いません
+   - 同じドメインは自動で重複を除きます（除いた数は入力欄の下に表示）
 2. **CSV アップロード**: CSV / TSV をドロップ。UTF-8 / Shift_JIS 自動判別。ドメイン列は自動検出（変更可）。
 3. **判定する** → 数千件でも一括処理（並列数は変更可）。途中で **中止** できます。
 4. 結果は **表をコピー (TSV)**（Excel / スプレッドシートにそのまま貼れる）、**CSV ダウンロード**（Excel で開ける UTF-8 BOM 付き）、**JSON** で出力。
@@ -49,6 +55,7 @@ Google Workspace の営業向けに、判定結果から **見込み度（◎ �
 - `dns.js` … DNS リゾルバ（ローカル API → Google DoH → Cloudflare DoH の順にフォールバック）とドメイン単位の収集
 - `rules.js` … ベンダー署名 DB と分類ロジック（純粋関数。Node でも動く）
 - `server.js` … ローカルサーバー（静的配信 + `/api/resolve`）
+- `test/parse.test.mjs` … 貼り付け解析の単体テスト（DNS を引かない。`node test/parse.test.mjs`）
 - `test/run.mjs` … ラベル付きコーパス `test/corpus.json`（実在企業約200件）による回帰テスト（`node test/run.mjs`）
 - `test/sample.csv` … 動作確認用のサンプル CSV
 - `tools/build_reference.js` … 判定ルール一覧ページの生成（`node tools/build_reference.js > reference.html`）

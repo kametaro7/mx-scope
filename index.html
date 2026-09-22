@@ -51,6 +51,7 @@ header.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:spac
 .tabs button[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
 .tabs button:focus-visible,button:focus-visible,select:focus-visible,textarea:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 label.lbl{display:block;color:var(--ink-2);font-size:13px;margin-bottom:6px}
+label.lbl code.ex{font-family:var(--mono);font-size:11.5px;background:var(--surface-2);border:1px solid var(--line);padding:0 4px;border-radius:4px}
 textarea{width:100%;min-height:150px;resize:vertical;border:1px solid var(--line-2);border-radius:8px;background:var(--surface-2);padding:10px 12px;font-family:var(--mono);font-size:13px;line-height:1.55}
 .drop{border:2px dashed var(--line-2);border-radius:10px;padding:22px;text-align:center;color:var(--ink-2);background:var(--surface-2);transition:border-color .15s,background .15s}
 .drop.over{border-color:var(--accent);background:var(--accent-soft)}
@@ -153,8 +154,8 @@ button.exp{background:none;border:0;color:var(--accent);cursor:pointer;padding:0
     <button role="tab" id="tabCsv" aria-selected="false" data-tab="csv">CSV アップロード</button>
   </div>
   <div id="panePaste" class="tabpanel">
-    <label class="lbl" for="inputText">URL・メールアドレス・ドメインを 1 行に 1 つ（Excel の列をそのまま貼っても、カンマ区切りでも可。会社名など他の列は結果に引き継ぎます）</label>
-    <textarea id="inputText" spellcheck="false" placeholder="https://www.example.co.jp/company/&#10;info@example.co.jp&#10;株式会社サンプル,example.jp"></textarea>
+    <label class="lbl" for="inputText">URL・メールアドレス・ドメインを貼り付け。1 行に 1 つでも、<b>区切りの無いまま URL がつながっていても</b>（<code class="ex">…co.jp/https://…</code>）1 件ずつ取り出します。Excel の列をそのまま貼れば、会社名など他の列は結果に引き継ぎます</label>
+    <textarea id="inputText" spellcheck="false" placeholder="https://www.example.co.jp/company/&#10;info@example.co.jp&#10;株式会社サンプル,example.jp&#10;https://a.example.jp/https://b.example.jp/ ← つながっていても OK"></textarea>
   </div>
   <div id="paneCsv" class="tabpanel" hidden>
     <div class="drop" id="dropZone">
@@ -240,8 +241,8 @@ button.exp{background:none;border:0;color:var(--accent);cursor:pointer;padding:0
 </section>
 </div>
 <div class="toast" id="toast"></div>
-<script src="rules.js?v=2"></script>
-<script src="dns.js?v=2"></script>
-<script src="app.js?v=2"></script>
+<script src="rules.js?v=3"></script>
+<script src="dns.js?v=3"></script>
+<script src="app.js?v=3"></script>
 </body>
 </html>

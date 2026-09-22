@@ -38,26 +38,21 @@
   el.tabCsv.addEventListener('click', () => setTab('csv'));
 
   // ---- 入力の解釈 -----------------------------------------------------------
-  function splitLine(line) {
-    if (line.includes('\t')) return line.split('\t');
-    if (line.includes(',')) return line.split(',');
-    if (line.includes(';')) return line.split(';');
-    return line.split(/\s+/);
-  }
   function parsePaste(text) {
     const recs = []; const seen = new Set(); let invalid = 0, dup = 0;
+    // 1行に複数の URL が連結されていても、区切りが無くても取り出す。
+    // ドメインとして読めなかった語（会社名など）は、その行の結果に引き継ぐ。
     for (const raw of text.split(/\r?\n/)) {
       const line = raw.trim(); if (!line) continue;
-      const cells = splitLine(line).map(c => c.trim()).filter(Boolean);
-      let domain = null, pick = -1;
-      for (let i = 0; i < cells.length; i++) { const d = dns.normalizeInput(cells[i]); if (d) { domain = d; pick = i; break; } }
-      if (!domain) { invalid++; continue; }
-      if (seen.has(domain)) { dup++; continue; }
-      seen.add(domain);
+      const { domains, rest } = dns.extractDomains(line);
+      if (!domains.length) { invalid++; continue; }
       const extras = {};
-      const others = cells.filter((c, i) => i !== pick);
-      if (others.length) extras['入力行の他の項目'] = others.join(' / ');
-      recs.push({ input: cells[pick], domain, extras });
+      if (rest.length) extras['入力行の他の項目'] = rest.join(' / ');
+      for (const d of domains) {
+        if (seen.has(d.domain)) { dup++; continue; }
+        seen.add(d.domain);
+        recs.push({ input: d.input, domain: d.domain, extras: Object.assign({}, extras) });
+      }
     }
     return { recs, invalid, dup };
   }
@@ -96,8 +91,9 @@
     if (!rows.length) return null;
     const width = Math.max(...rows.map(r => r.length));
     const validCount = new Array(width).fill(0);
-    for (const r of rows) for (let i = 0; i < width; i++) if (dns.normalizeInput(r[i] || '')) validCount[i]++;
-    const firstValid = rows[0].some(c => dns.normalizeInput(c));
+    const cellDomains = (c) => dns.extractDomains(c || '').domains;
+    for (const r of rows) for (let i = 0; i < width; i++) if (cellDomains(r[i]).length) validCount[i]++;
+    const firstValid = rows[0].some(c => cellDomains(c).length);
     const hasHeader = !firstValid && rows.length > 1;
     const header = hasHeader ? rows[0].map((h, i) => (h || '').trim() || `列${i + 1}`) : rows[0].map((_, i) => `列${i + 1}`);
     let col = validCount.indexOf(Math.max(...validCount));
@@ -110,15 +106,20 @@
   function csvToRecords(info) {
     const body = info.hasHeader ? info.rows.slice(1) : info.rows;
     const recs = []; let invalid = 0;
+    const seen = new Set(); let dup = 0;
     for (const r of body) {
       const cellv = (r[info.col] || '').trim();
-      const domain = dns.normalizeInput(cellv);
-      if (!domain) { invalid++; continue; }
+      const found = dns.extractDomains(cellv).domains;
+      if (!found.length) { invalid++; continue; }
       const extras = {};
       info.header.forEach((h, i) => { if (i !== info.col && (r[i] || '').trim() !== '') extras[h] = (r[i] || '').trim(); });
-      recs.push({ input: cellv, domain, extras });
+      for (const d of found) {
+        if (seen.has(d.domain)) { dup++; continue; }
+        seen.add(d.domain);
+        recs.push({ input: d.input, domain: d.domain, extras: Object.assign({}, extras) });
+      }
     }
-    return { recs, invalid, dup: 0 };
+    return { recs, invalid, dup };
   }
   function renderCsvPreview() {
     const info = state.csvInfo; if (!info) { el.csvPreview.hidden = true; return; }

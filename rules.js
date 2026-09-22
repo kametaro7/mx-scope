@@ -258,7 +258,7 @@
     { id: 'isp_nifty', name: '@nifty', cat: 'isp', prospect: 'A', mx: ['(^|\\.)nifty\\.com$', '(^|\\.)nifty\\.ne\\.jp$'] },
     { id: 'isp_plala', name: 'ぷらら', cat: 'isp', prospect: 'A', mx: ['(^|\\.)plala\\.or\\.jp$'] },
     { id: 'isp_dti', name: 'DTI', cat: 'isp', prospect: 'A', mx: ['(^|\\.)dti\\.ne\\.jp$'] },
-    { id: 'isp_iij', name: 'IIJ (メールホスティング)', cat: 'isp', prospect: 'A', mx: ['(^|\\.)iij\\.ad\\.jp$', '(^|\\.)iij4u\\.or\\.jp$'] },
+    { id: 'isp_iij', name: 'IIJ メールホスティング', cat: 'isp', prospect: 'A', mx: ['(^|\\.)2iij\\.net$', '(^|\\.)iij\\.ad\\.jp$', '(^|\\.)iij4u\\.or\\.jp$'], ptr: ['\\.2iij\\.net$'] },
     { id: 'isp_kddi', name: 'KDDI (au one net / ホスティング)', cat: 'isp', prospect: 'A', mx: ['(^|\\.)kddi\\.ne\\.jp$', '(^|\\.)auone-net\\.jp$', '(^|\\.)kddi\\.com$'] },
     { id: 'isp_odn', name: 'ODN / SoftBank', cat: 'isp', prospect: 'A', mx: ['(^|\\.)odn\\.ne\\.jp$', '(^|\\.)odn\\.ad\\.jp$', '(^|\\.)bbtec\\.net$'] },
     { id: 'isp_asahinet', name: 'ASAHIネット', cat: 'isp', prospect: 'A', mx: ['(^|\\.)asahi-net\\.or\\.jp$'] },
@@ -516,7 +516,8 @@
     if (d.mxStatus === 'nxdomain') {
       out.platform = { id: 'nxdomain', name: 'ドメインが存在しない (NXDOMAIN)', cat: 'unknown' };
       out.hosting = 'none'; out.prospect = '?'; out.label = out.platform.name; out.confidence = 'high';
-      ev.push('DNS にドメインが登録されていない');
+      ev.push('DNS にドメインが登録されていない（www も含めて引けない）');
+      out.notes.push('リストの URL が古い可能性（ドメイン失効・社名変更・入力ミス）');
       return finish(out);
     }
     if (d.mxStatus === 'nullmx') {
@@ -587,9 +588,10 @@
     if (d.mxStatus === 'nomx') {
       const a = d.aFallback;
       if (!a || !a.ip) {
-        out.platform = { id: 'no_mail', name: 'MX なし・A レコードなし (メール未使用)', cat: 'none' };
-        out.hosting = 'none'; out.prospect = 'X'; out.confidence = 'high'; out.label = out.platform.name;
-        ev.push('MX も A レコードも無く、メールは受信できない');
+        out.platform = { id: 'no_mail', name: 'MX なし・A レコードなし（このドメインでは受信しない）', cat: 'none' };
+        out.hosting = 'none'; out.prospect = 'C'; out.confidence = 'high'; out.label = out.platform.name;
+        ev.push('MX も A レコードも無く、このドメイン宛てのメールは受信できない');
+        out.notes.push('別ドメインでメール運用している可能性（会社の正式ドメインを要確認）');
         return finish(out);
       }
       // A レコードへのフォールバック配送（RFC 5321）
@@ -607,15 +609,23 @@
       } else if (ai && (ai.kind === 'isp' || ai.kind === 'own' || ai.kind === 'colo')) {
         out.platform = { id: 'no_mx_onprem', name: 'MX なし（自社サーバー宛て配送の可能性）', cat: 'onprem' }; out.hosting = 'onprem_maybe';
       } else {
-        out.platform = { id: 'no_mx', name: 'MX なし（メール未使用の可能性大）', cat: 'none' }; out.hosting = 'none';
+        out.platform = { id: 'no_mx', name: 'MX なし（このドメインでは受信しない）', cat: 'none' }; out.hosting = 'none';
       }
-      out.prospect = pv ? pv.prospect : (ai && ai.kind === 'isp' ? 'C' : 'X');
-      if (ranked.length) { out.backend = ranked[0].vendor; ev.push(...ranked[0].whys); out.prospect = prospectFor(ranked[0].vendor); }
+      // MX が無い＝受信していないので、SPF から基盤が見えても「要確認」に留める
+      out.prospect = pv ? pv.prospect : 'C';
+      if (ranked.length) {
+        out.backend = ranked[0].vendor; ev.push(...ranked[0].whys);
+        out.notes.push(`送信側の設定は ${ranked[0].vendor.name}。ただし MX が無いため、受信は別ドメインの可能性`);
+      }
       out.label = out.platform.name + (out.backend ? ` → ${out.backend.name}` : '');
-      if (out.sibling && !out.backend) {
+      if (out.sibling) {
+        const sv = out.sibling.vendor;
         out.label = `MX なし（関連ドメイン ${out.sibling.domain} は ${out.sibling.name}）`;
-        out.platform = { id: 'no_mx_sibling', name: out.label, cat: 'none' };
-        if (out.sibling.vendor) { out.prospect = prospectFor(out.sibling.vendor); out.notes.push(`${out.sibling.domain} の判定を参考にしてください`); }
+        out.platform = { id: 'no_mx_sibling', name: out.label, cat: sv ? sv.cat : 'none' };
+        out.hosting = sv ? sv.cat : 'none';
+        out.hostingLabel = `関連ドメインで運用${sv ? ` → ${HOSTING_JA[sv.cat] || '不明'}` : ''}`;
+        out.prospect = sv ? prospectFor(sv) : 'C';
+        out.notes.push(`${out.sibling.domain} の判定を参考にしてください`);
       }
       return finish(out);
     }
@@ -711,11 +721,16 @@
       } else if (ai && (ai.kind === 'isp' || ai.kind === 'own' || ai.kind === 'colo')) {
         out.platform = { id: 'other_isp', name: `その他 (${hostOrg} / ${ai.kind === 'colo' ? 'データセンター' : 'ISP 回線'}上)`, cat: 'onprem' }; out.hosting = 'onprem_maybe';
       } else {
-        out.platform = { id: 'other', name: `その他 (${hostOrg})`, cat: 'unknown' }; out.hosting = 'unknown';
+        // 自社ドメイン外の MX ＝ 誰かのメールサービスを使っている。事業者名までは特定できないが、
+        // Google Workspace への乗り換え提案の対象にはなる。
+        out.platform = { id: 'other_provider', name: `他社のメールサービス (${hostOrg})`, cat: 'hosting' };
+        out.hosting = 'hosting'; out.hostingLabel = `他社のメールサービス (${hostOrg})`;
+        out.notes.push('署名に無い事業者。逆引きや AS からも特定できず');
       }
       out.confidence = 'low';
       ev.push(`MX ${primary.host}${primary.ip ? ` (${primary.ip})` : ''} は登録外のホスト${primary.ptr ? `、逆引き ${primary.ptr}` : ''}${ai ? `、AS${ai.asn} ${ai.name}` : ''}`);
-      out.prospect = ai && (ai.kind === 'hosting' || ai.kind === 'isp' || ai.kind === 'own' || ai.kind === 'colo') ? 'A' : 'C';
+      // 他社のメールサービス／レンタルサーバー／自社運用は、いずれも乗り換え提案の対象
+      out.prospect = out.platform.id === 'other_provider' || (ai && (ai.kind === 'hosting' || ai.kind === 'isp' || ai.kind === 'own' || ai.kind === 'colo')) ? 'A' : 'C';
       if (ranked.length) {
         out.backend = ranked[0].vendor; ev.push(...ranked[0].whys);
         if (ranked[0].score >= 2) out.prospect = prospectFor(ranked[0].vendor);

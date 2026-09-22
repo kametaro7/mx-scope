@@ -136,7 +136,7 @@
   function normalizeInput(raw) {
     let s = String(raw || '').trim();
     if (!s) return null;
-    s = s.replace(/^[\s"'<>「」『』（(]+|[\s"'<>「」『』）),;]+$/g, '');
+    s = s.replace(/^[\s"'<>`「」『』【】〈〉《》（(\[]+|[\s"'<>`「」『』【】〈〉《》）)\],;。、]+$/g, '');
     if (s.includes('@')) s = s.slice(s.lastIndexOf('@') + 1);
     if (/^[a-z][a-z0-9+.-]*:\/\//i.test(s) || /^\/\//.test(s)) {
       try { s = new URL(s.startsWith('//') ? 'http:' + s : s).hostname; } catch (e) { return null; }
@@ -148,6 +148,61 @@
     s = strip(s).replace(/^www\d*\./, '');
     if (!/^(?=.{1,253}$)([a-z0-9_](?:[a-z0-9_-]{0,61}[a-z0-9_])?\.)+[a-z0-9-]{2,63}$/.test(s)) return null;
     return s;
+  }
+
+
+  // 区切りが無い貼り付けからドメインを取り出す ---------------------------------
+  // 例: "https://a.co.jp/https://b.co.jp/" や "www.a.co.jpwww.b.co.jp" のような
+  // URL が連結された文字列、会社名とURLが混ざった行にも対応する。
+  const FILE_EXT = new Set(['md','txt','csv','tsv','xlsx','xls','docx','doc','pptx','ppt','pdf','png','jpg','jpeg','gif','webp','svg','zip','rar','js','mjs','ts','json','html','htm','css','py','rb','go','php','sh','exe','dmg','pkg','log','tmp','bak','xml','yml','yaml','mp4','mp3','wav','mov','avi','ini','conf','lock','sql']);
+
+  /** 文字列を「1つずつのトークン」に割る（連結された URL を切り離す） */
+  function tokenize(text) {
+    let s = String(text || '');
+    if (!s) return [];
+    s = s.replace(/[　 ]/g, ' ')                  // 全角スペース・NBSP
+         .replace(/[、。，；・｜|]/g, ' ')                   // 日本語の区切り
+         .replace(/[：／．]/g, (c) => ({ '：': ':', '／': '/', '．': '.' }[c]))  // 全角 : / .
+         .replace(/[ａ-ｚＡ-Ｚ０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xFEE0)); // 全角英数
+    s = s.replace(/(.)(?=https?:\/\/)/gi, '$1\n');          // 連結された http(s):// の直前で切る
+    s = s.replace(/(.)(?=mailto:)/gi, '$1\n');
+    s = s.replace(/([a-z0-9\-.])(?=www\.)/gi, '$1\n');      // "…co.jpwww.…" の www. の直前で切る（"://www." は対象外）
+    s = s.replace(/(\.(?:co|ne|or|ac|go|ad|ed|gr|lg)\.jp)(?=[a-z0-9])/gi, '$1\n'); // "…co.jp" の直後に文字が続く連結
+    // 全角のかっこ類は区切りにしない（「（株）八天堂」のような社名を壊さないため）
+    return s.split(/[\s"'<>`\\\[\]{}(),;]+/).filter(Boolean);
+  }
+
+  /** トークン1個からドメインを取り出す（取れなければ null） */
+  function domainFromToken(tok) {
+    const t = String(tok || '').trim();
+    if (!t) return null;
+    const explicit = /^[a-z][a-z0-9+.-]*:\/\//i.test(t) || t.includes('@') || /^mailto:/i.test(t);
+    const d = normalizeInput(t.replace(/^mailto:/i, ''));
+    if (d) return explicit || !FILE_EXT.has(d.split('.').pop()) ? d : null;
+    if (explicit) return null;
+    // 余計な文字が混ざったトークンから、ドメインらしい部分を拾う
+    const m = t.match(/[a-z0-9][a-z0-9-]*(?:\.[a-z0-9][a-z0-9-]*)+/i);
+    if (!m) return null;
+    const cand = normalizeInput(m[0]);
+    if (!cand) return null;
+    const tld = cand.split('.').pop();
+    if (FILE_EXT.has(tld) || /\d/.test(tld)) return null;
+    return cand;
+  }
+
+  /**
+   * 任意のテキストからドメインを順番に取り出す。
+   * @returns {{domains: Array<{input:string, domain:string}>, rest: string[]}}
+   *   rest はドメインとして解釈できなかったトークン（会社名など）
+   */
+  function extractDomains(text) {
+    const domains = [], rest = [];
+    for (const tok of tokenize(text)) {
+      const d = domainFromToken(tok);
+      if (d) domains.push({ input: tok, domain: d });
+      else rest.push(tok);
+    }
+    return { domains, rest };
   }
 
   /**
@@ -261,5 +316,5 @@
     }
   }
 
-  MXC.dns = { resolve, lookupDomain, normalizeInput, ipInfo, detectLocalApi, state, TYPES, parseSpf, parseMx };
+  MXC.dns = { resolve, lookupDomain, normalizeInput, extractDomains, tokenize, domainFromToken, ipInfo, detectLocalApi, state, TYPES, parseSpf, parseMx };
 })(typeof globalThis !== 'undefined' ? globalThis : this);
