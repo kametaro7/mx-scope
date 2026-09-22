@@ -22,7 +22,9 @@
   async function detectLocalApi() {
     if (state.localApi !== null) return state.localApi;
     try {
+      // ローカルサーバー以外（GitHub Pages・file:// など）では問い合わせない（無駄な 404 を出さない）
       if (typeof location === 'undefined' || !/^https?:$/.test(location.protocol)) { state.localApi = false; return false; }
+      if (!/^(localhost|127\.0\.0\.1|\[?::1\]?|0\.0\.0\.0)$/i.test(location.hostname)) { state.localApi = false; return false; }
       const r = await fetch('./api/ping', { cache: 'no-store' });
       state.localApi = r.ok && /json/i.test(r.headers.get('content-type') || '') && (await r.json()).ok === true;
     } catch (e) { state.localApi = false; }
