@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MXスコープ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f4f6;--surface:#ffffff;--surface-2:#f7f8fa;--ink:#1b2130;--ink-2:#414a5c;--muted:#6b7385;--line:#dde1e8;--line-2:#c6ccd8;
+  --accent:#0d5c63;--accent-ink:#ffffff;--accent-soft:#dfeff0;
+  --good:#1e7b45;--good-soft:#e0f3e7;--warn:#9a5b00;--warn-soft:#fbefd9;--crit:#b42318;--crit-soft:#fce8e6;--info:#2a5db0;--info-soft:#e5edfa;--neutral:#5b6474;--neutral-soft:#e9ecf1;
+  --shadow:0 1px 2px rgba(20,30,50,.06),0 4px 16px rgba(20,30,50,.05);
+  --sans:"BIZ UDPGothic","Hiragino Sans","Yu Gothic UI","Meiryo",system-ui,sans-serif;
+  --mono:"IBM Plex Mono","SFMono-Regular",Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#101318;--surface:#181c23;--surface-2:#1f242d;--ink:#e6e9ef;--ink-2:#b5bcc9;--muted:#8b93a5;--line:#2a303b;--line-2:#3a4150;
+  --accent:#5cc8cf;--accent-ink:#0b1416;--accent-soft:#143236;
+  --good:#66cf8d;--good-soft:#15301f;--warn:#f2b653;--warn-soft:#3a2b10;--crit:#f4948c;--crit-soft:#3d1c19;--info:#8fb6f7;--info-soft:#172641;--neutral:#a7aebc;--neutral-soft:#262b35;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 16px rgba(0,0,0,.3);color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#101318;--surface:#181c23;--surface-2:#1f242d;--ink:#e6e9ef;--ink-2:#b5bcc9;--muted:#8b93a5;--line:#2a303b;--line-2:#3a4150;
+  --accent:#5cc8cf;--accent-ink:#0b1416;--accent-soft:#143236;
+  --good:#66cf8d;--good-soft:#15301f;--warn:#f2b653;--warn-soft:#3a2b10;--crit:#f4948c;--crit-soft:#3d1c19;--info:#8fb6f7;--info-soft:#172641;--neutral:#a7aebc;--neutral-soft:#262b35;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 16px rgba(0,0,0,.3);color-scheme:dark;}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.6;padding-block:0 48px;padding-inline:16px}
+a{color:var(--accent)}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:1280px;margin:0 auto}
+header.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;padding-block:22px 14px}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:10px;background:var(--accent);color:var(--accent-ink);font-family:var(--mono);font-weight:500;font-size:15px;letter-spacing:.02em}
+.brand h1{margin:0;font-size:22px;line-height:1.2;letter-spacing:.01em}
+.brand p{margin:2px 0 0;color:var(--muted);font-size:13px}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border:1px solid var(--line-2);border-radius:999px;font-size:12px;color:var(--ink-2);background:var(--surface)}
+.badge .dot{width:8px;height:8px;border-radius:50%;background:var(--neutral)}
+.badge.ok .dot{background:var(--good)}
+.badge.warn .dot{background:var(--warn)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:18px 20px;margin-block:0 16px}
+.panel h2{margin:0 0 10px;font-size:15px;letter-spacing:.02em}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:14px}
+.tabs button{background:none;border:0;border-bottom:2px solid transparent;padding:8px 12px;margin-bottom:-1px;color:var(--muted);cursor:pointer;font-weight:700}
+.tabs button[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+.tabs button:focus-visible,button:focus-visible,select:focus-visible,textarea:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+label.lbl{display:block;color:var(--ink-2);font-size:13px;margin-bottom:6px}
+textarea{width:100%;min-height:150px;resize:vertical;border:1px solid var(--line-2);border-radius:8px;background:var(--surface-2);padding:10px 12px;font-family:var(--mono);font-size:13px;line-height:1.55}
+.drop{border:2px dashed var(--line-2);border-radius:10px;padding:22px;text-align:center;color:var(--ink-2);background:var(--surface-2);transition:border-color .15s,background .15s}
+.drop.over{border-color:var(--accent);background:var(--accent-soft)}
+.drop input{display:block;margin:0 auto 8px}
+.drop p{margin:6px 0 0;font-size:13px}
+.csv-preview{margin-top:12px;font-size:13px;color:var(--ink-2)}
+.csv-preview table{border-collapse:collapse;font-size:12px;margin-top:6px}
+.csv-preview th,.csv-preview td{border:1px solid var(--line);padding:3px 8px;text-align:left;white-space:nowrap}
+.csv-preview th.pick{background:var(--accent-soft);color:var(--accent)}
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:14px}
+.opt{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--ink-2)}
+select{border:1px solid var(--line-2);border-radius:6px;padding:4px 8px;background:var(--surface)}
+button.primary{background:var(--accent);color:var(--accent-ink);border:0;border-radius:8px;padding:9px 20px;font-weight:700;cursor:pointer;letter-spacing:.04em}
+button.primary:disabled{opacity:.55;cursor:default}
+button.ghost{background:var(--surface);border:1px solid var(--line-2);border-radius:8px;padding:7px 12px;cursor:pointer;color:var(--ink-2)}
+button.ghost:hover{border-color:var(--accent);color:var(--accent)}
+.muted{color:var(--muted);font-size:13px}
+.progress{margin-top:14px;display:flex;align-items:center;gap:12px}
+.bar{flex:1;height:8px;border-radius:999px;background:var(--neutral-soft);overflow:hidden}
+.bar > div{height:100%;width:0;background:var(--accent);transition:width .2s}
+.summary{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:16px;margin-bottom:16px}
+@media (max-width:900px){.summary{grid-template-columns:1fr}}
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:2px}
+.tile .k{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.tile .v{font-size:26px;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums}
+.tile .s{font-size:12px;color:var(--ink-2)}
+.tile.total{grid-column:1 / -1;flex-direction:row;align-items:baseline;gap:12px}
+.tile.total .v{font-size:30px}
+.mark{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:6px;font-size:12px;font-weight:700}
+.mark.A{background:var(--good-soft);color:var(--good)}.mark.B{background:var(--warn-soft);color:var(--warn)}.mark.C{background:var(--info-soft);color:var(--info)}.mark.X{background:var(--neutral-soft);color:var(--neutral)}.mark.Q{background:var(--neutral-soft);color:var(--muted)}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.chart h3{margin:0 0 8px;font-size:13px;color:var(--ink-2);display:flex;justify-content:space-between;align-items:baseline}
+.chart h3 span{font-weight:400;color:var(--muted);font-size:12px}
+.bars{display:grid;grid-template-columns:minmax(120px,max-content) 1fr auto;gap:5px 10px;align-items:center;font-size:12.5px}
+.bars .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:260px;color:var(--ink-2)}
+.bars .b{height:14px;background:var(--neutral-soft);border-radius:3px;overflow:hidden}
+.bars .b > i{display:block;height:100%;background:var(--accent);border-radius:3px}
+.bars .c{font-variant-numeric:tabular-nums;color:var(--ink-2);min-width:2.5em;text-align:right}
+.bars .r{cursor:pointer;display:contents}
+.bars .r:hover .n{color:var(--accent)}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-bottom:12px}
+.toolbar input[type=search]{border:1px solid var(--line-2);border-radius:6px;padding:5px 10px;background:var(--surface);min-width:200px}
+.toolbar .sp{flex:1}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table.res{border-collapse:collapse;width:100%;font-size:13px;min-width:1120px}
+table.res th,table.res td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+table.res th{background:var(--surface-2);position:sticky;top:0;font-size:12px;color:var(--ink-2);white-space:nowrap;cursor:pointer;user-select:none}
+table.res th.sorted::after{content:" ▾";color:var(--accent)}
+table.res th.sorted.asc::after{content:" ▴"}
+table.res tr:hover td{background:var(--surface-2)}
+table.res td.dom{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
+table.res td.dom small{display:block;color:var(--muted);font-family:var(--sans);font-size:11px}
+table.res td.mono{font-family:var(--mono);font-size:12px;color:var(--ink-2);word-break:break-all}
+table.res td.mono.mx{white-space:nowrap;word-break:normal}
+table.res td.lab{font-weight:700;min-width:200px}
+table.res td.lab small{display:block;font-weight:400;color:var(--muted);font-size:11.5px}
+.chip{display:inline-flex;align-items:center;gap:5px;padding:2px 9px;border-radius:999px;font-size:12px;white-space:nowrap;border:1px solid transparent}
+.chip.host{background:var(--surface-2);border-color:var(--line-2);color:var(--ink-2)}
+.chip.p-A{background:var(--good-soft);color:var(--good)}.chip.p-B{background:var(--warn-soft);color:var(--warn)}.chip.p-C{background:var(--info-soft);color:var(--info)}.chip.p-X{background:var(--neutral-soft);color:var(--neutral)}.chip.p-Q{background:var(--neutral-soft);color:var(--muted);border-style:dashed;border-color:var(--line-2)}
+.conf{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.conf.high{background:var(--good)}.conf.medium{background:var(--warn)}.conf.low{background:var(--neutral)}
+tr.detail td{background:var(--surface-2);font-size:12.5px;color:var(--ink-2)}
+tr.detail ul{margin:4px 0 0;padding-left:18px}
+tr.detail code{font-family:var(--mono);font-size:12px;background:var(--neutral-soft);padding:0 4px;border-radius:4px}
+.dl{display:grid;grid-template-columns:max-content 1fr;gap:2px 12px}
+.dl dt{color:var(--muted);font-size:12px}
+.dl dd{margin:0;font-family:var(--mono);font-size:12px;word-break:break-all}
+button.exp{background:none;border:0;color:var(--accent);cursor:pointer;padding:0;font-size:12px;text-decoration:underline}
+.about{font-size:13px;color:var(--ink-2)}
+.about ol,.about ul{padding-left:20px;margin:6px 0}
+.about details summary{cursor:pointer;color:var(--accent);font-weight:700}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:8px}
+.empty{padding:30px;text-align:center;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:8px 16px;border-radius:8px;font-size:13px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:opacity .2s}
+.toast.show{opacity:1}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:600px){.tiles{grid-template-columns:1fr 1fr}.tile .v{font-size:22px}.brand h1{font-size:19px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand">
+    <span class="logo">MX</span>
+    <div>
+      <h1>MXスコープ</h1>
+      <p>ドメインの DNS からメール基盤のブランドと、オンプレ／クラウドを見抜く</p>
+    </div>
+  </div>
+  <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+    <span id="resolverBadge" class="badge"><span class="dot"></span>DNS: 確認中</span>
+    <button id="restoreBtn" class="ghost" hidden>前回の結果を復元</button>
+  </div>
+</header>
+
+<section class="panel">
+  <div class="tabs" role="tablist">
+    <button role="tab" id="tabPaste" aria-selected="true" data-tab="paste">貼り付け</button>
+    <button role="tab" id="tabCsv" aria-selected="false" data-tab="csv">CSV アップロード</button>
+  </div>
+  <div id="panePaste" class="tabpanel">
+    <label class="lbl" for="inputText">URL・メールアドレス・ドメインを 1 行に 1 つ（Excel の列をそのまま貼っても、カンマ区切りでも可。会社名など他の列は結果に引き継ぎます）</label>
+    <textarea id="inputText" spellcheck="false" placeholder="https://www.example.co.jp/company/&#10;info@example.co.jp&#10;株式会社サンプル,example.jp"></textarea>
+  </div>
+  <div id="paneCsv" class="tabpanel" hidden>
+    <div class="drop" id="dropZone">
+      <input type="file" id="csvFile" accept=".csv,.tsv,.txt,text/csv,text/plain">
+      <p>CSV / TSV / テキストをここにドロップ。文字コードは UTF-8・Shift_JIS を自動判別。<br>ドメイン（URL・メール）の列は自動検出し、会社名などの他の列は結果 CSV にそのまま引き継ぎます。</p>
+    </div>
+    <div id="csvPreview" class="csv-preview" hidden></div>
+  </div>
+  <div class="controls">
+    <button id="runBtn" class="primary">判定する</button>
+    <button id="cancelBtn" class="ghost" hidden>中止</button>
+    <label class="opt"><input type="checkbox" id="optDeep" checked> DKIM / autodiscover も調べる（ゲートウェイの裏側を推定）</label>
+    <label class="opt">並列数 <select id="optConc"><option>4</option><option selected>8</option><option>12</option><option>16</option><option>24</option></select></label>
+    <span id="inputCount" class="muted"></span>
+  </div>
+  <div class="progress" id="progress" hidden><div class="bar"><div id="progressBar"></div></div><span id="progressText" class="muted"></span></div>
+</section>
+
+<section id="summary" class="summary" hidden>
+  <div class="tiles">
+    <div class="tile total"><span class="v" id="tTotal">0</span><span class="s">件を判定<span id="tSub" class="muted"></span></span></div>
+    <div class="tile"><span class="k"><span class="mark A">◎</span>有望</span><span class="v" id="tA">0</span><span class="s">レンタルサーバー・ISP・自社運用</span></div>
+    <div class="tile"><span class="k"><span class="mark B">○</span>競合 SaaS</span><span class="v" id="tB">0</span><span class="s">Microsoft 365・LINE WORKS など</span></div>
+    <div class="tile"><span class="k"><span class="mark X">✕</span>Google Workspace 利用中</span><span class="v" id="tG">0</span><span class="s">既存ユーザー（対象外）</span></div>
+    <div class="tile"><span class="k"><span class="mark C">△</span>要確認・不明</span><span class="v" id="tC">0</span><span class="s">ゲートウェイ配下・材料不足・メール未使用</span></div>
+  </div>
+  <div class="chart">
+    <h3>メール基盤の内訳 <span>クリックで絞り込み</span></h3>
+    <div class="bars" id="bars"></div>
+  </div>
+</section>
+
+<section id="results" class="panel" hidden>
+  <div class="toolbar">
+    <input type="search" id="fText" placeholder="ドメイン・会社名・判定で検索">
+    <select id="fProspect"><option value="">見込み: すべて</option><option value="A">◎ 有望</option><option value="B">○ 競合SaaS</option><option value="C">△ 要確認</option><option value="X">✕ 対象外</option><option value="?">? 不明</option></select>
+    <select id="fHosting"><option value="">区分: すべて</option></select>
+    <select id="fPlatform"><option value="">基盤: すべて</option></select>
+    <span class="sp"></span>
+    <span id="shownCount" class="muted"></span>
+    <button id="copyBtn" class="ghost">表をコピー (TSV)</button>
+    <button id="csvBtn" class="ghost">CSV ダウンロード</button>
+    <button id="jsonBtn" class="ghost">JSON</button>
+    <button id="clearBtn" class="ghost">クリア</button>
+  </div>
+  <div class="tablewrap">
+    <table class="res" id="resTable">
+      <thead><tr>
+        <th data-k="domain">ドメイン</th>
+        <th data-k="label">判定（メール基盤）</th>
+        <th data-k="hostingLabel">区分</th>
+        <th data-k="prospect">見込み</th>
+        <th data-k="mx">MX（主）</th>
+        <th data-k="spf">SPF include</th>
+        <th data-k="dmarc">DMARC</th>
+        <th>根拠</th>
+      </tr></thead>
+      <tbody id="resBody"></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel about">
+  <h2>判定の仕組みと注意</h2>
+  <ol>
+    <li>入力を組織ドメインに正規化（URL・メールアドレス・www を除去）。MX が無ければ上位の組織ドメイン（例: sub.example.co.jp → example.co.jp）でも試します。</li>
+    <li>MX レコードのホスト名をベンダー署名（<span id="vendorCount"></span> 種）と照合。一致しない場合（Xserver やさくらは MX を自社ドメインに向けるのが標準）は、MX の IP の<b>逆引き（PTR）</b>、SPF の <b>a:sv####.xserver.jp</b> のようなサーバー名、<b>AS 番号</b>（Team Cymru）、ネームサーバーから、レンタルサーバー事業者か、ISP 回線上の自社サーバー（オンプレ）か、IaaS 上の自前サーバーかを推定します。</li>
+    <li>SPF の include、DKIM セレクタ（google / selector1・2）、autodiscover を見て、ゲートウェイの<b>裏側</b>で使われている基盤（Google Workspace / Microsoft 365 など）を推定します。</li>
+  </ol>
+  <div class="legend">
+    <span><span class="conf high"></span>高: MX 署名に一致</span>
+    <span><span class="conf medium"></span>中: 逆引き / AS から推定</span>
+    <span><span class="conf low"></span>低: 材料不足・ヒューリスティック</span>
+  </div>
+  <details style="margin-top:10px"><summary>限界と読み方</summary>
+    <ul>
+      <li>MX は「受信の入口」です。ゲートウェイ配下では裏側が読めないことがあり、その場合は <b>△ 要確認</b> になります。</li>
+      <li>Web サイトのドメインとメールのドメインが違う会社（グループ持株会社など）は判定できません。</li>
+      <li>自社ドメイン内の MX ＋ ISP 回線の IP は「オンプレ濃厚」ですが、データセンターに預けた自社サーバーの可能性も含みます。</li>
+      <li>DNS の問い合わせは Google / Cloudflare の DNS over HTTPS（またはローカルの Node サーバー）経由で行い、対象のメールサーバーには一切接続しません。</li>
+    </ul>
+  </details>
+</section>
+</div>
+<div class="toast" id="toast"></div>
+<script src="rules.js"></script>
+<script src="dns.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,2978 @@
+[
+ {
+  "domain": "algomatic.jp",
+  "expected_platform": "google_workspace",
+  "company": "Google Workspace (Gmail)",
+  "note": "研究例 google_workspace"
+ },
+ {
+  "domain": "google.com",
+  "expected_platform": "google_workspace",
+  "company": "Google Workspace (Gmail)",
+  "note": "研究例 google_workspace"
+ },
+ {
+  "domain": "mercari.com",
+  "expected_platform": "google_workspace",
+  "company": "Google Workspace (Gmail)",
+  "note": "研究例 google_workspace"
+ },
+ {
+  "domain": "freee.co.jp",
+  "expected_platform": "google_workspace",
+  "company": "Google Workspace (Gmail)",
+  "note": "研究例 google_workspace"
+ },
+ {
+  "domain": "cookpad.com",
+  "expected_platform": "google_workspace",
+  "company": "Google Workspace (Gmail)",
+  "note": "研究例 google_workspace"
+ },
+ {
+  "domain": "cyberagent.co.jp",
+  "expected_platform": "google_workspace",
+  "company": "Google Workspace (Gmail)",
+  "note": "研究例 google_workspace"
+ },
+ {
+  "domain": "jal.com",
+  "expected_platform": "google_workspace",
+  "company": "Google Workspace (Gmail)",
+  "note": "研究例 google_workspace"
+ },
+ {
+  "domain": "kyoto-u.ac.jp",
+  "expected_platform": "google_workspace",
+  "company": "Google Workspace (Gmail)",
+  "note": "研究例 google_workspace"
+ },
+ {
+  "domain": "hatena.ne.jp",
+  "expected_platform": "google_workspace",
+  "company": "Google Workspace (Gmail)",
+  "note": "研究例 google_workspace"
+ },
+ {
+  "domain": "smarthr.co.jp",
+  "expected_platform": "google_workspace",
+  "company": "Google Workspace (Gmail)",
+  "note": "研究例 google_workspace"
+ },
+ {
+  "domain": "layerx.co.jp",
+  "expected_platform": "google_workspace",
+  "company": "Google Workspace (Gmail)",
+  "note": "研究例 google_workspace"
+ },
+ {
+  "domain": "sakana.ai",
+  "expected_platform": "google_workspace",
+  "company": "Google Workspace (Gmail)",
+  "note": "研究例 google_workspace"
+ },
+ {
+  "domain": "microsoft.com",
+  "expected_platform": "microsoft_365",
+  "company": "Microsoft 365 (Exchange Online)",
+  "note": "研究例 microsoft_365"
+ },
+ {
+  "domain": "fujitsu.com",
+  "expected_platform": "microsoft_365",
+  "company": "Microsoft 365 (Exchange Online)",
+  "note": "研究例 microsoft_365"
+ },
+ {
+  "domain": "nissan.co.jp",
+  "expected_platform": "microsoft_365",
+  "company": "Microsoft 365 (Exchange Online)",
+  "note": "研究例 microsoft_365"
+ },
+ {
+  "domain": "shiseido.co.jp",
+  "expected_platform": "microsoft_365",
+  "company": "Microsoft 365 (Exchange Online)",
+  "note": "研究例 microsoft_365"
+ },
+ {
+  "domain": "komatsu.co.jp",
+  "expected_platform": "microsoft_365",
+  "company": "Microsoft 365 (Exchange Online)",
+  "note": "研究例 microsoft_365"
+ },
+ {
+  "domain": "mazda.co.jp",
+  "expected_platform": "microsoft_365",
+  "company": "Microsoft 365 (Exchange Online)",
+  "note": "研究例 microsoft_365"
+ },
+ {
+  "domain": "kubota.com",
+  "expected_platform": "microsoft_365",
+  "company": "Microsoft 365 (Exchange Online)",
+  "note": "研究例 microsoft_365"
+ },
+ {
+  "domain": "osaka-u.ac.jp",
+  "expected_platform": "microsoft_365",
+  "company": "Microsoft 365 (Exchange Online)",
+  "note": "研究例 microsoft_365"
+ },
+ {
+  "domain": "waseda.jp",
+  "expected_platform": "microsoft_365",
+  "company": "Microsoft 365 (Exchange Online)",
+  "note": "研究例 microsoft_365"
+ },
+ {
+  "domain": "meti.go.jp",
+  "expected_platform": "microsoft_365",
+  "company": "Microsoft 365 (Exchange Online)",
+  "note": "研究例 microsoft_365"
+ },
+ {
+  "domain": "kddi.com",
+  "expected_platform": "microsoft_365",
+  "company": "Microsoft 365 (Exchange Online)",
+  "note": "研究例 microsoft_365"
+ },
+ {
+  "domain": "nec.com",
+  "expected_platform": "microsoft_365",
+  "company": "Microsoft 365 (Exchange Online)",
+  "note": "研究例 microsoft_365"
+ },
+ {
+  "domain": "kajima.co.jp",
+  "expected_platform": "microsoft_365",
+  "company": "Microsoft 365 (Exchange Online)",
+  "note": "研究例 microsoft_365"
+ },
+ {
+  "domain": "toshiba.co.jp",
+  "expected_platform": "microsoft_365",
+  "company": "Microsoft 365 (Exchange Online)",
+  "note": "研究例 microsoft_365"
+ },
+ {
+  "domain": "kirin.co.jp",
+  "expected_platform": "microsoft_365",
+  "company": "Microsoft 365 (Exchange Online)",
+  "note": "研究例 microsoft_365"
+ },
+ {
+  "domain": "honda.co.jp",
+  "expected_platform": "microsoft_365",
+  "company": "Microsoft 365 (Exchange Online)",
+  "note": "研究例 microsoft_365"
+ },
+ {
+  "domain": "mufg.jp",
+  "expected_platform": "microsoft_365",
+  "company": "Microsoft 365 (Exchange Online)",
+  "note": "研究例 microsoft_365"
+ },
+ {
+  "domain": "nsg.com",
+  "expected_platform": "exchange_onprem",
+  "company": "Exchange Server（オンプレミス / 自社運用メール）",
+  "note": "研究例 exchange_onprem"
+ },
+ {
+  "domain": "mhi.com",
+  "expected_platform": "exchange_onprem",
+  "company": "Exchange Server（オンプレミス / 自社運用メール）",
+  "note": "研究例 exchange_onprem"
+ },
+ {
+  "domain": "keyence.co.jp",
+  "expected_platform": "exchange_onprem",
+  "company": "Exchange Server（オンプレミス / 自社運用メール）",
+  "note": "研究例 exchange_onprem"
+ },
+ {
+  "domain": "fanuc.co.jp",
+  "expected_platform": "exchange_onprem",
+  "company": "Exchange Server（オンプレミス / 自社運用メール）",
+  "note": "研究例 exchange_onprem"
+ },
+ {
+  "domain": "shionogi.co.jp",
+  "expected_platform": "exchange_onprem",
+  "company": "Exchange Server（オンプレミス / 自社運用メール）",
+  "note": "研究例 exchange_onprem"
+ },
+ {
+  "domain": "ihi.co.jp",
+  "expected_platform": "exchange_onprem",
+  "company": "Exchange Server（オンプレミス / 自社運用メール）",
+  "note": "研究例 exchange_onprem"
+ },
+ {
+  "domain": "nomura.com",
+  "expected_platform": "exchange_onprem",
+  "company": "Exchange Server（オンプレミス / 自社運用メール）",
+  "note": "研究例 exchange_onprem"
+ },
+ {
+  "domain": "tepco.co.jp",
+  "expected_platform": "exchange_onprem",
+  "company": "Exchange Server（オンプレミス / 自社運用メール）",
+  "note": "研究例 exchange_onprem"
+ },
+ {
+  "domain": "daiwahouse.co.jp",
+  "expected_platform": "exchange_onprem",
+  "company": "Exchange Server（オンプレミス / 自社運用メール）",
+  "note": "研究例 exchange_onprem"
+ },
+ {
+  "domain": "keio.jp",
+  "expected_platform": "exchange_onprem",
+  "company": "Exchange Server（オンプレミス / 自社運用メール）",
+  "note": "研究例 exchange_onprem"
+ },
+ {
+  "domain": "mod.go.jp",
+  "expected_platform": "exchange_onprem",
+  "company": "Exchange Server（オンプレミス / 自社運用メール）",
+  "note": "研究例 exchange_onprem"
+ },
+ {
+  "domain": "ntt-east.co.jp",
+  "expected_platform": "exchange_onprem",
+  "company": "Exchange Server（オンプレミス / 自社運用メール）",
+  "note": "研究例 exchange_onprem"
+ },
+ {
+  "domain": "toray.co.jp",
+  "expected_platform": "exchange_onprem",
+  "company": "Exchange Server（オンプレミス / 自社運用メール）",
+  "note": "研究例 exchange_onprem"
+ },
+ {
+  "domain": "telema.co.jp",
+  "expected_platform": "zoho_mail",
+  "company": "Zoho Mail",
+  "note": "研究例 zoho_mail"
+ },
+ {
+  "domain": "telema.jp",
+  "expected_platform": "zoho_mail",
+  "company": "Zoho Mail",
+  "note": "研究例 zoho_mail"
+ },
+ {
+  "domain": "zylker.com",
+  "expected_platform": "zoho_mail",
+  "company": "Zoho Mail",
+  "note": "研究例 zoho_mail"
+ },
+ {
+  "domain": "zoho.co.jp",
+  "expected_platform": "zoho_mail",
+  "company": "Zoho Mail",
+  "note": "研究例 zoho_mail"
+ },
+ {
+  "domain": "zoho.jp",
+  "expected_platform": "zoho_mail",
+  "company": "Zoho Mail",
+  "note": "研究例 zoho_mail"
+ },
+ {
+  "domain": "zoho.eu",
+  "expected_platform": "zoho_mail",
+  "company": "Zoho Mail",
+  "note": "研究例 zoho_mail"
+ },
+ {
+  "domain": "zoho.com.au",
+  "expected_platform": "zoho_mail",
+  "company": "Zoho Mail",
+  "note": "研究例 zoho_mail"
+ },
+ {
+  "domain": "zoho.com.cn",
+  "expected_platform": "zoho_mail",
+  "company": "Zoho Mail",
+  "note": "研究例 zoho_mail"
+ },
+ {
+  "domain": "fdms.co.jp",
+  "expected_platform": "line_works",
+  "company": "LINE WORKS (ワークスモバイルジャパン)",
+  "note": "研究例 line_works"
+ },
+ {
+  "domain": "cosmedia.co.jp",
+  "expected_platform": "line_works",
+  "company": "LINE WORKS (ワークスモバイルジャパン)",
+  "note": "研究例 line_works"
+ },
+ {
+  "domain": "alldo-eng.com",
+  "expected_platform": "line_works",
+  "company": "LINE WORKS (ワークスモバイルジャパン)",
+  "note": "研究例 line_works"
+ },
+ {
+  "domain": "yamazakipan.co.jp",
+  "expected_platform": "line_works",
+  "company": "LINE WORKS (ワークスモバイルジャパン)",
+  "note": "研究例 line_works"
+ },
+ {
+  "domain": "neo.co.jp",
+  "expected_platform": "cybermail",
+  "company": "CYBERMAIL Σ / MAILGATES Σ (サイバーソリューションズ)",
+  "note": "研究例 cybermail"
+ },
+ {
+  "domain": "desknets.com",
+  "expected_platform": "cybermail",
+  "company": "CYBERMAIL Σ / MAILGATES Σ (サイバーソリューションズ)",
+  "note": "研究例 cybermail"
+ },
+ {
+  "domain": "leopalace21.com",
+  "expected_platform": "cybermail",
+  "company": "CYBERMAIL Σ / MAILGATES Σ (サイバーソリューションズ)",
+  "note": "研究例 cybermail"
+ },
+ {
+  "domain": "himeshima.jp",
+  "expected_platform": "cybermail",
+  "company": "CYBERMAIL Σ / MAILGATES Σ (サイバーソリューションズ)",
+  "note": "研究例 cybermail"
+ },
+ {
+  "domain": "starnet.ad.jp",
+  "expected_platform": "cybermail",
+  "company": "CYBERMAIL Σ / MAILGATES Σ (サイバーソリューションズ)",
+  "note": "研究例 cybermail"
+ },
+ {
+  "domain": "hennge.com",
+  "expected_platform": "hennge",
+  "company": "HENNGE One (HENNGE Email DLP / Email Archive)",
+  "note": "研究例 hennge_one"
+ },
+ {
+  "domain": "openhouse-group.com",
+  "expected_platform": "hennge",
+  "company": "HENNGE One (HENNGE Email DLP / Email Archive)",
+  "note": "研究例 hennge_one"
+ },
+ {
+  "domain": "ntn.co.jp",
+  "expected_platform": "hennge",
+  "company": "HENNGE One (HENNGE Email DLP / Email Archive)",
+  "note": "研究例 hennge_one"
+ },
+ {
+  "domain": "asahibeer.co.jp",
+  "expected_platform": "hennge",
+  "company": "HENNGE One (HENNGE Email DLP / Email Archive)",
+  "note": "研究例 hennge_one"
+ },
+ {
+  "domain": "nankai-ferry.co.jp",
+  "expected_platform": "hennge",
+  "company": "HENNGE One (HENNGE Email DLP / Email Archive)",
+  "note": "研究例 hennge_one"
+ },
+ {
+  "domain": "smbc.co.jp",
+  "expected_platform": "iij_secure_mx",
+  "company": "IIJセキュアMXサービス",
+  "note": "研究例 iij_secure_mx"
+ },
+ {
+  "domain": "nhk.or.jp",
+  "expected_platform": "iij_secure_mx",
+  "company": "IIJセキュアMXサービス",
+  "note": "研究例 iij_secure_mx"
+ },
+ {
+  "domain": "tamahome.jp",
+  "expected_platform": "iij_secure_mx",
+  "company": "IIJセキュアMXサービス",
+  "note": "研究例 iij_secure_mx"
+ },
+ {
+  "domain": "nict.go.jp",
+  "expected_platform": "iij_secure_mx",
+  "company": "IIJセキュアMXサービス",
+  "note": "研究例 iij_secure_mx"
+ },
+ {
+  "domain": "askul.co.jp",
+  "expected_platform": "iij_secure_mx",
+  "company": "IIJセキュアMXサービス",
+  "note": "研究例 iij_secure_mx"
+ },
+ {
+  "domain": "vill.aguni.okinawa.jp",
+  "expected_platform": "iij_secure_mx",
+  "company": "IIJセキュアMXサービス",
+  "note": "研究例 iij_secure_mx"
+ },
+ {
+  "domain": "mori-soft.com",
+  "expected_platform": "sakura",
+  "company": "さくらのレンタルサーバ / さくらのメールボックス",
+  "note": "研究例 sakura_rental_server"
+ },
+ {
+  "domain": "hyouhyan.com",
+  "expected_platform": "sakura",
+  "company": "さくらのレンタルサーバ / さくらのメールボックス",
+  "note": "研究例 sakura_rental_server"
+ },
+ {
+  "domain": "kobe-fugetsudo.co.jp",
+  "expected_platform": "sakura",
+  "company": "さくらのレンタルサーバ / さくらのメールボックス",
+  "note": "研究例 sakura_rental_server"
+ },
+ {
+  "domain": "eripyon.com",
+  "expected_platform": "sakura",
+  "company": "さくらのレンタルサーバ / さくらのメールボックス",
+  "note": "研究例 sakura_rental_server"
+ },
+ {
+  "domain": "andfostory.com",
+  "expected_platform": "sakura",
+  "company": "さくらのレンタルサーバ / さくらのメールボックス",
+  "note": "研究例 sakura_rental_server"
+ },
+ {
+  "domain": "human-tec.co.jp",
+  "expected_platform": "sakura",
+  "company": "さくらのレンタルサーバ / さくらのメールボックス",
+  "note": "研究例 sakura_rental_server"
+ },
+ {
+  "domain": "sakura-vps.jp",
+  "expected_platform": "sakura_vps",
+  "company": "さくらのVPS / さくらのクラウド（自前メールサーバ）",
+  "note": "研究例 sakura_vps_cloud"
+ },
+ {
+  "domain": "ma3ki.net",
+  "expected_platform": "sakura_vps",
+  "company": "さくらのVPS / さくらのクラウド（自前メールサーバ）",
+  "note": "研究例 sakura_vps_cloud"
+ },
+ {
+  "domain": "mk-group.co.jp",
+  "expected_platform": "sakura_vps",
+  "company": "さくらのVPS / さくらのクラウド（自前メールサーバ）",
+  "note": "研究例 sakura_vps_cloud"
+ },
+ {
+  "domain": "nomad-saving.com",
+  "expected_platform": "xserver",
+  "company": "エックスサーバー（Xserver レンタルサーバー）",
+  "note": "研究例 xserver"
+ },
+ {
+  "domain": "joylifepc.net",
+  "expected_platform": "xserver",
+  "company": "エックスサーバー（Xserver レンタルサーバー）",
+  "note": "研究例 xserver"
+ },
+ {
+  "domain": "kobe-websakusei.com",
+  "expected_platform": "xserver",
+  "company": "エックスサーバー（Xserver レンタルサーバー）",
+  "note": "研究例 xserver"
+ },
+ {
+  "domain": "hattendo.co.jp",
+  "expected_platform": "xserver",
+  "company": "エックスサーバー（Xserver レンタルサーバー）",
+  "note": "研究例 xserver"
+ },
+ {
+  "domain": "smacom.jp",
+  "expected_platform": "xserver",
+  "company": "エックスサーバー（Xserver レンタルサーバー）",
+  "note": "研究例 xserver"
+ },
+ {
+  "domain": "hattendo.xsrv.jp",
+  "expected_platform": "xserver",
+  "company": "エックスサーバー（Xserver レンタルサーバー）",
+  "note": "研究例 xserver"
+ },
+ {
+  "domain": "work-evol.com",
+  "expected_platform": "xserver",
+  "company": "エックスサーバー（Xserver レンタルサーバー）",
+  "note": "研究例 xserver"
+ },
+ {
+  "domain": "hostingstock.net",
+  "expected_platform": "xserver",
+  "company": "エックスサーバー（Xserver レンタルサーバー）",
+  "note": "研究例 xserver"
+ },
+ {
+  "domain": "clarenet-contents.com",
+  "expected_platform": "xserver",
+  "company": "エックスサーバー（Xserver レンタルサーバー）",
+  "note": "研究例 xserver"
+ },
+ {
+  "domain": "sokupuri.jp",
+  "expected_platform": "xserver",
+  "company": "エックスサーバー（Xserver レンタルサーバー）",
+  "note": "研究例 xserver"
+ },
+ {
+  "domain": "jabank-oita.or.jp",
+  "expected_platform": "xserver_business",
+  "company": "Xserverビジネス（エックスサーバー ビジネス）",
+  "note": "研究例 xserver_business"
+ },
+ {
+  "domain": "cybergorilla.wpx.jp",
+  "expected_platform": "xserver",
+  "company": "シン・レンタルサーバー / wpX / シックスコア（Xserver系）",
+  "note": "研究例 shin_rental_server_wpx_sixcore"
+ },
+ {
+  "domain": "knis.jp",
+  "expected_platform": "lolipop",
+  "company": "ロリポップ！レンタルサーバー（GMOペパボ）",
+  "note": "研究例 lolipop"
+ },
+ {
+  "domain": "coiai.net",
+  "expected_platform": "lolipop",
+  "company": "ロリポップ！レンタルサーバー（GMOペパボ）",
+  "note": "研究例 lolipop"
+ },
+ {
+  "domain": "ugcj.com",
+  "expected_platform": "lolipop",
+  "company": "ロリポップ！レンタルサーバー（GMOペパボ）",
+  "note": "研究例 lolipop"
+ },
+ {
+  "domain": "marketing-planner.com",
+  "expected_platform": "lolipop",
+  "company": "ロリポップ！レンタルサーバー（GMOペパボ）",
+  "note": "研究例 lolipop"
+ },
+ {
+  "domain": "netools.info",
+  "expected_platform": "lolipop",
+  "company": "ロリポップ！レンタルサーバー（GMOペパボ）",
+  "note": "研究例 lolipop"
+ },
+ {
+  "domain": "yujikudo.com",
+  "expected_platform": "lolipop",
+  "company": "ロリポップ！レンタルサーバー（GMOペパボ）",
+  "note": "研究例 lolipop"
+ },
+ {
+  "domain": "itguide.jp",
+  "expected_platform": "lolipop",
+  "company": "ロリポップ！レンタルサーバー（GMOペパボ）",
+  "note": "研究例 lolipop"
+ },
+ {
+  "domain": "takumichiba.com",
+  "expected_platform": "heteml",
+  "company": "ヘテムル（heteml、GMOペパボ）",
+  "note": "研究例 heteml"
+ },
+ {
+  "domain": "heteml.jp",
+  "expected_platform": "heteml",
+  "company": "ヘテムル（heteml、GMOペパボ）",
+  "note": "研究例 heteml"
+ },
+ {
+  "domain": "muumuu-mail.com",
+  "expected_platform": "muumuu",
+  "company": "ムームーメール（ムームードメイン、GMOペパボ）",
+  "note": "研究例 muumuu_mail"
+ },
+ {
+  "domain": "hitodeblog.com",
+  "expected_platform": "conoha",
+  "company": "ConoHa WING（GMOインターネット）",
+  "note": "研究例 conoha_wing"
+ },
+ {
+  "domain": "hf-corporation.co.jp",
+  "expected_platform": "conoha",
+  "company": "ConoHa WING（GMOインターネット）",
+  "note": "研究例 conoha_wing"
+ },
+ {
+  "domain": "dry-iceberg.co.jp",
+  "expected_platform": "conoha",
+  "company": "ConoHa WING（GMOインターネット）",
+  "note": "研究例 conoha_wing"
+ },
+ {
+  "domain": "arinna.co.jp",
+  "expected_platform": "conoha",
+  "company": "ConoHa WING（GMOインターネット）",
+  "note": "研究例 conoha_wing"
+ },
+ {
+  "domain": "gmocloud.com",
+  "expected_platform": "conoha_vps",
+  "company": "ConoHa VPS（GMOインターネット）上の自前メールサーバー",
+  "note": "研究例 conoha_vps"
+ },
+ {
+  "domain": "rapidsite.jp",
+  "expected_platform": "conoha_vps",
+  "company": "ConoHa VPS（GMOインターネット）上の自前メールサーバー",
+  "note": "研究例 conoha_vps"
+ },
+ {
+  "domain": "a-keith.com",
+  "expected_platform": "wadax",
+  "company": "WADAX 共用サーバー／WordPress専用サーバー（GMOグローバルサイン・ホールディングス）",
+  "note": "研究例 wadax"
+ },
+ {
+  "domain": "jspc-home.com",
+  "expected_platform": "wadax",
+  "company": "WADAX 共用サーバー／WordPress専用サーバー（GMOグローバルサイン・ホールディングス）",
+  "note": "研究例 wadax"
+ },
+ {
+  "domain": "shihokawa.com",
+  "expected_platform": "wadax",
+  "company": "WADAX 共用サーバー／WordPress専用サーバー（GMOグローバルサイン・ホールディングス）",
+  "note": "研究例 wadax"
+ },
+ {
+  "domain": "white-door.co.jp",
+  "expected_platform": "wadax",
+  "company": "WADAX 共用サーバー／WordPress専用サーバー（GMOグローバルサイン・ホールディングス）",
+  "note": "研究例 wadax"
+ },
+ {
+  "domain": "roppongi-st.co.jp",
+  "expected_platform": "wadax",
+  "company": "WADAX 共用サーバー／WordPress専用サーバー（GMOグローバルサイン・ホールディングス）",
+  "note": "研究例 wadax"
+ },
+ {
+  "domain": "hobby-club.jp",
+  "expected_platform": "wadax",
+  "company": "WADAX 共用サーバー／WordPress専用サーバー（GMOグローバルサイン・ホールディングス）",
+  "note": "研究例 wadax"
+ },
+ {
+  "domain": "jca-library.jp",
+  "expected_platform": "wadax",
+  "company": "WADAX 共用サーバー／WordPress専用サーバー（GMOグローバルサイン・ホールディングス）",
+  "note": "研究例 wadax"
+ },
+ {
+  "domain": "takatafound.or.jp",
+  "expected_platform": "wadax",
+  "company": "WADAX 共用サーバー／WordPress専用サーバー（GMOグローバルサイン・ホールディングス）",
+  "note": "研究例 wadax"
+ },
+ {
+  "domain": "kobetea.co.jp",
+  "expected_platform": "wadax",
+  "company": "WADAX 共用サーバー／WordPress専用サーバー（GMOグローバルサイン・ホールディングス）",
+  "note": "研究例 wadax"
+ },
+ {
+  "domain": "s-art-j.com",
+  "expected_platform": "wadax",
+  "company": "WADAX 共用サーバー／WordPress専用サーバー（GMOグローバルサイン・ホールディングス）",
+  "note": "研究例 wadax"
+ },
+ {
+  "domain": "2ndhouse-jp.com",
+  "expected_platform": "wadax",
+  "company": "WADAX 共用サーバー／WordPress専用サーバー（GMOグローバルサイン・ホールディングス）",
+  "note": "研究例 wadax"
+ },
+ {
+  "domain": "3tsuki.com",
+  "expected_platform": "wadax",
+  "company": "WADAX 共用サーバー／WordPress専用サーバー（GMOグローバルサイン・ホールディングス）",
+  "note": "研究例 wadax"
+ },
+ {
+  "domain": "a-dex.co.jp",
+  "expected_platform": "wadax",
+  "company": "WADAX 共用サーバー／WordPress専用サーバー（GMOグローバルサイン・ホールディングス）",
+  "note": "研究例 wadax"
+ },
+ {
+  "domain": "100nenfukushima.jp",
+  "expected_platform": "wadax",
+  "company": "WADAX 共用サーバー／WordPress専用サーバー（GMOグローバルサイン・ホールディングス）",
+  "note": "研究例 wadax"
+ },
+ {
+  "domain": "wadax.ne.jp",
+  "expected_platform": "wadax",
+  "company": "WADAX 共用サーバー／WordPress専用サーバー（GMOグローバルサイン・ホールディングス）",
+  "note": "研究例 wadax"
+ },
+ {
+  "domain": "raikyuji.com",
+  "expected_platform": "gmo_cloud",
+  "company": "GMOクラウド iCLUSTA+／GMOクラウド レンタルサーバー（旧ラピッドサイト）",
+  "note": "研究例 gmocloud_shared_iclusta_rapidsite"
+ },
+ {
+  "domain": "straw-kobo.co.jp",
+  "expected_platform": "gmo_cloud",
+  "company": "GMOクラウド iCLUSTA+／GMOクラウド レンタルサーバー（旧ラピッドサイト）",
+  "note": "研究例 gmocloud_shared_iclusta_rapidsite"
+ },
+ {
+  "domain": "suzuran.info",
+  "expected_platform": "gmo_cloud",
+  "company": "GMOクラウド iCLUSTA+／GMOクラウド レンタルサーバー（旧ラピッドサイト）",
+  "note": "研究例 gmocloud_shared_iclusta_rapidsite"
+ },
+ {
+  "domain": "watanabe-coffee.com",
+  "expected_platform": "gmo_cloud",
+  "company": "GMOクラウド iCLUSTA+／GMOクラウド レンタルサーバー（旧ラピッドサイト）",
+  "note": "研究例 gmocloud_shared_iclusta_rapidsite"
+ },
+ {
+  "domain": "m-w.cc",
+  "expected_platform": "gmo_cloud",
+  "company": "GMOクラウド iCLUSTA+／GMOクラウド レンタルサーバー（旧ラピッドサイト）",
+  "note": "研究例 gmocloud_shared_iclusta_rapidsite"
+ },
+ {
+  "domain": "splice-spec.com",
+  "expected_platform": "speever",
+  "company": "スピーバー（Speever）レンタルサーバー（ライド株式会社）",
+  "note": "研究例 speever"
+ },
+ {
+  "domain": "unify-gw.com",
+  "expected_platform": "speever",
+  "company": "スピーバー（Speever）レンタルサーバー（ライド株式会社）",
+  "note": "研究例 speever"
+ },
+ {
+  "domain": "753line.co.jp",
+  "expected_platform": "webarena",
+  "company": "WebARENA SuiteX / SuitePRO / メールホスティング (NTTPC)",
+  "note": "研究例 webarena_nttpc"
+ },
+ {
+  "domain": "7iro.co.jp",
+  "expected_platform": "webarena",
+  "company": "WebARENA SuiteX / SuitePRO / メールホスティング (NTTPC)",
+  "note": "研究例 webarena_nttpc"
+ },
+ {
+  "domain": "8egg.co.jp",
+  "expected_platform": "webarena",
+  "company": "WebARENA SuiteX / SuitePRO / メールホスティング (NTTPC)",
+  "note": "研究例 webarena_nttpc"
+ },
+ {
+  "domain": "a-intex.co.jp",
+  "expected_platform": "webarena",
+  "company": "WebARENA SuiteX / SuitePRO / メールホスティング (NTTPC)",
+  "note": "研究例 webarena_nttpc"
+ },
+ {
+  "domain": "ahd.co.jp",
+  "expected_platform": "webarena",
+  "company": "WebARENA SuiteX / SuitePRO / メールホスティング (NTTPC)",
+  "note": "研究例 webarena_nttpc"
+ },
+ {
+  "domain": "ancla.co.jp",
+  "expected_platform": "webarena",
+  "company": "WebARENA SuiteX / SuitePRO / メールホスティング (NTTPC)",
+  "note": "研究例 webarena_nttpc"
+ },
+ {
+  "domain": "v4001-059.mailsecure.jp",
+  "expected_platform": "webarena",
+  "company": "WebARENA SuiteX / SuitePRO / メールホスティング (NTTPC)",
+  "note": "研究例 webarena_nttpc"
+ },
+ {
+  "domain": "0033-ntt.com",
+  "expected_platform": "bizmw",
+  "company": "Bizメール&ウェブ ビジネス / プレミアム (NTTドコモビジネス 旧NTTコミュニケーションズ)",
+  "note": "研究例 ntt_bizmw"
+ },
+ {
+  "domain": "0101net.jp",
+  "expected_platform": "bizmw",
+  "company": "Bizメール&ウェブ ビジネス / プレミアム (NTTドコモビジネス 旧NTTコミュニケーションズ)",
+  "note": "研究例 ntt_bizmw"
+ },
+ {
+  "domain": "010maruto.co.jp",
+  "expected_platform": "bizmw",
+  "company": "Bizメール&ウェブ ビジネス / プレミアム (NTTドコモビジネス 旧NTTコミュニケーションズ)",
+  "note": "研究例 ntt_bizmw"
+ },
+ {
+  "domain": "0202.co.jp",
+  "expected_platform": "bizmw",
+  "company": "Bizメール&ウェブ ビジネス / プレミアム (NTTドコモビジネス 旧NTTコミュニケーションズ)",
+  "note": "研究例 ntt_bizmw"
+ },
+ {
+  "domain": "aanet.co.jp",
+  "expected_platform": "bizmw",
+  "company": "Bizメール&ウェブ ビジネス / プレミアム (NTTドコモビジネス 旧NTTコミュニケーションズ)",
+  "note": "研究例 ntt_bizmw"
+ },
+ {
+  "domain": "001mm.jp",
+  "expected_platform": "bizmw",
+  "company": "Bizメール&ウェブ ビジネス / プレミアム (NTTドコモビジネス 旧NTTコミュニケーションズ)",
+  "note": "研究例 ntt_bizmw"
+ },
+ {
+  "domain": "002mm.com",
+  "expected_platform": "bizmw",
+  "company": "Bizメール&ウェブ ビジネス / プレミアム (NTTドコモビジネス 旧NTTコミュニケーションズ)",
+  "note": "研究例 ntt_bizmw"
+ },
+ {
+  "domain": "0085.co.jp",
+  "expected_platform": "bizmw",
+  "company": "Bizメール&ウェブ ビジネス / プレミアム (NTTドコモビジネス 旧NTTコミュニケーションズ)",
+  "note": "研究例 ntt_bizmw"
+ },
+ {
+  "domain": "bizmw.jp",
+  "expected_platform": "bizmw",
+  "company": "Bizメール&ウェブ ビジネス / プレミアム (NTTドコモビジネス 旧NTTコミュニケーションズ)",
+  "note": "研究例 ntt_bizmw"
+ },
+ {
+  "domain": "0215.co.jp",
+  "expected_platform": "alpha_mail",
+  "company": "アルファメール2 / プレミア / プラチナ (大塚商会)",
+  "note": "研究例 otsuka_alpha_mail"
+ },
+ {
+  "domain": "3-es.co.jp",
+  "expected_platform": "alpha_mail",
+  "company": "アルファメール2 / プレミア / プラチナ (大塚商会)",
+  "note": "研究例 otsuka_alpha_mail"
+ },
+ {
+  "domain": "3eng.co.jp",
+  "expected_platform": "alpha_mail",
+  "company": "アルファメール2 / プレミア / プラチナ (大塚商会)",
+  "note": "研究例 otsuka_alpha_mail"
+ },
+ {
+  "domain": "1-5.co.jp",
+  "expected_platform": "alpha_mail",
+  "company": "アルファメール2 / プレミア / プラチナ (大塚商会)",
+  "note": "研究例 otsuka_alpha_mail"
+ },
+ {
+  "domain": "alpha-plt.jp",
+  "expected_platform": "alpha_mail",
+  "company": "アルファメール2 / プレミア / プラチナ (大塚商会)",
+  "note": "研究例 otsuka_alpha_mail"
+ },
+ {
+  "domain": "acoma-medical.co.jp",
+  "expected_platform": "alpha_mail",
+  "company": "アルファメール2 / プレミア / プラチナ (大塚商会)",
+  "note": "研究例 otsuka_alpha_mail"
+ },
+ {
+  "domain": "0003.co.jp",
+  "expected_platform": "cpi",
+  "company": "CPI (KDDIウェブコミュニケーションズ) ACE01 / マネージド専用サーバ",
+  "note": "研究例 cpi_kddi_web"
+ },
+ {
+  "domain": "01ko-ken.co.jp",
+  "expected_platform": "cpi",
+  "company": "CPI (KDDIウェブコミュニケーションズ) ACE01 / マネージド専用サーバ",
+  "note": "研究例 cpi_kddi_web"
+ },
+ {
+  "domain": "anka-mart.com",
+  "expected_platform": "cpi",
+  "company": "CPI (KDDIウェブコミュニケーションズ) ACE01 / マネージド専用サーバ",
+  "note": "研究例 cpi_kddi_web"
+ },
+ {
+  "domain": "bodymaker.jp",
+  "expected_platform": "cpi",
+  "company": "CPI (KDDIウェブコミュニケーションズ) ACE01 / マネージド専用サーバ",
+  "note": "研究例 cpi_kddi_web"
+ },
+ {
+  "domain": "rakudou.co.jp",
+  "expected_platform": "cpi",
+  "company": "CPI (KDDIウェブコミュニケーションズ) ACE01 / マネージド専用サーバ",
+  "note": "研究例 cpi_kddi_web"
+ },
+ {
+  "domain": "furiee.jp",
+  "expected_platform": "cpi",
+  "company": "CPI (KDDIウェブコミュニケーションズ) ACE01 / マネージド専用サーバ",
+  "note": "研究例 cpi_kddi_web"
+ },
+ {
+  "domain": "auone-net.jp",
+  "expected_platform": "cpi",
+  "company": "CPI (KDDIウェブコミュニケーションズ) ACE01 / マネージド専用サーバ",
+  "note": "研究例 cpi_kddi_web"
+ },
+ {
+  "domain": "0-zero.com",
+  "expected_platform": "biglobe_business",
+  "company": "BIGLOBE ビジネスメール / ホスティング (bgmgate)",
+  "note": "研究例 biglobe_business"
+ },
+ {
+  "domain": "108u.co.jp",
+  "expected_platform": "biglobe_business",
+  "company": "BIGLOBE ビジネスメール / ホスティング (bgmgate)",
+  "note": "研究例 biglobe_business"
+ },
+ {
+  "domain": "12ki.jp",
+  "expected_platform": "biglobe_business",
+  "company": "BIGLOBE ビジネスメール / ホスティング (bgmgate)",
+  "note": "研究例 biglobe_business"
+ },
+ {
+  "domain": "biglobe.ne.jp",
+  "expected_platform": "biglobe_business",
+  "company": "BIGLOBE ビジネスメール / ホスティング (bgmgate)",
+  "note": "研究例 biglobe_business"
+ },
+ {
+  "domain": "canon.co.jp",
+  "expected_platform": "trend_micro_email_security",
+  "company": "Trend Micro Email Security (TMEMS / 現 TrendAI Email Security、旧 Hosted Email Security)",
+  "note": "研究例 trend_micro_email_security"
+ },
+ {
+  "domain": "hankyu.co.jp",
+  "expected_platform": "trend_micro_email_security",
+  "company": "Trend Micro Email Security (TMEMS / 現 TrendAI Email Security、旧 Hosted Email Security)",
+  "note": "研究例 trend_micro_email_security"
+ },
+ {
+  "domain": "kobelco.co.jp",
+  "expected_platform": "trend_micro_email_security",
+  "company": "Trend Micro Email Security (TMEMS / 現 TrendAI Email Security、旧 Hosted Email Security)",
+  "note": "研究例 trend_micro_email_security"
+ },
+ {
+  "domain": "keio.co.jp",
+  "expected_platform": "trend_micro_email_security",
+  "company": "Trend Micro Email Security (TMEMS / 現 TrendAI Email Security、旧 Hosted Email Security)",
+  "note": "研究例 trend_micro_email_security"
+ },
+ {
+  "domain": "zensho.co.jp",
+  "expected_platform": "trend_micro_email_security",
+  "company": "Trend Micro Email Security (TMEMS / 現 TrendAI Email Security、旧 Hosted Email Security)",
+  "note": "研究例 trend_micro_email_security"
+ },
+ {
+  "domain": "jrkyushu.co.jp",
+  "expected_platform": "trend_micro_email_security",
+  "company": "Trend Micro Email Security (TMEMS / 現 TrendAI Email Security、旧 Hosted Email Security)",
+  "note": "研究例 trend_micro_email_security"
+ },
+ {
+  "domain": "trendmicro.com",
+  "expected_platform": "trend_micro_email_security",
+  "company": "Trend Micro Email Security (TMEMS / 現 TrendAI Email Security、旧 Hosted Email Security)",
+  "note": "研究例 trend_micro_email_security"
+ },
+ {
+  "domain": "isuzu.co.jp",
+  "expected_platform": "trend_micro_email_security",
+  "company": "Trend Micro Email Security (TMEMS / 現 TrendAI Email Security、旧 Hosted Email Security)",
+  "note": "研究例 trend_micro_email_security"
+ },
+ {
+  "domain": "nus.edu.sg",
+  "expected_platform": "trend_micro_email_security",
+  "company": "Trend Micro Email Security (TMEMS / 現 TrendAI Email Security、旧 Hosted Email Security)",
+  "note": "研究例 trend_micro_email_security"
+ },
+ {
+  "domain": "ntu.edu.sg",
+  "expected_platform": "trend_micro_email_security",
+  "company": "Trend Micro Email Security (TMEMS / 現 TrendAI Email Security、旧 Hosted Email Security)",
+  "note": "研究例 trend_micro_email_security"
+ },
+ {
+  "domain": "capitaland.com",
+  "expected_platform": "trend_micro_email_security",
+  "company": "Trend Micro Email Security (TMEMS / 現 TrendAI Email Security、旧 Hosted Email Security)",
+  "note": "研究例 trend_micro_email_security"
+ },
+ {
+  "domain": "infosys.com",
+  "expected_platform": "trend_micro_email_security",
+  "company": "Trend Micro Email Security (TMEMS / 現 TrendAI Email Security、旧 Hosted Email Security)",
+  "note": "研究例 trend_micro_email_security"
+ },
+ {
+  "domain": "nintendo.co.jp",
+  "expected_platform": "proofpoint",
+  "company": "Proofpoint Email Protection (Proofpoint on Demand / エンタープライズ版)",
+  "note": "研究例 proofpoint_enterprise"
+ },
+ {
+  "domain": "joshin.co.jp",
+  "expected_platform": "proofpoint",
+  "company": "Proofpoint Email Protection (Proofpoint on Demand / エンタープライズ版)",
+  "note": "研究例 proofpoint_enterprise"
+ },
+ {
+  "domain": "nttdata.com",
+  "expected_platform": "proofpoint",
+  "company": "Proofpoint Email Protection (Proofpoint on Demand / エンタープライズ版)",
+  "note": "研究例 proofpoint_enterprise"
+ },
+ {
+  "domain": "sony.com",
+  "expected_platform": "proofpoint",
+  "company": "Proofpoint Email Protection (Proofpoint on Demand / エンタープライズ版)",
+  "note": "研究例 proofpoint_enterprise"
+ },
+ {
+  "domain": "att.com",
+  "expected_platform": "proofpoint",
+  "company": "Proofpoint Email Protection (Proofpoint on Demand / エンタープライズ版)",
+  "note": "研究例 proofpoint_enterprise"
+ },
+ {
+  "domain": "rtx.com",
+  "expected_platform": "proofpoint",
+  "company": "Proofpoint Email Protection (Proofpoint on Demand / エンタープライズ版)",
+  "note": "研究例 proofpoint_enterprise"
+ },
+ {
+  "domain": "proofpoint.com",
+  "expected_platform": "proofpoint",
+  "company": "Proofpoint Email Protection (Proofpoint on Demand / エンタープライズ版)",
+  "note": "研究例 proofpoint_enterprise"
+ },
+ {
+  "domain": "khi.co.jp",
+  "expected_platform": "proofpoint",
+  "company": "Proofpoint Email Protection (Proofpoint on Demand / エンタープライズ版)",
+  "note": "研究例 proofpoint_enterprise"
+ },
+ {
+  "domain": "ricoh.co.jp",
+  "expected_platform": "proofpoint",
+  "company": "Proofpoint Email Protection (Proofpoint on Demand / エンタープライズ版)",
+  "note": "研究例 proofpoint_enterprise"
+ },
+ {
+  "domain": "meiji.com",
+  "expected_platform": "proofpoint",
+  "company": "Proofpoint Email Protection (Proofpoint on Demand / エンタープライズ版)",
+  "note": "研究例 proofpoint_enterprise"
+ },
+ {
+  "domain": "mitsubishicorp.com",
+  "expected_platform": "proofpoint",
+  "company": "Proofpoint Email Protection (Proofpoint on Demand / エンタープライズ版)",
+  "note": "研究例 proofpoint_enterprise"
+ },
+ {
+  "domain": "murata.com",
+  "expected_platform": "proofpoint",
+  "company": "Proofpoint Email Protection (Proofpoint on Demand / エンタープライズ版)",
+  "note": "研究例 proofpoint_enterprise"
+ },
+ {
+  "domain": "suntory.co.jp",
+  "expected_platform": "proofpoint",
+  "company": "Proofpoint Email Protection (Proofpoint on Demand / エンタープライズ版)",
+  "note": "研究例 proofpoint_enterprise"
+ },
+ {
+  "domain": "lion.co.jp",
+  "expected_platform": "proofpoint",
+  "company": "Proofpoint Email Protection (Proofpoint on Demand / エンタープライズ版)",
+  "note": "研究例 proofpoint_enterprise"
+ },
+ {
+  "domain": "nissay.co.jp",
+  "expected_platform": "proofpoint",
+  "company": "Proofpoint Email Protection (Proofpoint on Demand / エンタープライズ版)",
+  "note": "研究例 proofpoint_enterprise"
+ },
+ {
+  "domain": "qantas.com.au",
+  "expected_platform": "proofpoint",
+  "company": "Proofpoint Email Protection (Proofpoint on Demand / エンタープライズ版)",
+  "note": "研究例 proofpoint_enterprise"
+ },
+ {
+  "domain": "bhp.com",
+  "expected_platform": "proofpoint",
+  "company": "Proofpoint Email Protection (Proofpoint on Demand / エンタープライズ版)",
+  "note": "研究例 proofpoint_enterprise"
+ },
+ {
+  "domain": "hsbc.com.hk",
+  "expected_platform": "proofpoint",
+  "company": "Proofpoint Email Protection (Proofpoint on Demand / エンタープライズ版)",
+  "note": "研究例 proofpoint_enterprise"
+ },
+ {
+  "domain": "muji.com",
+  "expected_platform": "proofpoint",
+  "company": "Proofpoint Essentials (中小企業向け)",
+  "note": "研究例 proofpoint_essentials"
+ },
+ {
+  "domain": "constantedge.com",
+  "expected_platform": "proofpoint",
+  "company": "Proofpoint Essentials (中小企業向け)",
+  "note": "研究例 proofpoint_essentials"
+ },
+ {
+  "domain": "suzuki.co.jp",
+  "expected_platform": "symantec_email_security_cloud",
+  "company": "Symantec Email Security.cloud (Broadcom / 旧 MessageLabs)",
+  "note": "研究例 symantec_email_security_cloud"
+ },
+ {
+  "domain": "kyuden.co.jp",
+  "expected_platform": "symantec_email_security_cloud",
+  "company": "Symantec Email Security.cloud (Broadcom / 旧 MessageLabs)",
+  "note": "研究例 symantec_email_security_cloud"
+ },
+ {
+  "domain": "saisoncard.co.jp",
+  "expected_platform": "symantec_email_security_cloud",
+  "company": "Symantec Email Security.cloud (Broadcom / 旧 MessageLabs)",
+  "note": "研究例 symantec_email_security_cloud"
+ },
+ {
+  "domain": "jrhokkaido.co.jp",
+  "expected_platform": "symantec_email_security_cloud",
+  "company": "Symantec Email Security.cloud (Broadcom / 旧 MessageLabs)",
+  "note": "研究例 symantec_email_security_cloud"
+ },
+ {
+  "domain": "rakuten-sec.co.jp",
+  "expected_platform": "symantec_email_security_cloud",
+  "company": "Symantec Email Security.cloud (Broadcom / 旧 MessageLabs)",
+  "note": "研究例 symantec_email_security_cloud"
+ },
+ {
+  "domain": "bbc.co.uk",
+  "expected_platform": "symantec_email_security_cloud",
+  "company": "Symantec Email Security.cloud (Broadcom / 旧 MessageLabs)",
+  "note": "研究例 symantec_email_security_cloud"
+ },
+ {
+  "domain": "aviva.com",
+  "expected_platform": "symantec_email_security_cloud",
+  "company": "Symantec Email Security.cloud (Broadcom / 旧 MessageLabs)",
+  "note": "研究例 symantec_email_security_cloud"
+ },
+ {
+  "domain": "symantec.com",
+  "expected_platform": "symantec_email_security_cloud",
+  "company": "Symantec Email Security.cloud (Broadcom / 旧 MessageLabs)",
+  "note": "研究例 symantec_email_security_cloud"
+ },
+ {
+  "domain": "legalandgeneral.com",
+  "expected_platform": "symantec_email_security_cloud",
+  "company": "Symantec Email Security.cloud (Broadcom / 旧 MessageLabs)",
+  "note": "研究例 symantec_email_security_cloud"
+ },
+ {
+  "domain": "barracuda.com",
+  "expected_platform": "barracuda",
+  "company": "Barracuda Email Gateway Defense (旧 Barracuda Essentials / Email Security Service)",
+  "note": "研究例 barracuda_email_gateway_defense"
+ },
+ {
+  "domain": "barracudanetworks.com",
+  "expected_platform": "barracuda",
+  "company": "Barracuda Email Gateway Defense (旧 Barracuda Essentials / Email Security Service)",
+  "note": "研究例 barracuda_email_gateway_defense"
+ },
+ {
+  "domain": "barracudamsp.com",
+  "expected_platform": "barracuda",
+  "company": "Barracuda Email Gateway Defense (旧 Barracuda Essentials / Email Security Service)",
+  "note": "研究例 barracuda_email_gateway_defense"
+ },
+ {
+  "domain": "intronis.com",
+  "expected_platform": "barracuda",
+  "company": "Barracuda Email Gateway Defense (旧 Barracuda Essentials / Email Security Service)",
+  "note": "研究例 barracuda_email_gateway_defense"
+ },
+ {
+  "domain": "sonian.com",
+  "expected_platform": "barracuda",
+  "company": "Barracuda Email Gateway Defense (旧 Barracuda Essentials / Email Security Service)",
+  "note": "研究例 barracuda_email_gateway_defense"
+ },
+ {
+  "domain": "fyde.com",
+  "expected_platform": "barracuda",
+  "company": "Barracuda Email Gateway Defense (旧 Barracuda Essentials / Email Security Service)",
+  "note": "研究例 barracuda_email_gateway_defense"
+ },
+ {
+  "domain": "coles.com.au",
+  "expected_platform": "mimecast",
+  "company": "Mimecast",
+  "note": "研究例 mimecast"
+ },
+ {
+  "domain": "optus.com.au",
+  "expected_platform": "mimecast",
+  "company": "Mimecast",
+  "note": "研究例 mimecast"
+ },
+ {
+  "domain": "jardines.com",
+  "expected_platform": "mimecast",
+  "company": "Mimecast",
+  "note": "研究例 mimecast"
+ },
+ {
+  "domain": "unimelb.edu.au",
+  "expected_platform": "mimecast",
+  "company": "Mimecast",
+  "note": "研究例 mimecast"
+ },
+ {
+  "domain": "sydney.edu.au",
+  "expected_platform": "mimecast",
+  "company": "Mimecast",
+  "note": "研究例 mimecast"
+ },
+ {
+  "domain": "hp.com",
+  "expected_platform": "mimecast",
+  "company": "Mimecast",
+  "note": "研究例 mimecast"
+ },
+ {
+  "domain": "cvshealth.com",
+  "expected_platform": "mimecast",
+  "company": "Mimecast",
+  "note": "研究例 mimecast"
+ },
+ {
+  "domain": "arizona.edu",
+  "expected_platform": "mimecast",
+  "company": "Mimecast",
+  "note": "研究例 mimecast"
+ },
+ {
+  "domain": "next.co.uk",
+  "expected_platform": "mimecast",
+  "company": "Mimecast",
+  "note": "研究例 mimecast"
+ },
+ {
+  "domain": "schroders.com",
+  "expected_platform": "mimecast",
+  "company": "Mimecast",
+  "note": "研究例 mimecast"
+ },
+ {
+  "domain": "sanlam.co.za",
+  "expected_platform": "mimecast",
+  "company": "Mimecast",
+  "note": "研究例 mimecast"
+ },
+ {
+  "domain": "informa.com",
+  "expected_platform": "mimecast",
+  "company": "Mimecast",
+  "note": "研究例 mimecast"
+ },
+ {
+  "domain": "mimecast.com",
+  "expected_platform": "mimecast",
+  "company": "Mimecast",
+  "note": "研究例 mimecast"
+ },
+ {
+  "domain": "hitachi.co.jp",
+  "expected_platform": "cisco_secure_email",
+  "company": "Cisco Secure Email Cloud Gateway (旧 Cloud Email Security / IronPort)",
+  "note": "研究例 cisco_secure_email_cloud"
+ },
+ {
+  "domain": "nec.co.jp",
+  "expected_platform": "cisco_secure_email",
+  "company": "Cisco Secure Email Cloud Gateway (旧 Cloud Email Security / IronPort)",
+  "note": "研究例 cisco_secure_email_cloud"
+ },
+ {
+  "domain": "jreast.co.jp",
+  "expected_platform": "cisco_secure_email",
+  "company": "Cisco Secure Email Cloud Gateway (旧 Cloud Email Security / IronPort)",
+  "note": "研究例 cisco_secure_email_cloud"
+ },
+ {
+  "domain": "subaru.co.jp",
+  "expected_platform": "cisco_secure_email",
+  "company": "Cisco Secure Email Cloud Gateway (旧 Cloud Email Security / IronPort)",
+  "note": "研究例 cisco_secure_email_cloud"
+ },
+ {
+  "domain": "daiwa.co.jp",
+  "expected_platform": "cisco_secure_email",
+  "company": "Cisco Secure Email Cloud Gateway (旧 Cloud Email Security / IronPort)",
+  "note": "研究例 cisco_secure_email_cloud"
+ },
+ {
+  "domain": "jfe-holdings.co.jp",
+  "expected_platform": "cisco_secure_email",
+  "company": "Cisco Secure Email Cloud Gateway (旧 Cloud Email Security / IronPort)",
+  "note": "研究例 cisco_secure_email_cloud"
+ },
+ {
+  "domain": "cathaypacific.com",
+  "expected_platform": "cisco_secure_email",
+  "company": "Cisco Secure Email Cloud Gateway (旧 Cloud Email Security / IronPort)",
+  "note": "研究例 cisco_secure_email_cloud"
+ },
+ {
+  "domain": "uq.edu.au",
+  "expected_platform": "cisco_secure_email",
+  "company": "Cisco Secure Email Cloud Gateway (旧 Cloud Email Security / IronPort)",
+  "note": "研究例 cisco_secure_email_cloud"
+ },
+ {
+  "domain": "asahi.com",
+  "expected_platform": "cisco_secure_email",
+  "company": "Cisco Secure Email Cloud Gateway (旧 Cloud Email Security / IronPort)",
+  "note": "研究例 cisco_secure_email_cloud"
+ },
+ {
+  "domain": "abbvie.com",
+  "expected_platform": "cisco_secure_email",
+  "company": "Cisco Secure Email Cloud Gateway (旧 Cloud Email Security / IronPort)",
+  "note": "研究例 cisco_secure_email_cloud"
+ },
+ {
+  "domain": "allianz.com",
+  "expected_platform": "cisco_secure_email",
+  "company": "Cisco Secure Email Cloud Gateway (旧 Cloud Email Security / IronPort)",
+  "note": "研究例 cisco_secure_email_cloud"
+ },
+ {
+  "domain": "asahi-kasei.com",
+  "expected_platform": "cisco_secure_email",
+  "company": "Cisco Secure Email Cloud Gateway (旧 Cloud Email Security / IronPort)",
+  "note": "研究例 cisco_secure_email_cloud"
+ },
+ {
+  "domain": "boots.com",
+  "expected_platform": "cisco_secure_email",
+  "company": "Cisco Secure Email Cloud Gateway (旧 Cloud Email Security / IronPort)",
+  "note": "研究例 cisco_secure_email_cloud"
+ },
+ {
+  "domain": "caltech.edu",
+  "expected_platform": "cisco_secure_email",
+  "company": "Cisco Secure Email Cloud Gateway (旧 Cloud Email Security / IronPort)",
+  "note": "研究例 cisco_secure_email_cloud"
+ },
+ {
+  "domain": "umd.edu",
+  "expected_platform": "cisco_secure_email",
+  "company": "Cisco Secure Email Cloud Gateway (旧 Cloud Email Security / IronPort)",
+  "note": "研究例 cisco_secure_email_cloud"
+ },
+ {
+  "domain": "toyota.co.jp",
+  "expected_platform": "fortinet_fortimail",
+  "company": "FortiMail Cloud (Fortinet)",
+  "note": "研究例 fortinet_fortimail_cloud"
+ },
+ {
+  "domain": "hino.co.jp",
+  "expected_platform": "fortinet_fortimail",
+  "company": "FortiMail Cloud (Fortinet)",
+  "note": "研究例 fortinet_fortimail_cloud"
+ },
+ {
+  "domain": "jtekt.co.jp",
+  "expected_platform": "fortinet_fortimail",
+  "company": "FortiMail Cloud (Fortinet)",
+  "note": "研究例 fortinet_fortimail_cloud"
+ },
+ {
+  "domain": "konicaminolta.com",
+  "expected_platform": "fortinet_fortimail",
+  "company": "FortiMail Cloud (Fortinet)",
+  "note": "研究例 fortinet_fortimail_cloud"
+ },
+ {
+  "domain": "resona-gr.co.jp",
+  "expected_platform": "fortinet_fortimail",
+  "company": "FortiMail Cloud (Fortinet)",
+  "note": "研究例 fortinet_fortimail_cloud"
+ },
+ {
+  "domain": "sophos.com",
+  "expected_platform": "sophos_email",
+  "company": "Sophos Email (Sophos Central Email Security / 旧 Reflexion)",
+  "note": "研究例 sophos_email"
+ },
+ {
+  "domain": "sophos.co.jp",
+  "expected_platform": "sophos_email",
+  "company": "Sophos Email (Sophos Central Email Security / 旧 Reflexion)",
+  "note": "研究例 sophos_email"
+ },
+ {
+  "domain": "secureworks.com",
+  "expected_platform": "sophos_email",
+  "company": "Sophos Email (Sophos Central Email Security / 旧 Reflexion)",
+  "note": "研究例 sophos_email"
+ },
+ {
+  "domain": "astaro.com",
+  "expected_platform": "sophos_email",
+  "company": "Sophos Email (Sophos Central Email Security / 旧 Reflexion)",
+  "note": "研究例 sophos_email"
+ },
+ {
+  "domain": "braintrace.com",
+  "expected_platform": "sophos_email",
+  "company": "Sophos Email (Sophos Central Email Security / 旧 Reflexion)",
+  "note": "研究例 sophos_email"
+ },
+ {
+  "domain": "reflexion.net",
+  "expected_platform": "sophos_email",
+  "company": "Sophos Email (Sophos Central Email Security / 旧 Reflexion)",
+  "note": "研究例 sophos_email"
+ },
+ {
+  "domain": "excelmicro.com",
+  "expected_platform": "sophos_email",
+  "company": "Sophos Email (Sophos Central Email Security / 旧 Reflexion)",
+  "note": "研究例 sophos_email"
+ },
+ {
+  "domain": "cloudflare.com",
+  "expected_platform": "cloudflare_email_security",
+  "company": "Cloudflare Email Security (旧 Area 1 Security)",
+  "note": "研究例 cloudflare_email_security"
+ },
+ {
+  "domain": "asu.edu",
+  "expected_platform": "cloudflare_email_security",
+  "company": "Cloudflare Email Security (旧 Area 1 Security)",
+  "note": "研究例 cloudflare_email_security"
+ },
+ {
+  "domain": "area1security.com",
+  "expected_platform": "cloudflare_email_security",
+  "company": "Cloudflare Email Security (旧 Area 1 Security)",
+  "note": "研究例 cloudflare_email_security"
+ },
+ {
+  "domain": "area1.com",
+  "expected_platform": "cloudflare_email_security",
+  "company": "Cloudflare Email Security (旧 Area 1 Security)",
+  "note": "研究例 cloudflare_email_security"
+ },
+ {
+  "domain": "altaro.com",
+  "expected_platform": "hornetsecurity",
+  "company": "Hornetsecurity (旧 antispameurope / Zerospam / Spamina / EveryCloud 含む)",
+  "note": "研究例 hornetsecurity"
+ },
+ {
+  "domain": "watchguard.com",
+  "expected_platform": "hornetsecurity",
+  "company": "Hornetsecurity (旧 antispameurope / Zerospam / Spamina / EveryCloud 含む)",
+  "note": "研究例 hornetsecurity"
+ },
+ {
+  "domain": "zerospam.ca",
+  "expected_platform": "hornetsecurity",
+  "company": "Hornetsecurity (旧 antispameurope / Zerospam / Spamina / EveryCloud 含む)",
+  "note": "研究例 hornetsecurity"
+ },
+ {
+  "domain": "spamina.com",
+  "expected_platform": "hornetsecurity",
+  "company": "Hornetsecurity (旧 antispameurope / Zerospam / Spamina / EveryCloud 含む)",
+  "note": "研究例 hornetsecurity"
+ },
+ {
+  "domain": "hornetsecurity.de",
+  "expected_platform": "hornetsecurity",
+  "company": "Hornetsecurity (旧 antispameurope / Zerospam / Spamina / EveryCloud 含む)",
+  "note": "研究例 hornetsecurity"
+ },
+ {
+  "domain": "hornetsecurity.fr",
+  "expected_platform": "hornetsecurity",
+  "company": "Hornetsecurity (旧 antispameurope / Zerospam / Spamina / EveryCloud 含む)",
+  "note": "研究例 hornetsecurity"
+ },
+ {
+  "domain": "hornetsecurity.com",
+  "expected_platform": "hornetsecurity",
+  "company": "Hornetsecurity (旧 antispameurope / Zerospam / Spamina / EveryCloud 含む)",
+  "note": "研究例 hornetsecurity"
+ },
+ {
+  "domain": "everycloud.com",
+  "expected_platform": "hornetsecurity",
+  "company": "Hornetsecurity (旧 antispameurope / Zerospam / Spamina / EveryCloud 含む)",
+  "note": "研究例 hornetsecurity"
+ },
+ {
+  "domain": "nipponsteel.com",
+  "expected_platform": "trellix_email_security",
+  "company": "Trellix Email Security Cloud (旧 FireEye Email Security)",
+  "note": "研究例 trellix_email_security_cloud"
+ },
+ {
+  "domain": "jr-central.co.jp",
+  "expected_platform": "trellix_email_security",
+  "company": "Trellix Email Security Cloud (旧 FireEye Email Security)",
+  "note": "研究例 trellix_email_security_cloud"
+ },
+ {
+  "domain": "daikin.co.jp",
+  "expected_platform": "trellix_email_security",
+  "company": "Trellix Email Security Cloud (旧 FireEye Email Security)",
+  "note": "研究例 trellix_email_security_cloud"
+ },
+ {
+  "domain": "kline.co.jp",
+  "expected_platform": "trellix_email_security",
+  "company": "Trellix Email Security Cloud (旧 FireEye Email Security)",
+  "note": "研究例 trellix_email_security_cloud"
+ },
+ {
+  "domain": "anz.com",
+  "expected_platform": "trellix_email_security",
+  "company": "Trellix Email Security Cloud (旧 FireEye Email Security)",
+  "note": "研究例 trellix_email_security_cloud"
+ },
+ {
+  "domain": "trellix.com",
+  "expected_platform": "trellix_email_security",
+  "company": "Trellix Email Security Cloud (旧 FireEye Email Security)",
+  "note": "研究例 trellix_email_security_cloud"
+ },
+ {
+  "domain": "ntt.co.jp",
+  "expected_platform": "iij_secure_mx",
+  "company": "IIJセキュアMXサービス",
+  "note": "研究例 iij_securemx"
+ },
+ {
+  "domain": "denso.com",
+  "expected_platform": "iij_secure_mx",
+  "company": "IIJセキュアMXサービス",
+  "note": "研究例 iij_securemx"
+ },
+ {
+  "domain": "tokyo-gas.co.jp",
+  "expected_platform": "iij_secure_mx",
+  "company": "IIJセキュアMXサービス",
+  "note": "研究例 iij_securemx"
+ },
+ {
+  "domain": "jcb.co.jp",
+  "expected_platform": "iij_secure_mx",
+  "company": "IIJセキュアMXサービス",
+  "note": "研究例 iij_securemx"
+ },
+ {
+  "domain": "jpx.co.jp",
+  "expected_platform": "iij_secure_mx",
+  "company": "IIJセキュアMXサービス",
+  "note": "研究例 iij_securemx"
+ },
+ {
+  "domain": "calbee.co.jp",
+  "expected_platform": "iij_secure_mx",
+  "company": "IIJセキュアMXサービス",
+  "note": "研究例 iij_securemx"
+ },
+ {
+  "domain": "morinaga.co.jp",
+  "expected_platform": "iij_secure_mx",
+  "company": "IIJセキュアMXサービス",
+  "note": "研究例 iij_securemx"
+ },
+ {
+  "domain": "forcepoint.com",
+  "expected_platform": "forcepoint_email_security",
+  "company": "Forcepoint Email Security Cloud (旧 Websense / MessageControl)",
+  "note": "研究例 forcepoint_email_security_cloud"
+ },
+ {
+  "domain": "websense.com",
+  "expected_platform": "forcepoint_email_security",
+  "company": "Forcepoint Email Security Cloud (旧 Websense / MessageControl)",
+  "note": "研究例 forcepoint_email_security_cloud"
+ },
+ {
+  "domain": "chibakogyo-bank.co.jp",
+  "expected_platform": "m_filter",
+  "company": "m-FILTER@Cloud（デジタルアーツ）",
+  "note": "研究例 digitalarts_mfilter_cloud"
+ },
+ {
+  "domain": "chibakogin-cs.co.jp",
+  "expected_platform": "m_filter",
+  "company": "m-FILTER@Cloud（デジタルアーツ）",
+  "note": "研究例 digitalarts_mfilter_cloud"
+ },
+ {
+  "domain": "innomedics.co.jp",
+  "expected_platform": "m_filter",
+  "company": "m-FILTER@Cloud（デジタルアーツ）",
+  "note": "研究例 digitalarts_mfilter_cloud"
+ },
+ {
+  "domain": "daj.co.jp",
+  "expected_platform": "m_filter",
+  "company": "m-FILTER@Cloud（デジタルアーツ）",
+  "note": "研究例 digitalarts_mfilter_cloud"
+ },
+ {
+  "domain": "tozen.com",
+  "expected_platform": "active_gate",
+  "company": "Active! gate SS／Active! zone SS（クオリティア）",
+  "note": "研究例 qualitia_activegate_ss"
+ },
+ {
+  "domain": "jmsc.co.jp",
+  "expected_platform": "active_gate",
+  "company": "Active! gate SS／Active! zone SS（クオリティア）",
+  "note": "研究例 qualitia_activegate_ss"
+ },
+ {
+  "domain": "raksul.com",
+  "expected_platform": "active_gate",
+  "company": "Active! gate SS／Active! zone SS（クオリティア）",
+  "note": "研究例 qualitia_activegate_ss"
+ },
+ {
+  "domain": "zozo.com",
+  "expected_platform": "active_gate",
+  "company": "Active! gate SS／Active! zone SS（クオリティア）",
+  "note": "研究例 qualitia_activegate_ss"
+ },
+ {
+  "domain": "kaonavi.jp",
+  "expected_platform": "active_gate",
+  "company": "Active! gate SS／Active! zone SS（クオリティア）",
+  "note": "研究例 qualitia_activegate_ss"
+ },
+ {
+  "domain": "izumiyaseika.co.jp",
+  "expected_platform": "securemail_plus",
+  "company": "@Securemail Plus（ケイティケイソリューションズ）",
+  "note": "研究例 ktk_securemail_plus"
+ },
+ {
+  "domain": "jicdom.co.jp",
+  "expected_platform": "securemail_plus",
+  "company": "@Securemail Plus（ケイティケイソリューションズ）",
+  "note": "研究例 ktk_securemail_plus"
+ },
+ {
+  "domain": "jdic.co.jp",
+  "expected_platform": "securemail_plus",
+  "company": "@Securemail Plus（ケイティケイソリューションズ）",
+  "note": "研究例 ktk_securemail_plus"
+ },
+ {
+  "domain": "securemail-asp.com",
+  "expected_platform": "securemail_plus",
+  "company": "@Securemail Plus（ケイティケイソリューションズ）",
+  "note": "研究例 ktk_securemail_plus"
+ },
+ {
+  "domain": "ktk-sol.co.jp",
+  "expected_platform": "securemail_plus",
+  "company": "@Securemail Plus（ケイティケイソリューションズ）",
+  "note": "研究例 ktk_securemail_plus"
+ },
+ {
+  "domain": "act-medical.jp",
+  "expected_platform": "securemail_plus",
+  "company": "@Securemail Plus（ケイティケイソリューションズ）",
+  "note": "研究例 ktk_securemail_plus"
+ },
+ {
+  "domain": "sansan.com",
+  "expected_platform": "hennge",
+  "company": "HENNGE One（HENNGE Email Security／Email DLP、旧HDE One）",
+  "note": "研究例 hennge_one_email_security"
+ },
+ {
+  "domain": "kccs.co.jp",
+  "expected_platform": "hennge",
+  "company": "HENNGE One（HENNGE Email Security／Email DLP、旧HDE One）",
+  "note": "研究例 hennge_one_email_security"
+ },
+ {
+  "domain": "moweb.jp",
+  "expected_platform": "hennge",
+  "company": "HENNGE One（HENNGE Email Security／Email DLP、旧HDE One）",
+  "note": "研究例 hennge_one_email_security"
+ },
+ {
+  "domain": "aiphone.co.jp",
+  "expected_platform": "cybermail",
+  "company": "CyberMail Σ／MAILGATES Σ（サイバーソリューションズ）",
+  "note": "研究例 cybersolutions_cybermail_mailgates_sigma"
+ },
+ {
+  "domain": "joho-shimane.or.jp",
+  "expected_platform": "cybermail",
+  "company": "CyberMail Σ／MAILGATES Σ（サイバーソリューションズ）",
+  "note": "研究例 cybersolutions_cybermail_mailgates_sigma"
+ },
+ {
+  "domain": "77bank.co.jp",
+  "expected_platform": "cybermail",
+  "company": "CyberMail Σ／MAILGATES Σ（サイバーソリューションズ）",
+  "note": "研究例 cybersolutions_cybermail_mailgates_sigma"
+ },
+ {
+  "domain": "aerotoyota.co.jp",
+  "expected_platform": "cybermail",
+  "company": "CyberMail Σ／MAILGATES Σ（サイバーソリューションズ）",
+  "note": "研究例 cybersolutions_cybermail_mailgates_sigma"
+ },
+ {
+  "domain": "konoike.co.jp",
+  "expected_platform": "cybermail",
+  "company": "CyberMail Σ／MAILGATES Σ（サイバーソリューションズ）",
+  "note": "研究例 cybersolutions_cybermail_mailgates_sigma"
+ },
+ {
+  "domain": "ail-c.com",
+  "expected_platform": "bizmw",
+  "company": "Bizメール&ウェブ ビジネス／プレミアム（NTTドコモビジネス、旧NTTコミュニケーションズ）",
+  "note": "研究例 ntt_bizmail_web_business"
+ },
+ {
+  "domain": "kurumikougei.co.jp",
+  "expected_platform": "bizmw",
+  "company": "Bizメール&ウェブ ビジネス／プレミアム（NTTドコモビジネス、旧NTTコミュニケーションズ）",
+  "note": "研究例 ntt_bizmail_web_business"
+ },
+ {
+  "domain": "ishihara-ah.jp",
+  "expected_platform": "bizmw",
+  "company": "Bizメール&ウェブ ビジネス／プレミアム（NTTドコモビジネス、旧NTTコミュニケーションズ）",
+  "note": "研究例 ntt_bizmail_web_business"
+ },
+ {
+  "domain": "nikko-net.co.jp",
+  "expected_platform": "bizmw",
+  "company": "Bizメール&ウェブ ビジネス／プレミアム（NTTドコモビジネス、旧NTTコミュニケーションズ）",
+  "note": "研究例 ntt_bizmail_web_business"
+ },
+ {
+  "domain": "nikkotelecom.co.jp",
+  "expected_platform": "trend_micro_email_security",
+  "company": "Trend Micro Email Security（トレンドマイクロ、日本リージョン tmems-jp／海外リージョン tmes）",
+  "note": "研究例 trendmicro_email_security_jp"
+ },
+ {
+  "domain": "kaiyukan.com",
+  "expected_platform": "trend_micro_email_security",
+  "company": "Trend Micro Email Security（トレンドマイクロ、日本リージョン tmems-jp／海外リージョン tmes）",
+  "note": "研究例 trendmicro_email_security_jp"
+ },
+ {
+  "domain": "nifrel.jp",
+  "expected_platform": "trend_micro_email_security",
+  "company": "Trend Micro Email Security（トレンドマイクロ、日本リージョン tmems-jp／海外リージョン tmes）",
+  "note": "研究例 trendmicro_email_security_jp"
+ },
+ {
+  "domain": "trendmicro.co.jp",
+  "expected_platform": "trend_micro_email_security",
+  "company": "Trend Micro Email Security（トレンドマイクロ、日本リージョン tmems-jp／海外リージョン tmes）",
+  "note": "研究例 trendmicro_email_security_jp"
+ },
+ {
+  "domain": "spamsniper.jp",
+  "expected_platform": "spamsniper",
+  "company": "SPAMSNIPER（Spam Sniper Cloud、JIRAN／ジラン）",
+  "note": "研究例 jiran_spamsniper_cloud"
+ },
+ {
+  "domain": "jiyu.co.jp",
+  "expected_platform": "zenlogic",
+  "company": "Zenlogic ホスティング（IDCフロンティア、旧ファーストサーバ）",
+  "note": "研究例 firstserver_zenlogic"
+ },
+ {
+  "domain": "azzurro.co.jp",
+  "expected_platform": "zenlogic",
+  "company": "Zenlogic ホスティング（IDCフロンティア、旧ファーストサーバ）",
+  "note": "研究例 firstserver_zenlogic"
+ },
+ {
+  "domain": "weeare.co.jp",
+  "expected_platform": "zenlogic",
+  "company": "Zenlogic（旧ファーストサーバ／IDCフロンティア）",
+  "note": "研究例 zenlogic_firstserver"
+ },
+ {
+  "domain": "pro-seeds.com",
+  "expected_platform": "zenlogic",
+  "company": "Zenlogic（旧ファーストサーバ／IDCフロンティア）",
+  "note": "研究例 zenlogic_firstserver"
+ },
+ {
+  "domain": "minami-p.co.jp",
+  "expected_platform": "zenlogic",
+  "company": "Zenlogic（旧ファーストサーバ／IDCフロンティア）",
+  "note": "研究例 zenlogic_firstserver"
+ },
+ {
+  "domain": "nikkoren.jp",
+  "expected_platform": "zenlogic",
+  "company": "Zenlogic（旧ファーストサーバ／IDCフロンティア）",
+  "note": "研究例 zenlogic_firstserver"
+ },
+ {
+  "domain": "toshin-chemical.co.jp",
+  "expected_platform": "zenlogic",
+  "company": "Zenlogic（旧ファーストサーバ／IDCフロンティア）",
+  "note": "研究例 zenlogic_firstserver"
+ },
+ {
+  "domain": "sensitiv.jp",
+  "expected_platform": "zenlogic",
+  "company": "Zenlogic（旧ファーストサーバ／IDCフロンティア）",
+  "note": "研究例 zenlogic_firstserver"
+ },
+ {
+  "domain": "hinoki-juku.com",
+  "expected_platform": "zenlogic",
+  "company": "Zenlogic（旧ファーストサーバ／IDCフロンティア）",
+  "note": "研究例 zenlogic_firstserver"
+ },
+ {
+  "domain": "nissho.ac.jp",
+  "expected_platform": "zenlogic",
+  "company": "Zenlogic（旧ファーストサーバ／IDCフロンティア）",
+  "note": "研究例 zenlogic_firstserver"
+ },
+ {
+  "domain": "marukyo.jp",
+  "expected_platform": "zenlogic",
+  "company": "Zenlogic（旧ファーストサーバ／IDCフロンティア）",
+  "note": "研究例 zenlogic_firstserver"
+ },
+ {
+  "domain": "june-net.com",
+  "expected_platform": "zenlogic",
+  "company": "Zenlogic（旧ファーストサーバ／IDCフロンティア）",
+  "note": "研究例 zenlogic_firstserver"
+ },
+ {
+  "domain": "boken.or.jp",
+  "expected_platform": "kagoya",
+  "company": "カゴヤ・ジャパン（KAGOYA 共用レンタルサーバー／KAGOYA MAIL・メールプラン／マネージド専用／KAGOYA CLOUD VPS）",
+  "note": "研究例 kagoya"
+ },
+ {
+  "domain": "yoshiori.co.jp",
+  "expected_platform": "kagoya",
+  "company": "カゴヤ・ジャパン（KAGOYA 共用レンタルサーバー／KAGOYA MAIL・メールプラン／マネージド専用／KAGOYA CLOUD VPS）",
+  "note": "研究例 kagoya"
+ },
+ {
+  "domain": "goshu-seiyaku.co.jp",
+  "expected_platform": "kagoya",
+  "company": "カゴヤ・ジャパン（KAGOYA 共用レンタルサーバー／KAGOYA MAIL・メールプラン／マネージド専用／KAGOYA CLOUD VPS）",
+  "note": "研究例 kagoya"
+ },
+ {
+  "domain": "nishi-seiko.co.jp",
+  "expected_platform": "kagoya",
+  "company": "カゴヤ・ジャパン（KAGOYA 共用レンタルサーバー／KAGOYA MAIL・メールプラン／マネージド専用／KAGOYA CLOUD VPS）",
+  "note": "研究例 kagoya"
+ },
+ {
+  "domain": "tokushimacci.or.jp",
+  "expected_platform": "kagoya",
+  "company": "カゴヤ・ジャパン（KAGOYA 共用レンタルサーバー／KAGOYA MAIL・メールプラン／マネージド専用／KAGOYA CLOUD VPS）",
+  "note": "研究例 kagoya"
+ },
+ {
+  "domain": "genkigroup.com",
+  "expected_platform": "kagoya",
+  "company": "カゴヤ・ジャパン（KAGOYA 共用レンタルサーバー／KAGOYA MAIL・メールプラン／マネージド専用／KAGOYA CLOUD VPS）",
+  "note": "研究例 kagoya"
+ },
+ {
+  "domain": "kagoya.jp",
+  "expected_platform": "kagoya",
+  "company": "カゴヤ・ジャパン（KAGOYA 共用レンタルサーバー／KAGOYA MAIL・メールプラン／マネージド専用／KAGOYA CLOUD VPS）",
+  "note": "研究例 kagoya"
+ },
+ {
+  "domain": "gro-w.jp",
+  "expected_platform": "kagoya",
+  "company": "カゴヤ・ジャパン（KAGOYA 共用レンタルサーバー／KAGOYA MAIL・メールプラン／マネージド専用／KAGOYA CLOUD VPS）",
+  "note": "研究例 kagoya"
+ },
+ {
+  "domain": "visit-town.com",
+  "expected_platform": "kagoya",
+  "company": "カゴヤ・ジャパン（KAGOYA 共用レンタルサーバー／KAGOYA MAIL・メールプラン／マネージド専用／KAGOYA CLOUD VPS）",
+  "note": "研究例 kagoya"
+ },
+ {
+  "domain": "watanabecompany.com",
+  "expected_platform": "kagoya",
+  "company": "カゴヤ・ジャパン（KAGOYA 共用レンタルサーバー／KAGOYA MAIL・メールプラン／マネージド専用／KAGOYA CLOUD VPS）",
+  "note": "研究例 kagoya"
+ },
+ {
+  "domain": "tanba-prime.com",
+  "expected_platform": "kagoya",
+  "company": "カゴヤ・ジャパン（KAGOYA 共用レンタルサーバー／KAGOYA MAIL・メールプラン／マネージド専用／KAGOYA CLOUD VPS）",
+  "note": "研究例 kagoya"
+ },
+ {
+  "domain": "zekno.co.jp",
+  "expected_platform": "mixhost",
+  "company": "mixhost（ミックスホスト）",
+  "note": "研究例 mixhost"
+ },
+ {
+  "domain": "light-juku.co.jp",
+  "expected_platform": "mixhost",
+  "company": "mixhost（ミックスホスト）",
+  "note": "研究例 mixhost"
+ },
+ {
+  "domain": "tbits.jp",
+  "expected_platform": "mixhost",
+  "company": "mixhost（ミックスホスト）",
+  "note": "研究例 mixhost"
+ },
+ {
+  "domain": "tarosac.com",
+  "expected_platform": "mixhost",
+  "company": "mixhost（ミックスホスト）",
+  "note": "研究例 mixhost"
+ },
+ {
+  "domain": "zensokutohaino.clinic",
+  "expected_platform": "mixhost",
+  "company": "mixhost（ミックスホスト）",
+  "note": "研究例 mixhost"
+ },
+ {
+  "domain": "mixhost.jp",
+  "expected_platform": "mixhost",
+  "company": "mixhost（ミックスホスト）",
+  "note": "研究例 mixhost"
+ },
+ {
+  "domain": "wakabayashi-skinclinic.com",
+  "expected_platform": "colorfulbox",
+  "company": "カラフルボックス（ColorfulBox）",
+  "note": "研究例 colorfulbox"
+ },
+ {
+  "domain": "curec.jp",
+  "expected_platform": "colorfulbox",
+  "company": "カラフルボックス（ColorfulBox）",
+  "note": "研究例 colorfulbox"
+ },
+ {
+  "domain": "ikegami-okabe-dental.com",
+  "expected_platform": "colorfulbox",
+  "company": "カラフルボックス（ColorfulBox）",
+  "note": "研究例 colorfulbox"
+ },
+ {
+  "domain": "sendaiefc.com",
+  "expected_platform": "colorfulbox",
+  "company": "カラフルボックス（ColorfulBox）",
+  "note": "研究例 colorfulbox"
+ },
+ {
+  "domain": "mihune-web.com",
+  "expected_platform": "colorfulbox",
+  "company": "カラフルボックス（ColorfulBox）",
+  "note": "研究例 colorfulbox"
+ },
+ {
+  "domain": "harukidai-ah.com",
+  "expected_platform": "colorfulbox",
+  "company": "カラフルボックス（ColorfulBox）",
+  "note": "研究例 colorfulbox"
+ },
+ {
+  "domain": "kaitori-shouten.com",
+  "expected_platform": "starserver",
+  "company": "スターサーバー／スターレンタルサーバー（ネットオウル・エックスサーバーグループ）",
+  "note": "研究例 starserver_netowl"
+ },
+ {
+  "domain": "mkougyou.jp",
+  "expected_platform": "starserver",
+  "company": "スターサーバー／スターレンタルサーバー（ネットオウル・エックスサーバーグループ）",
+  "note": "研究例 starserver_netowl"
+ },
+ {
+  "domain": "startlife.jp",
+  "expected_platform": "starserver",
+  "company": "スターサーバー／スターレンタルサーバー（ネットオウル・エックスサーバーグループ）",
+  "note": "研究例 starserver_netowl"
+ },
+ {
+  "domain": "kays-care.info",
+  "expected_platform": "starserver",
+  "company": "スターサーバー／スターレンタルサーバー（ネットオウル・エックスサーバーグループ）",
+  "note": "研究例 starserver_netowl"
+ },
+ {
+  "domain": "sozainabe.com",
+  "expected_platform": "starserver",
+  "company": "スターサーバー／スターレンタルサーバー（ネットオウル・エックスサーバーグループ）",
+  "note": "研究例 starserver_netowl"
+ },
+ {
+  "domain": "e-souzokutouki.com",
+  "expected_platform": "starserver",
+  "company": "スターサーバー／スターレンタルサーバー（ネットオウル・エックスサーバーグループ）",
+  "note": "研究例 starserver_netowl"
+ },
+ {
+  "domain": "star.ne.jp",
+  "expected_platform": "starserver",
+  "company": "スターサーバー／スターレンタルサーバー（ネットオウル・エックスサーバーグループ）",
+  "note": "研究例 starserver_netowl"
+ },
+ {
+  "domain": "nichibeieisuu-gakuin.com",
+  "expected_platform": "coreserver",
+  "company": "コアサーバー／XREA／バリューサーバー（GMOデジロック・バリュードメイン）",
+  "note": "研究例 coreserver_xrea_valueserver"
+ },
+ {
+  "domain": "tmgtr.com",
+  "expected_platform": "coreserver",
+  "company": "コアサーバー／XREA／バリューサーバー（GMOデジロック・バリュードメイン）",
+  "note": "研究例 coreserver_xrea_valueserver"
+ },
+ {
+  "domain": "coliss.com",
+  "expected_platform": "coreserver",
+  "company": "コアサーバー／XREA／バリューサーバー（GMOデジロック・バリュードメイン）",
+  "note": "研究例 coreserver_xrea_valueserver"
+ },
+ {
+  "domain": "kisoitsc.net",
+  "expected_platform": "coreserver",
+  "company": "コアサーバー／XREA／バリューサーバー（GMOデジロック・バリュードメイン）",
+  "note": "研究例 coreserver_xrea_valueserver"
+ },
+ {
+  "domain": "uccj.org",
+  "expected_platform": "coreserver",
+  "company": "コアサーバー／XREA／バリューサーバー（GMOデジロック・バリュードメイン）",
+  "note": "研究例 coreserver_xrea_valueserver"
+ },
+ {
+  "domain": "biosupli.co.jp",
+  "expected_platform": "coreserver",
+  "company": "コアサーバー／XREA／バリューサーバー（GMOデジロック・バリュードメイン）",
+  "note": "研究例 coreserver_xrea_valueserver"
+ },
+ {
+  "domain": "nabmuseum.jp",
+  "expected_platform": "coreserver",
+  "company": "コアサーバー／XREA／バリューサーバー（GMOデジロック・バリュードメイン）",
+  "note": "研究例 coreserver_xrea_valueserver"
+ },
+ {
+  "domain": "enjoji.jp",
+  "expected_platform": "coreserver",
+  "company": "コアサーバー／XREA／バリューサーバー（GMOデジロック・バリュードメイン）",
+  "note": "研究例 coreserver_xrea_valueserver"
+ },
+ {
+  "domain": "sghss.co.jp",
+  "expected_platform": "coreserver",
+  "company": "コアサーバー／XREA／バリューサーバー（GMOデジロック・バリュードメイン）",
+  "note": "研究例 coreserver_xrea_valueserver"
+ },
+ {
+  "domain": "zuishinin.or.jp",
+  "expected_platform": "coreserver",
+  "company": "コアサーバー／XREA／バリューサーバー（GMOデジロック・バリュードメイン）",
+  "note": "研究例 coreserver_xrea_valueserver"
+ },
+ {
+  "domain": "abcpaso.com",
+  "expected_platform": "coreserver",
+  "company": "コアサーバー／XREA／バリューサーバー（GMOデジロック・バリュードメイン）",
+  "note": "研究例 coreserver_xrea_valueserver"
+ },
+ {
+  "domain": "coreserver.jp",
+  "expected_platform": "coreserver",
+  "company": "コアサーバー／XREA／バリューサーバー（GMOデジロック・バリュードメイン）",
+  "note": "研究例 coreserver_xrea_valueserver"
+ },
+ {
+  "domain": "xrea.com",
+  "expected_platform": "coreserver",
+  "company": "コアサーバー／XREA／バリューサーバー（GMOデジロック・バリュードメイン）",
+  "note": "研究例 coreserver_xrea_valueserver"
+ },
+ {
+  "domain": "value-domain.com",
+  "expected_platform": "coreserver",
+  "company": "コアサーバー／XREA／バリューサーバー（GMOデジロック・バリュードメイン）",
+  "note": "研究例 coreserver_xrea_valueserver"
+ },
+ {
+  "domain": "taishiishida.net",
+  "expected_platform": "jetboy",
+  "company": "JETBOY（ジェットボーイ／andcloud）",
+  "note": "研究例 jetboy"
+ },
+ {
+  "domain": "chihoan.jp",
+  "expected_platform": "jetboy",
+  "company": "JETBOY（ジェットボーイ／andcloud）",
+  "note": "研究例 jetboy"
+ },
+ {
+  "domain": "rescue-39.com",
+  "expected_platform": "jetboy",
+  "company": "JETBOY（ジェットボーイ／andcloud）",
+  "note": "研究例 jetboy"
+ },
+ {
+  "domain": "omuta-hitomeguri.jp",
+  "expected_platform": "jetboy",
+  "company": "JETBOY（ジェットボーイ／andcloud）",
+  "note": "研究例 jetboy"
+ },
+ {
+  "domain": "mfsanet.org",
+  "expected_platform": "jetboy",
+  "company": "JETBOY（ジェットボーイ／andcloud）",
+  "note": "研究例 jetboy"
+ },
+ {
+  "domain": "noodle-lk.com",
+  "expected_platform": "littleserver",
+  "company": "リトルサーバー（lsv.jp）",
+  "note": "研究例 littleserver"
+ },
+ {
+  "domain": "ai-otasuke.com",
+  "expected_platform": "littleserver",
+  "company": "リトルサーバー（lsv.jp）",
+  "note": "研究例 littleserver"
+ },
+ {
+  "domain": "soka-style.com",
+  "expected_platform": "littleserver",
+  "company": "リトルサーバー（lsv.jp）",
+  "note": "研究例 littleserver"
+ },
+ {
+  "domain": "kanagawa-tantei.net",
+  "expected_platform": "littleserver",
+  "company": "リトルサーバー（lsv.jp）",
+  "note": "研究例 littleserver"
+ },
+ {
+  "domain": "ownmono.com",
+  "expected_platform": "littleserver",
+  "company": "リトルサーバー（lsv.jp）",
+  "note": "研究例 littleserver"
+ },
+ {
+  "domain": "lsv.jp",
+  "expected_platform": "littleserver",
+  "company": "リトルサーバー（lsv.jp）",
+  "note": "研究例 littleserver"
+ },
+ {
+  "domain": "vpnavi.jp",
+  "expected_platform": "rakkoserver",
+  "company": "ラッコサーバー（ラッコ株式会社）",
+  "note": "研究例 rakkoserver"
+ },
+ {
+  "domain": "eleni.jp",
+  "expected_platform": "rakkoserver",
+  "company": "ラッコサーバー（ラッコ株式会社）",
+  "note": "研究例 rakkoserver"
+ },
+ {
+  "domain": "mindhack-media.jp",
+  "expected_platform": "rakkoserver",
+  "company": "ラッコサーバー（ラッコ株式会社）",
+  "note": "研究例 rakkoserver"
+ },
+ {
+  "domain": "iseshima-heli.jp",
+  "expected_platform": "rakkoserver",
+  "company": "ラッコサーバー（ラッコ株式会社）",
+  "note": "研究例 rakkoserver"
+ },
+ {
+  "domain": "doraemon-miraiten.jp",
+  "expected_platform": "rakkoserver",
+  "company": "ラッコサーバー（ラッコ株式会社）",
+  "note": "研究例 rakkoserver"
+ },
+ {
+  "domain": "rakko.inc",
+  "expected_platform": "rakkoserver",
+  "company": "ラッコサーバー（ラッコ株式会社）",
+  "note": "研究例 rakkoserver"
+ },
+ {
+  "domain": "ablenet.jp",
+  "expected_platform": "ablenet",
+  "company": "ABLENET（エイブルネット／ケイアンドケイコーポレーション）",
+  "note": "研究例 ablenet"
+ },
+ {
+  "domain": "saiseikai-hp.or.jp",
+  "expected_platform": "ablenet",
+  "company": "ABLENET（エイブルネット／ケイアンドケイコーポレーション）",
+  "note": "研究例 ablenet"
+ },
+ {
+  "domain": "nisekotakken.co.jp",
+  "expected_platform": "ablenet",
+  "company": "ABLENET（エイブルネット／ケイアンドケイコーポレーション）",
+  "note": "研究例 ablenet"
+ },
+ {
+  "domain": "tobugodo.com",
+  "expected_platform": "ablenet",
+  "company": "ABLENET（エイブルネット／ケイアンドケイコーポレーション）",
+  "note": "研究例 ablenet"
+ },
+ {
+  "domain": "aashyaa.com",
+  "expected_platform": "amazon_workmail",
+  "company": "Amazon WorkMail / Amazon SES 受信 (AWS)",
+  "note": "研究例 amazon_workmail_ses"
+ },
+ {
+  "domain": "44thfleet.com",
+  "expected_platform": "amazon_workmail",
+  "company": "Amazon WorkMail / Amazon SES 受信 (AWS)",
+  "note": "研究例 amazon_workmail_ses"
+ },
+ {
+  "domain": "amitksh.net",
+  "expected_platform": "amazon_workmail",
+  "company": "Amazon WorkMail / Amazon SES 受信 (AWS)",
+  "note": "研究例 amazon_workmail_ses"
+ },
+ {
+  "domain": "accis-aws.jp",
+  "expected_platform": "amazon_workmail",
+  "company": "Amazon WorkMail / Amazon SES 受信 (AWS)",
+  "note": "研究例 amazon_workmail_ses"
+ },
+ {
+  "domain": "4shfit.com",
+  "expected_platform": "amazon_workmail",
+  "company": "Amazon WorkMail / Amazon SES 受信 (AWS)",
+  "note": "研究例 amazon_workmail_ses"
+ },
+ {
+  "domain": "afd-fanshop.com",
+  "expected_platform": "amazon_workmail",
+  "company": "Amazon WorkMail / Amazon SES 受信 (AWS)",
+  "note": "研究例 amazon_workmail_ses"
+ },
+ {
+  "domain": "akron-global.ru",
+  "expected_platform": "amazon_workmail",
+  "company": "Amazon WorkMail / Amazon SES 受信 (AWS)",
+  "note": "研究例 amazon_workmail_ses"
+ },
+ {
+  "domain": "00-software.net",
+  "expected_platform": "godaddy",
+  "company": "GoDaddy Professional Email (旧 Workspace Email / secureserver.net)",
+  "note": "研究例 godaddy_workspace_email"
+ },
+ {
+  "domain": "000518.com",
+  "expected_platform": "godaddy",
+  "company": "GoDaddy Professional Email (旧 Workspace Email / secureserver.net)",
+  "note": "研究例 godaddy_workspace_email"
+ },
+ {
+  "domain": "0-100k.com",
+  "expected_platform": "godaddy",
+  "company": "GoDaddy Professional Email (旧 Workspace Email / secureserver.net)",
+  "note": "研究例 godaddy_workspace_email"
+ },
+ {
+  "domain": "000software.net",
+  "expected_platform": "ionos",
+  "company": "IONOS (旧 1&1 / イオノス) メール",
+  "note": "研究例 ionos"
+ },
+ {
+  "domain": "09technology.net",
+  "expected_platform": "ionos",
+  "company": "IONOS (旧 1&1 / イオノス) メール",
+  "note": "研究例 ionos"
+ },
+ {
+  "domain": "00dilly.info",
+  "expected_platform": "ionos",
+  "company": "IONOS (旧 1&1 / イオノス) メール",
+  "note": "研究例 ionos"
+ },
+ {
+  "domain": "0700intellicom.info",
+  "expected_platform": "ionos",
+  "company": "IONOS (旧 1&1 / イオノス) メール",
+  "note": "研究例 ionos"
+ },
+ {
+  "domain": "ionos.de",
+  "expected_platform": "ionos",
+  "company": "IONOS (旧 1&1 / イオノス) メール",
+  "note": "研究例 ionos"
+ },
+ {
+  "domain": "11fingers.com",
+  "expected_platform": "rackspace",
+  "company": "Rackspace Email / Hosted Exchange (emailsrvr.com)",
+  "note": "研究例 rackspace_email"
+ },
+ {
+  "domain": "1122northdearborn.com",
+  "expected_platform": "rackspace",
+  "company": "Rackspace Email / Hosted Exchange (emailsrvr.com)",
+  "note": "研究例 rackspace_email"
+ },
+ {
+  "domain": "12plusuk.co.uk",
+  "expected_platform": "rackspace",
+  "company": "Rackspace Email / Hosted Exchange (emailsrvr.com)",
+  "note": "研究例 rackspace_email"
+ },
+ {
+  "domain": "100talenti.it",
+  "expected_platform": "rackspace",
+  "company": "Rackspace Email / Hosted Exchange (emailsrvr.com)",
+  "note": "研究例 rackspace_email"
+ },
+ {
+  "domain": "emailsrvr.com",
+  "expected_platform": "rackspace",
+  "company": "Rackspace Email / Hosted Exchange (emailsrvr.com)",
+  "note": "研究例 rackspace_email"
+ },
+ {
+  "domain": "101bestdeals.com",
+  "expected_platform": "namecheap",
+  "company": "Namecheap Private Email",
+  "note": "研究例 namecheap_private_email"
+ },
+ {
+  "domain": "108spaces.com",
+  "expected_platform": "namecheap",
+  "company": "Namecheap Private Email",
+  "note": "研究例 namecheap_private_email"
+ },
+ {
+  "domain": "10sonly.com",
+  "expected_platform": "namecheap",
+  "company": "Namecheap Private Email",
+  "note": "研究例 namecheap_private_email"
+ },
+ {
+  "domain": "privateemail.com",
+  "expected_platform": "namecheap",
+  "company": "Namecheap Private Email",
+  "note": "研究例 namecheap_private_email"
+ },
+ {
+  "domain": "namecheap.com",
+  "expected_platform": "namecheap",
+  "company": "Namecheap Private Email",
+  "note": "研究例 namecheap_private_email"
+ },
+ {
+  "domain": "0800ayuda.com",
+  "expected_platform": "titan",
+  "company": "Hostinger メール",
+  "note": "研究例 hostinger_email"
+ },
+ {
+  "domain": "1000ofertas.com",
+  "expected_platform": "titan",
+  "company": "Hostinger メール",
+  "note": "研究例 hostinger_email"
+ },
+ {
+  "domain": "1001-filles.com",
+  "expected_platform": "titan",
+  "company": "Hostinger メール",
+  "note": "研究例 hostinger_email"
+ },
+ {
+  "domain": "1001resepi.com",
+  "expected_platform": "titan",
+  "company": "Hostinger メール",
+  "note": "研究例 hostinger_email"
+ },
+ {
+  "domain": "101pounds.com",
+  "expected_platform": "titan",
+  "company": "Titan メール (Hostinger/HostGator/Name.com 等のリセラー経由)",
+  "note": "研究例 titan_email"
+ },
+ {
+  "domain": "1205designstudio.com",
+  "expected_platform": "titan",
+  "company": "Titan メール (Hostinger/HostGator/Name.com 等のリセラー経由)",
+  "note": "研究例 titan_email"
+ },
+ {
+  "domain": "007ecotercerizacao.com",
+  "expected_platform": "titan",
+  "company": "Titan メール (Hostinger/HostGator/Name.com 等のリセラー経由)",
+  "note": "研究例 titan_email"
+ },
+ {
+  "domain": "10thplanetsantafe.com",
+  "expected_platform": "titan",
+  "company": "Titan メール (Hostinger/HostGator/Name.com 等のリセラー経由)",
+  "note": "研究例 titan_email"
+ },
+ {
+  "domain": "titan.email",
+  "expected_platform": "titan",
+  "company": "Titan メール (Hostinger/HostGator/Name.com 等のリセラー経由)",
+  "note": "研究例 titan_email"
+ },
+ {
+  "domain": "dreamhost.com",
+  "expected_platform": "dreamhost",
+  "company": "DreamHost メール",
+  "note": "研究例 dreamhost"
+ },
+ {
+  "domain": "mjtsai.com",
+  "expected_platform": "dreamhost",
+  "company": "DreamHost メール",
+  "note": "研究例 dreamhost"
+ },
+ {
+  "domain": "siteground.com",
+  "expected_platform": "siteground",
+  "company": "SiteGround メール (mailspamprotection.com)",
+  "note": "研究例 siteground"
+ },
+ {
+  "domain": "1icbadev.com",
+  "expected_platform": "siteground",
+  "company": "SiteGround メール (mailspamprotection.com)",
+  "note": "研究例 siteground"
+ },
+ {
+  "domain": "101leadership.com",
+  "expected_platform": "siteground",
+  "company": "SiteGround メール (mailspamprotection.com)",
+  "note": "研究例 siteground"
+ },
+ {
+  "domain": "1-1architecture.com",
+  "expected_platform": "siteground",
+  "company": "SiteGround メール (mailspamprotection.com)",
+  "note": "研究例 siteground"
+ },
+ {
+  "domain": "ovhcloud.com",
+  "expected_platform": "ovh",
+  "company": "OVHcloud メール (MX Plan / Email Pro / Hosted Exchange / Zimbra)",
+  "note": "研究例 ovh"
+ },
+ {
+  "domain": "360businessmedia.com",
+  "expected_platform": "ovh",
+  "company": "OVHcloud メール (MX Plan / Email Pro / Hosted Exchange / Zimbra)",
+  "note": "研究例 ovh"
+ },
+ {
+  "domain": "1001tables.fr",
+  "expected_platform": "ovh",
+  "company": "OVHcloud メール (MX Plan / Email Pro / Hosted Exchange / Zimbra)",
+  "note": "研究例 ovh"
+ },
+ {
+  "domain": "2s-informatique.fr",
+  "expected_platform": "ovh",
+  "company": "OVHcloud メール (MX Plan / Email Pro / Hosted Exchange / Zimbra)",
+  "note": "研究例 ovh"
+ },
+ {
+  "domain": "lafibre.info",
+  "expected_platform": "ovh",
+  "company": "OVHcloud メール (MX Plan / Email Pro / Hosted Exchange / Zimbra)",
+  "note": "研究例 ovh"
+ },
+ {
+  "domain": "1001galons.fr",
+  "expected_platform": "ovh",
+  "company": "OVHcloud メール (MX Plan / Email Pro / Hosted Exchange / Zimbra)",
+  "note": "研究例 ovh"
+ },
+ {
+  "domain": "ovh.com",
+  "expected_platform": "ovh",
+  "company": "OVHcloud メール (MX Plan / Email Pro / Hosted Exchange / Zimbra)",
+  "note": "研究例 ovh"
+ },
+ {
+  "domain": "100-euro-wohnung.com",
+  "expected_platform": "hetzner",
+  "company": "Hetzner (konsoleH Webホスティングメール / Hetzner上の自前サーバー)",
+  "note": "研究例 hetzner"
+ },
+ {
+  "domain": "gingerhero.fr",
+  "expected_platform": "hetzner",
+  "company": "Hetzner (konsoleH Webホスティングメール / Hetzner上の自前サーバー)",
+  "note": "研究例 hetzner"
+ },
+ {
+  "domain": "honeypot.at",
+  "expected_platform": "hetzner",
+  "company": "Hetzner (konsoleH Webホスティングメール / Hetzner上の自前サーバー)",
+  "note": "研究例 hetzner"
+ },
+ {
+  "domain": "doemerring.de",
+  "expected_platform": "hetzner",
+  "company": "Hetzner (konsoleH Webホスティングメール / Hetzner上の自前サーバー)",
+  "note": "研究例 hetzner"
+ },
+ {
+  "domain": "hetzner.com",
+  "expected_platform": "hetzner",
+  "company": "Hetzner (konsoleH Webホスティングメール / Hetzner上の自前サーバー)",
+  "note": "研究例 hetzner"
+ },
+ {
+  "domain": "0-range.com",
+  "expected_platform": "yandex",
+  "company": "Yandex 360 for Business (Яндекс)",
+  "note": "研究例 yandex_360"
+ },
+ {
+  "domain": "1-nomer.ru",
+  "expected_platform": "yandex",
+  "company": "Yandex 360 for Business (Яндекс)",
+  "note": "研究例 yandex_360"
+ },
+ {
+  "domain": "03afyon.com",
+  "expected_platform": "yandex",
+  "company": "Yandex 360 for Business (Яндекс)",
+  "note": "研究例 yandex_360"
+ },
+ {
+  "domain": "kinopoisk.ru",
+  "expected_platform": "yandex",
+  "company": "Yandex 360 for Business (Яндекс)",
+  "note": "研究例 yandex_360"
+ },
+ {
+  "domain": "yandex.ru",
+  "expected_platform": "yandex",
+  "company": "Yandex 360 for Business (Яндекс)",
+  "note": "研究例 yandex_360"
+ },
+ {
+  "domain": "wechat.com",
+  "expected_platform": "tencent_exmail",
+  "company": "Tencent 企業メール (腾讯企业邮箱 / Exmail)",
+  "note": "研究例 tencent_exmail"
+ },
+ {
+  "domain": "zhihu.com",
+  "expected_platform": "tencent_exmail",
+  "company": "Tencent 企業メール (腾讯企业邮箱 / Exmail)",
+  "note": "研究例 tencent_exmail"
+ },
+ {
+  "domain": "tencentmusic.com",
+  "expected_platform": "tencent_exmail",
+  "company": "Tencent 企業メール (腾讯企业邮箱 / Exmail)",
+  "note": "研究例 tencent_exmail"
+ },
+ {
+  "domain": "tencent.com",
+  "expected_platform": "tencent_exmail",
+  "company": "Tencent 企業メール (腾讯企业邮箱 / Exmail)",
+  "note": "研究例 tencent_exmail"
+ },
+ {
+  "domain": "alipay.com",
+  "expected_platform": "alibaba_mail",
+  "company": "Alibaba Mail (阿里企業メール / 旧 HiChina 万網)",
+  "note": "研究例 alibaba_mail"
+ },
+ {
+  "domain": "antgroup.com",
+  "expected_platform": "alibaba_mail",
+  "company": "Alibaba Mail (阿里企業メール / 旧 HiChina 万網)",
+  "note": "研究例 alibaba_mail"
+ },
+ {
+  "domain": "alibabagroup.com",
+  "expected_platform": "alibaba_mail",
+  "company": "Alibaba Mail (阿里企業メール / 旧 HiChina 万網)",
+  "note": "研究例 alibaba_mail"
+ },
+ {
+  "domain": "taobao.com",
+  "expected_platform": "alibaba_mail",
+  "company": "Alibaba Mail (阿里企業メール / 旧 HiChina 万網)",
+  "note": "研究例 alibaba_mail"
+ },
+ {
+  "domain": "alibaba.com",
+  "expected_platform": "alibaba_mail",
+  "company": "Alibaba Mail (阿里企業メール / 旧 HiChina 万網)",
+  "note": "研究例 alibaba_mail"
+ },
+ {
+  "domain": "aliyun.com",
+  "expected_platform": "alibaba_mail",
+  "company": "Alibaba Mail (阿里企業メール / 旧 HiChina 万網)",
+  "note": "研究例 alibaba_mail"
+ },
+ {
+  "domain": "100plus.jp",
+  "expected_platform": "line_works",
+  "company": "LINE WORKS (旧 NAVER WORKS / ワークスモバイル)",
+  "note": "研究例 line_works"
+ },
+ {
+  "domain": "5hashi-med.jp",
+  "expected_platform": "line_works",
+  "company": "LINE WORKS (旧 NAVER WORKS / ワークスモバイル)",
+  "note": "研究例 line_works"
+ },
+ {
+  "domain": "5ola.jp",
+  "expected_platform": "line_works",
+  "company": "LINE WORKS (旧 NAVER WORKS / ワークスモバイル)",
+  "note": "研究例 line_works"
+ },
+ {
+  "domain": "aplin.jp",
+  "expected_platform": "line_works",
+  "company": "LINE WORKS (旧 NAVER WORKS / ワークスモバイル)",
+  "note": "研究例 line_works"
+ },
+ {
+  "domain": "abq.co.jp",
+  "expected_platform": "line_works",
+  "company": "LINE WORKS (旧 NAVER WORKS / ワークスモバイル)",
+  "note": "研究例 line_works"
+ },
+ {
+  "domain": "alamode8.jp",
+  "expected_platform": "line_works",
+  "company": "LINE WORKS (旧 NAVER WORKS / ワークスモバイル)",
+  "note": "研究例 line_works"
+ },
+ {
+  "domain": "000gan.com",
+  "expected_platform": "line_works",
+  "company": "LINE WORKS (旧 NAVER WORKS / ワークスモバイル)",
+  "note": "研究例 line_works"
+ },
+ {
+  "domain": "045da.com",
+  "expected_platform": "line_works",
+  "company": "LINE WORKS (旧 NAVER WORKS / ワークスモバイル)",
+  "note": "研究例 line_works"
+ },
+ {
+  "domain": "navercorp.com",
+  "expected_platform": "line_works",
+  "company": "LINE WORKS (旧 NAVER WORKS / ワークスモバイル)",
+  "note": "研究例 line_works"
+ },
+ {
+  "domain": "worksmobile.com",
+  "expected_platform": "line_works",
+  "company": "LINE WORKS (旧 NAVER WORKS / ワークスモバイル)",
+  "note": "研究例 line_works"
+ },
+ {
+  "domain": "abakuka.ru",
+  "expected_platform": "icloud",
+  "company": "iCloud メール カスタムドメイン (iCloud+)",
+  "note": "研究例 icloud_custom_domain"
+ },
+ {
+  "domain": "1cdata.ru",
+  "expected_platform": "icloud",
+  "company": "iCloud メール カスタムドメイン (iCloud+)",
+  "note": "研究例 icloud_custom_domain"
+ },
+ {
+  "domain": "0xceed.ru",
+  "expected_platform": "icloud",
+  "company": "iCloud メール カスタムドメイン (iCloud+)",
+  "note": "研究例 icloud_custom_domain"
+ },
+ {
+  "domain": "me.com",
+  "expected_platform": "icloud",
+  "company": "iCloud メール カスタムドメイン (iCloud+)",
+  "note": "研究例 icloud_custom_domain"
+ },
+ {
+  "domain": "marco.org",
+  "expected_platform": "fastmail",
+  "company": "Fastmail",
+  "note": "研究例 fastmail"
+ },
+ {
+  "domain": "atp.fm",
+  "expected_platform": "fastmail",
+  "company": "Fastmail",
+  "note": "研究例 fastmail"
+ },
+ {
+  "domain": "manton.org",
+  "expected_platform": "fastmail",
+  "company": "Fastmail",
+  "note": "研究例 fastmail"
+ },
+ {
+  "domain": "micro.blog",
+  "expected_platform": "fastmail",
+  "company": "Fastmail",
+  "note": "研究例 fastmail"
+ },
+ {
+  "domain": "fastmail.com",
+  "expected_platform": "fastmail",
+  "company": "Fastmail",
+  "note": "研究例 fastmail"
+ },
+ {
+  "domain": "standardnotes.com",
+  "expected_platform": "proton",
+  "company": "Proton Mail (Proton for Business)",
+  "note": "研究例 proton_mail"
+ },
+ {
+  "domain": "proton.me",
+  "expected_platform": "proton",
+  "company": "Proton Mail (Proton for Business)",
+  "note": "研究例 proton_mail"
+ },
+ {
+  "domain": "protonmail.com",
+  "expected_platform": "proton",
+  "company": "Proton Mail (Proton for Business)",
+  "note": "研究例 proton_mail"
+ },
+ {
+  "domain": "pm.me",
+  "expected_platform": "proton",
+  "company": "Proton Mail (Proton for Business)",
+  "note": "研究例 proton_mail"
+ },
+ {
+  "domain": "yahoo.com",
+  "expected_platform": "yahoo",
+  "company": "Yahoo Mail / AOL (米国 Yahoo)",
+  "note": "研究例 yahoo_mail"
+ },
+ {
+  "domain": "ymail.com",
+  "expected_platform": "yahoo",
+  "company": "Yahoo Mail / AOL (米国 Yahoo)",
+  "note": "研究例 yahoo_mail"
+ },
+ {
+  "domain": "aol.com",
+  "expected_platform": "yahoo",
+  "company": "Yahoo Mail / AOL (米国 Yahoo)",
+  "note": "研究例 yahoo_mail"
+ },
+ {
+  "domain": "verizon.net",
+  "expected_platform": "yahoo",
+  "company": "Yahoo Mail / AOL (米国 Yahoo)",
+  "note": "研究例 yahoo_mail"
+ },
+ {
+  "domain": "yahoo.co.jp",
+  "expected_platform": "yahoo_japan",
+  "company": "Yahoo!メール (Yahoo! JAPAN / Yahoo! BB / Y!mobile)",
+  "note": "研究例 yahoo_japan_mail"
+ },
+ {
+  "domain": "ybb.ne.jp",
+  "expected_platform": "yahoo_japan",
+  "company": "Yahoo!メール (Yahoo! JAPAN / Yahoo! BB / Y!mobile)",
+  "note": "研究例 yahoo_japan_mail"
+ },
+ {
+  "domain": "yahoo.ne.jp",
+  "expected_platform": "yahoo_japan",
+  "company": "Yahoo!メール (Yahoo! JAPAN / Yahoo! BB / Y!mobile)",
+  "note": "研究例 yahoo_japan_mail"
+ },
+ {
+  "domain": "outlook.com",
+  "expected_platform": "outlook_consumer",
+  "company": "Outlook.com / Hotmail (個人向け Microsoft)",
+  "note": "研究例 outlook_com_consumer"
+ },
+ {
+  "domain": "hotmail.com",
+  "expected_platform": "outlook_consumer",
+  "company": "Outlook.com / Hotmail (個人向け Microsoft)",
+  "note": "研究例 outlook_com_consumer"
+ },
+ {
+  "domain": "hotmail.co.jp",
+  "expected_platform": "outlook_consumer",
+  "company": "Outlook.com / Hotmail (個人向け Microsoft)",
+  "note": "研究例 outlook_com_consumer"
+ },
+ {
+  "domain": "outlook.jp",
+  "expected_platform": "outlook_consumer",
+  "company": "Outlook.com / Hotmail (個人向け Microsoft)",
+  "note": "研究例 outlook_com_consumer"
+ },
+ {
+  "domain": "live.jp",
+  "expected_platform": "outlook_consumer",
+  "company": "Outlook.com / Hotmail (個人向け Microsoft)",
+  "note": "研究例 outlook_com_consumer"
+ },
+ {
+  "domain": "msn.com",
+  "expected_platform": "outlook_consumer",
+  "company": "Outlook.com / Hotmail (個人向け Microsoft)",
+  "note": "研究例 outlook_com_consumer"
+ },
+ {
+  "domain": "gmail.com",
+  "expected_platform": "gmail_consumer",
+  "company": "Gmail (個人向け @gmail.com)",
+  "note": "研究例 gmail_consumer"
+ },
+ {
+  "domain": "googlemail.com",
+  "expected_platform": "gmail_consumer",
+  "company": "Gmail (個人向け @gmail.com)",
+  "note": "研究例 gmail_consumer"
+ },
+ {
+  "domain": "pegandpickle.com",
+  "expected_platform": "squarespace",
+  "company": "Squarespace (ドメインのメール転送 / Google Workspace リセラー)",
+  "note": "研究例 squarespace"
+ },
+ {
+  "domain": "fanbaro.com",
+  "expected_platform": "squarespace",
+  "company": "Squarespace (ドメインのメール転送 / Google Workspace リセラー)",
+  "note": "研究例 squarespace"
+ },
+ {
+  "domain": "authorbenjaminclark.com",
+  "expected_platform": "squarespace",
+  "company": "Squarespace (ドメインのメール転送 / Google Workspace リセラー)",
+  "note": "研究例 squarespace"
+ },
+ {
+  "domain": "marthahoffmancoaching.com",
+  "expected_platform": "squarespace",
+  "company": "Squarespace (ドメインのメール転送 / Google Workspace リセラー)",
+  "note": "研究例 squarespace"
+ },
+ {
+  "domain": "000.studio",
+  "expected_platform": "squarespace",
+  "company": "Squarespace (ドメインのメール転送 / Google Workspace リセラー)",
+  "note": "研究例 squarespace"
+ },
+ {
+  "domain": "001.earth",
+  "expected_platform": "squarespace",
+  "company": "Squarespace (ドメインのメール転送 / Google Workspace リセラー)",
+  "note": "研究例 squarespace"
+ }
+]

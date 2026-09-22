@@ -1,0 +1,2318 @@
+[
+ {
+  "domain": "ana.co.jp",
+  "company": "全日本空輸株式会社 (ANA)",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/ana/",
+  "observed_mx": [
+   "10 aspmx.l.google.com.",
+   "20 alt1.aspmx.l.google.com."
+  ],
+  "note": "Only two MX records (non-standard Google set)."
+ },
+ {
+  "domain": "jal.com",
+  "company": "日本航空株式会社 (JAL)",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/jal/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "10 alt1.aspmx.l.google.com.",
+   "10 alt2.aspmx.l.google.com.",
+   "20 alt3.aspmx.l.google.com.",
+   "20 alt4.aspmx.l.google.com."
+  ],
+  "note": "SPF also includes _spf.activegate-ss.jp (Active!gate SS outbound filter) — outbound only, MX is Google."
+ },
+ {
+  "domain": "family.co.jp",
+  "company": "株式会社ファミリーマート",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/familymart/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "freee.co.jp",
+  "company": "freee株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/freee/",
+  "observed_mx": [
+   "10 aspmx.l.google.com.",
+   "20 alt1.aspmx.l.google.com.",
+   "20 alt2.aspmx.l.google.com.",
+   "30 aspmx2.googlemail.com.",
+   "30 aspmx3.googlemail.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "fujitec.co.jp",
+  "company": "フジテック株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/fujitec/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "funaisoken.co.jp",
+  "company": "株式会社船井総研ホールディングス",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/funaisoken/",
+  "observed_mx": [
+   "1 smtp.google.com."
+  ],
+  "note": "Newer single-record MX form (smtp.google.com). SPF does NOT reference _spf.google.com directly (flattened via powerspf.com + Zoho) — classifier must rely on MX."
+ },
+ {
+  "domain": "gnavi.co.jp",
+  "company": "株式会社ぐるなび",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/gurunavi/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "ito-ya.co.jp",
+  "company": "株式会社伊東屋",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/ito-ya/",
+  "observed_mx": [
+   "10 aspmx.l.google.com.",
+   "20 alt1.aspmx.l.google.com.",
+   "20 alt2.aspmx.l.google.com.",
+   "30 aspmx2.googlemail.com.",
+   "30 aspmx3.googlemail.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "kewpie.co.jp",
+  "company": "キユーピー株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/kewpie/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com.",
+   "150 aspmx2.googlemail.com.",
+   "150 aspmx3.googlemail.com."
+  ],
+  "note": "7 MX records (5 standard + 2 googlemail backups at priority 150)."
+ },
+ {
+  "domain": "lancers.co.jp",
+  "company": "ランサーズ株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/lancers/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 aspmx2.googlemail.com.",
+   "10 aspmx3.googlemail.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "lixil.com",
+  "company": "株式会社LIXIL",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/lixil/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": "SPF lists spf.protection.outlook.com BEFORE _spf.google.com (hybrid group) — MX is the decider. Legacy lixil.co.jp also has Google MX but its SPF has no Google include (only outlook/messagelabs)."
+ },
+ {
+  "domain": "minebeamitsumi.com",
+  "company": "ミネベアミツミ株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/minebeamitsumi/",
+  "observed_mx": [
+   "10 smtp.google.com."
+  ],
+  "note": "Single smtp.google.com MX; very long multi-string SPF (good parser test)."
+ },
+ {
+  "domain": "mitsui-soko.co.jp",
+  "company": "三井倉庫株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/mitsui-soko/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "mitsuihome.co.jp",
+  "company": "三井ホーム株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/mitsuihome/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": "SPF uses _netblocks.google.com/_netblocks2/_netblocks3 instead of _spf.google.com — SPF matcher should accept these too."
+ },
+ {
+  "domain": "monex.co.jp",
+  "company": "マネックス証券株式会社 (マネックスグループ)",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/monex-group/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": "Evidence page is for holding company マネックスグループ; monexgroup.jp has no MX (SPF only), so the operating-company domain is used."
+ },
+ {
+  "domain": "mori.co.jp",
+  "company": "森ビル株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/mori-building/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "oisixradaichi.co.jp",
+  "company": "オイシックス・ラ・大地株式会社 (旧オイシックス)",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/oisix/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 aspmx2.googlemail.com.",
+   "10 aspmx3.googlemail.com."
+  ],
+  "note": "SPF includes kagoya.net (web/outbound host) — must not be misclassified as KAGOYA mail. Legacy consumer domain oisix.com has self-hosted MX (mail01.oisix.com, mx.idc.jp)."
+ },
+ {
+  "domain": "flypeach.com",
+  "company": "Peach Aviation株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/peach/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "shimamura.co.jp",
+  "company": "島村楽器株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/shimamuragakki/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 aspmx2.googlemail.com.",
+   "10 aspmx3.googlemail.com."
+  ],
+  "note": "SPF flattened via bmspf.jp — no direct _spf.google.com; MX is the decider."
+ },
+ {
+  "domain": "solasto.co.jp",
+  "company": "株式会社ソラスト",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/solasto/",
+  "observed_mx": [
+   "0 smtp.google.com."
+  ],
+  "note": "Single smtp.google.com MX at priority 0; SPF also includes outlook (hybrid)."
+ },
+ {
+  "domain": "tabio.com",
+  "company": "タビオ株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/tabio/",
+  "observed_mx": [
+   "5 aspmx.l.google.com.",
+   "15 alt1.aspmx.l.google.com.",
+   "15 alt2.aspmx.l.google.com.",
+   "25 aspmx2.googlemail.com.",
+   "25 aspmx3.googlemail.com.",
+   "50 7544859033090d52a1be915fe96b1ec34f4dfd58.msv1.invalid."
+  ],
+  "note": "Contains a stray Microsoft domain-verification MX (*.msv1.invalid) at low priority — classifier should ignore it."
+ },
+ {
+  "domain": "imperialhotel.co.jp",
+  "company": "株式会社帝国ホテル",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/teikoku-hotel/",
+  "observed_mx": [
+   "10 ASPMX.L.GOOGLE.COM.",
+   "20 ALT1.ASPMX.L.GOOGLE.COM.",
+   "20 ALT2.ASPMX.L.GOOGLE.COM.",
+   "30 ALT3.ASPMX.L.GOOGLE.COM.",
+   "30 ALT4.ASPMX.L.GOOGLE.COM."
+  ],
+  "note": "MX hostnames returned in UPPERCASE — matching must be case-insensitive."
+ },
+ {
+  "domain": "toda.co.jp",
+  "company": "戸田建設株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/toda-corporation/",
+  "observed_mx": [
+   "10 aspmx.l.google.com.",
+   "20 alt1.aspmx.l.google.com.",
+   "20 alt2.aspmx.l.google.com.",
+   "30 alt3.aspmx.l.google.com.",
+   "30 alt4.aspmx.l.google.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "tohogas.co.jp",
+  "company": "東邦ガス株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/toho-gas/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": "SPF flattened via powerspf.com — no direct Google include."
+ },
+ {
+  "domain": "tokyu-hands.co.jp",
+  "company": "株式会社東急ハンズ (現 株式会社ハンズ)",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/tokyu-hands/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com.",
+   "10 mx1.mail-filter.nifty.com.",
+   "10 ns01.tokyu-hands.co.jp.",
+   "100 tm-mail.tokyu-hands.co.jp."
+  ],
+  "note": "Mixed MX: Google at top priority plus legacy @nifty mail-filter and self-hosted hosts at equal/lower priority. Classifier should pick the lowest-priority-number host (Google)."
+ },
+ {
+  "domain": "hands.net",
+  "company": "株式会社ハンズ (旧 東急ハンズ)",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/tokyu-hands/",
+  "observed_mx": [
+   "10 aspmx.l.google.com.",
+   "20 alt1.aspmx.l.google.com.",
+   "20 alt2.aspmx.l.google.com.",
+   "30 aspmx2.googlemail.com.",
+   "30 aspmx3.googlemail.com.",
+   "30 aspmx4.googlemail.com.",
+   "30 aspmx5.googlemail.com.",
+   "30 mx1.mail-filter.nifty.com."
+  ],
+  "note": "Current corporate domain after rebrand; Google primary with a nifty mail-filter backup MX."
+ },
+ {
+  "domain": "tv-tokyo.co.jp",
+  "company": "株式会社テレビ東京ホールディングス",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/tv-tokyo/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "ykkap.co.jp",
+  "company": "YKK AP株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/ykk/",
+  "observed_mx": [
+   "1 ASPMX.L.GOOGLE.COM.",
+   "5 ALT1.ASPMX.L.GOOGLE.COM.",
+   "5 ALT2.ASPMX.L.GOOGLE.COM.",
+   "10 ALT3.ASPMX.L.GOOGLE.COM.",
+   "10 ALT4.ASPMX.L.GOOGLE.COM."
+  ],
+  "note": "Uppercase MX. Parent company domain ykk.com is Microsoft 365 (ykk-com.mail.protection.outlook.com) — sibling domains differ."
+ },
+ {
+  "domain": "yohobrewing.com",
+  "company": "株式会社ヤッホーブルーイング",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/yohobrewing/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "y-yokohama.com",
+  "company": "横浜ゴム株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/yokohama/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "dip-net.co.jp",
+  "company": "ディップ株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/dip-corporation/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": "No direct _spf.google.com at top level (likely nested in spf1.dip-net.co.jp)."
+ },
+ {
+  "domain": "biglobe.co.jp",
+  "company": "ビッグローブ株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/biglobe/",
+  "observed_mx": [
+   "10 ASPMX.L.GOOGLE.COM.",
+   "50 ALT1.ASPMX.L.GOOGLE.COM.",
+   "50 ALT2.ASPMX.L.GOOGLE.COM.",
+   "100 ALT3.ASPMX.L.GOOGLE.COM.",
+   "100 ALT4.ASPMX.L.GOOGLE.COM."
+  ],
+  "note": "Uppercase MX with non-standard priorities 10/50/50/100/100."
+ },
+ {
+  "domain": "akindo-sushiro.co.jp",
+  "company": "株式会社あきんどスシロー",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/akindo-sushiro/",
+  "observed_mx": [
+   "10 aspmx.l.google.com.",
+   "20 alt1.aspmx.l.google.com.",
+   "30 alt2.aspmx.l.google.com.",
+   "40 aspmx2.googlemail.com.",
+   "50 aspmx3.googlemail.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "beams.co.jp",
+  "company": "株式会社ビームス",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/beams/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "e-guardian.co.jp",
+  "company": "イー・ガーディアン株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/e-guardian/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": "SPF flattened via powerspf.com."
+ },
+ {
+  "domain": "ssu.co.jp",
+  "company": "株式会社サニーサイドアップ",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/sunny-sideup/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 aspmx2.googlemail.com.",
+   "10 aspmx3.googlemail.com.",
+   "10 aspmx4.googlemail.com.",
+   "10 aspmx5.googlemail.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "right-on.co.jp",
+  "company": "株式会社ライトオン",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/right-on/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 aspmx2.googlemail.com.",
+   "10 aspmx3.googlemail.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "apcompany.jp",
+  "company": "株式会社エー・ピーカンパニー (現 エー・ピーホールディングス)",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/ap-company/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 aspmx2.googlemail.com.",
+   "10 aspmx3.googlemail.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "tbs.co.jp",
+  "company": "株式会社TBSテレビ",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://www.street-smart.co.jp/case-studies/850/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": "SPF also includes spfcm.cybermail.jp (CyberMail) as an outbound sender — MX is Google, so do not classify as CyberMail."
+ },
+ {
+  "domain": "hanamaruki.co.jp",
+  "company": "ハナマルキ株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://www.street-smart.co.jp/case-studies/805/",
+  "observed_mx": [
+   "10 aspmx.l.google.com.",
+   "20 alt1.aspmx.l.google.com.",
+   "20 alt2.aspmx.l.google.com.",
+   "30 alt3.aspmx.l.google.com.",
+   "30 alt4.aspmx.l.google.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "cerezo.jp",
+  "company": "一般社団法人セレッソ大阪スポーツクラブ",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/cerezo-osaka-sportsclub/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": "Google MX but SPF has no Google include at all — MX must be the decider."
+ },
+ {
+  "domain": "mother-house.jp",
+  "company": "株式会社マザーハウス",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/motherhouse/",
+  "observed_mx": [
+   "10 aspmx.l.google.com.",
+   "20 alt1.aspmx.l.google.com.",
+   "20 alt2.aspmx.l.google.com."
+  ],
+  "note": "Only 3 of the 5 standard Google MX records."
+ },
+ {
+  "domain": "yoshimoto.co.jp",
+  "company": "株式会社よしもとアドミニストレーション (吉本興業グループ)",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/yoshimoto-administration/",
+  "observed_mx": [
+   "10 aspmx.l.google.com.",
+   "20 alt1.aspmx.l.google.com.",
+   "20 alt2.aspmx.l.google.com.",
+   "30 aspmx2.googlemail.com.",
+   "30 aspmx3.googlemail.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "wwwave.jp",
+  "company": "株式会社ウェイブ",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/wwwave/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com.",
+   "25 inbound-smtp.us-west-2.amazonaws.com."
+  ],
+  "note": "Backup MX is Amazon SES inbound — should be ignored in favor of Google primary."
+ },
+ {
+  "domain": "saisonfactory.co.jp",
+  "company": "株式会社セゾンファクトリー",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/saisonfactory/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": "SPF references a sakura.ne.jp web host — must NOT be misclassified as さくらのレンタルサーバ mail."
+ },
+ {
+  "domain": "sk-japan.co.jp",
+  "company": "株式会社エスケイジャパン",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/sk-japan/",
+  "observed_mx": [
+   "10 aspmx.l.google.com.",
+   "20 alt1.aspmx.l.google.com.",
+   "20 alt2.aspmx.l.google.com.",
+   "30 aspmx2.googlemail.com.",
+   "30 aspmx3.googlemail.com.",
+   "30 aspmx4.googlemail.com.",
+   "30 aspmx5.googlemail.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "smarteducation.jp",
+  "company": "株式会社スマートエデュケーション",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/smarteducation/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "chuoh.co.jp",
+  "company": "中央出版株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/chuoh-publishing/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 aspmx2.googlemail.com.",
+   "10 aspmx3.googlemail.com.",
+   "20 mail.tmhd.net."
+  ],
+  "note": "Low-priority self-hosted backup MX (mail.tmhd.net)."
+ },
+ {
+  "domain": "gooday.co.jp",
+  "company": "株式会社グッデイ",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/gooday/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "town.kimotsuki.lg.jp",
+  "company": "鹿児島県肝付町",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/kimotsukicho/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": "Local government (.lg.jp) on Google Workspace."
+ },
+ {
+  "domain": "katsura.com",
+  "company": "京都桂病院 (社会福祉法人 京都社会事業財団)",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/kyoto-katsura-hospital/",
+  "observed_mx": [
+   "1 smtp.google.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "hotstaff.co.jp",
+  "company": "株式会社ホットスタッフ",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/hotstaff/",
+  "observed_mx": [
+   "10 SMTP.GOOGLE.COM."
+  ],
+  "note": "Uppercase single smtp.google.com MX; SPF lists outlook before google (hybrid)."
+ },
+ {
+  "domain": "hurxley.co.jp",
+  "company": "株式会社ハークスレイ",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/hurxley/",
+  "observed_mx": [
+   "0 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "junwakai.com",
+  "company": "潤和リハビリテーション振興財団 (潤和会)",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/junwakai/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": "SPF references sakura.ne.jp web host — not さくら mail."
+ },
+ {
+  "domain": "home.misawa.co.jp",
+  "company": "ミサワホーム株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/misawa-homes/",
+  "observed_mx": [
+   "1 ASPMX.L.GOOGLE.COM.",
+   "5 ALT1.ASPMX.L.GOOGLE.COM.",
+   "5 ALT2.ASPMX.L.GOOGLE.COM.",
+   "10 ALT3.ASPMX.L.GOOGLE.COM.",
+   "10 ALT4.ASPMX.L.GOOGLE.COM."
+  ],
+  "note": "Mail domain is a SUBDOMAIN. Apex misawa.co.jp has no MX and TXT 'v=spf1 -all'. Good test for 'no MX at apex — try known mail subdomain' handling."
+ },
+ {
+  "domain": "global-dining.com",
+  "company": "株式会社グローバルダイニング",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/globaldining/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": "Look-alike globaldining.com (no hyphen) has Null MX '0 .' and 'v=spf1 -all' — test for Null MX handling."
+ },
+ {
+  "domain": "ps.nippon-foundation.or.jp",
+  "company": "日本財団",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/nippon-foundation/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": "Mail on subdomain; apex nippon-foundation.or.jp returns no MX and no SPF."
+ },
+ {
+  "domain": "znouyaku.or.jp",
+  "company": "全国農薬協同組合",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/znouyaku/",
+  "observed_mx": [
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "note": ""
+ },
+ {
+  "domain": "fujifilm.com",
+  "company": "富士フイルムホールディングス株式会社",
+  "expected_platform": "google_workspace_behind_gateway",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/fujifilm/",
+  "observed_mx": [
+   "10 mxa-00922502.gslb.pphosted.com.",
+   "10 mxb-00922502.gslb.pphosted.com."
+  ],
+  "note": "Gateway = Proofpoint (pphosted.com). SPF includes both Google and Outlook (group hybrid). fujifilm.co.jp uses the same Proofpoint MX but its SPF has no Google include."
+ },
+ {
+  "domain": "hoshinoresorts.com",
+  "company": "星野リゾート",
+  "expected_platform": "google_workspace_behind_gateway",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/hoshinoresorts/",
+  "observed_mx": [
+   "10 mxa-009f5901.gslb.pphosted.com.",
+   "10 mxb-009f5901.gslb.pphosted.com."
+  ],
+  "note": "Gateway = Proofpoint. SPF also has a:ms212.kagoya.net (web server) — must not be classified as KAGOYA mail."
+ },
+ {
+  "domain": "tokyo-shoseki.co.jp",
+  "company": "東京書籍株式会社",
+  "expected_platform": "google_workspace_behind_gateway",
+  "evidence_url": "https://www.street-smart.co.jp/case-studies/824/",
+  "observed_mx": [
+   "10 mxa-00729401.gslb.pphosted.com.",
+   "10 mxb-00729401.gslb.pphosted.com."
+  ],
+  "note": "Gateway = Proofpoint."
+ },
+ {
+  "domain": "juroku.co.jp",
+  "company": "株式会社十六銀行 (十六フィナンシャルグループ)",
+  "expected_platform": "google_workspace_behind_gateway",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/16fg/",
+  "observed_mx": [
+   "10 mx.securemx.jp."
+  ],
+  "note": "Gateway = IIJ SecureMX (mx.securemx.jp). Evidence page is for holding company 十六FG; 16fg.co.jp has no MX, so bank operating domain used."
+ },
+ {
+  "domain": "city.sapporo.jp",
+  "company": "札幌市",
+  "expected_platform": "google_workspace_behind_gateway",
+  "evidence_url": "https://workspace.google.com/intl/ja/customers/city-sapporo/",
+  "observed_mx": [
+   "10 relay.city.sapporo.jp."
+  ],
+  "note": "Gateway is a self-operated relay (relay.city.sapporo.jp), not a commercial brand — expected classification: on-prem relay/gateway in front of Google Workspace (SPF shows _spf.google.com)."
+ },
+ {
+  "domain": "keio.jp",
+  "company": "慶應義塾 (慶應義塾大学)",
+  "expected_platform": "google_workspace_behind_gateway",
+  "evidence_url": "https://www.itc.keio.ac.jp/ja/keiojp_keiomail.html",
+  "observed_mx": [
+   "10 mailgate3-1.keio.jp.",
+   "10 mailgate3-2.keio.jp."
+  ],
+  "note": "Google Workspace for Education (慶應メール = Gmail) behind university-operated mail gateways (mailgate3-*.keio.jp)."
+ },
+ {
+  "domain": "hosei.ac.jp",
+  "company": "法政大学",
+  "expected_platform": "google_workspace_behind_gateway",
+  "evidence_url": "https://netsys.hosei.ac.jp/manual/gsuite/G-Suite.html",
+  "observed_mx": [
+   "10 mailgw.hosei.ac.jp."
+  ],
+  "note": "Google Workspace for Education (全学ネットワークシステム Gmail) behind university-operated gateway mailgw.hosei.ac.jp."
+ },
+ {
+  "domain": "nttdata.com",
+  "company": "株式会社NTTデータグループ",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://www.proofpoint.com/jp/customer-stories/nttdatagroup",
+  "observed_mx": [
+   "5 mxa-004dc302.gslb.pphosted.com.",
+   "5 mxb-004dc302.gslb.pphosted.com."
+  ],
+  "note": "Vendor case study (Proofpoint Email Protection). SPF is a Proofpoint-hosted macro (powerspf.com) only, so the backend is not visible (no Google/Microsoft include). dig observed 2026-09-22."
+ },
+ {
+  "domain": "nttdata.co.jp",
+  "company": "株式会社NTTデータ",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://www.proofpoint.com/jp/customer-stories/nttdatagroup",
+  "observed_mx": [
+   "10 mxa-004b5d03.gslb.pphosted.com.",
+   "10 mxb-004b5d03.gslb.pphosted.com."
+  ],
+  "note": "Same case study as nttdata.com. SPF has only NTT DATA's own includes plus Proofpoint; no Google/Microsoft include, so backend looks on-prem/private. dig observed 2026-09-22."
+ },
+ {
+  "domain": "chibakogyo-bank.co.jp",
+  "company": "株式会社千葉興業銀行",
+  "expected_platform": "m_filter",
+  "evidence_url": "https://www.daj.jp/bs/case/case107/",
+  "observed_mx": [
+   "10 mail.system.digitalartscloud.com."
+  ],
+  "note": "Digital Arts case study: m-FILTER@Cloud (+f-FILTER). MX hostname pattern for m-FILTER@Cloud = *.digitalartscloud.com. SPF has only the Digital Arts include, backend not visible (case study says migrated from on-prem m-FILTER). dig observed 2026-09-22."
+ },
+ {
+  "domain": "takebishi.co.jp",
+  "company": "株式会社たけびし",
+  "expected_platform": "iij_secure_mx",
+  "evidence_url": "https://www.iij.ad.jp/svcsol/case/takebishi.html",
+  "observed_mx": [
+   "10 mx.securemx.jp."
+  ],
+  "note": "IIJ case study (IIJセキュアMXサービス, article May 2014). IIJ Secure MX MX pattern = mx.securemx.jp / mx6.securemx.jp. SPF includes spf.protection.outlook.com -> Microsoft 365 backend. dig observed 2026-09-22."
+ },
+ {
+  "domain": "hokkokubank.co.jp",
+  "company": "株式会社北國銀行",
+  "expected_platform": "iij_secure_mx",
+  "evidence_url": "https://www.iij.ad.jp/svcsol/case/hokkokubank.html",
+  "observed_mx": [
+   "10 mx.securemx.jp.",
+   "20 mx6.securemx.jp."
+  ],
+  "note": "IIJ case study (interview Jan 2021, production Oct 2020) states the backend is Microsoft 365. SPF itself is IP-list based with no Google/Microsoft include, so the backend is not visible from SPF alone. dig observed 2026-09-22."
+ },
+ {
+  "domain": "oakis.co.jp",
+  "company": "株式会社オーク情報システム（大林組グループ）",
+  "expected_platform": "iij_secure_mx",
+  "evidence_url": "https://www.iij.ad.jp/svcsol/case/oakis.html",
+  "observed_mx": [
+   "10 mx.securemx.jp."
+  ],
+  "note": "IIJ case study (interview May 2026; adoption 2018) says IIJ Secure MX filters in front of Microsoft 365 for ~23,000 Obayashi Group users. SPF includes spf.protection.outlook.com -> Microsoft 365. dig observed 2026-09-22."
+ },
+ {
+  "domain": "softbrain.co.jp",
+  "company": "ソフトブレーン株式会社",
+  "expected_platform": "hennge",
+  "evidence_url": "https://hennge.com/jp/service/one/case/softbrain/",
+  "observed_mx": [
+   "5 aspmx.l.google.com.",
+   "7 alt1.aspmx.l.google.com.",
+   "7 alt2.aspmx.l.google.com.",
+   "9 alt3.aspmx.l.google.com.",
+   "9 alt4.aspmx.l.google.com.",
+   "10 mi-1a.softbrain.hdemail.jp.",
+   "10 mi-1b.softbrain.hdemail.jp."
+  ],
+  "note": "CAUTION / ambiguous: HENNGE case study (archive + misdelivery prevention on Google Workspace). Primary MX (pref 5-9) is Google; HENNGE hosts (*.hdemail.jp) are only lower-priority MX. SPF includes _spf.google.com -> Google Workspace backend; spf.mta.hdems.com is HENNGE outbound. Only HENNGE inbound-MX example found. dig observed 2026-09-22."
+ },
+ {
+  "domain": "rintatsu.co.jp",
+  "company": "株式会社林龍",
+  "expected_platform": "securemail_plus",
+  "evidence_url": "https://securemail-plus.com/",
+  "observed_mx": [
+   "10 mx.ktk-sol.co.jp."
+  ],
+  "note": "Medium confidence: 林龍 is shown in the 導入実績 logo list on securemail-plus.com; MX points at mx.ktk-sol.co.jp (ケイティケイソリューションズ, the @Securemail Plus support/operator partner: kssc.ktk-sol.co.jp/faq/plus/), not a securemail-plus.com hostname. SPF includes _spf.google.com -> Google Workspace backend. dig observed 2026-09-22."
+ },
+ {
+  "domain": "rsi.co.jp",
+  "company": "三菱ケミカル株式会社（旧 菱化システム）",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3arsi.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mxa-0048ac03.gslb.pphosted.com.",
+   "10 mxb-0048ac03.gslb.pphosted.com."
+  ],
+  "note": "DNS-only label. IIJ case study https://www.iij.ad.jp/svcsol/case/rsi.html says they adopted IIJ Secure MX, but current MX is Proofpoint (pphosted) -> migrated; good example that case studies go stale. SPF includes spf.protection.outlook.com -> Microsoft 365. dig observed 2026-09-22."
+ },
+ {
+  "domain": "city.shibuya.tokyo.jp",
+  "company": "渋谷区",
+  "expected_platform": "iij_secure_mx",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3acity.shibuya.tokyo.jp&run=toolpage",
+  "observed_mx": [
+   "10 mx.securemx.jp."
+  ],
+  "note": "DNS-only label for inbound. HENNGE case study https://hennge.com/jp/service/one/case/shibuya-city/ covers HENNGE One (outbound/secure download), but inbound MX is IIJ Secure MX. No SPF TXT at apex, backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "jpx.co.jp",
+  "company": "株式会社日本取引所グループ",
+  "expected_platform": "iij_secure_mx",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3ajpx.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mx.securemx.jp."
+  ],
+  "note": "DNS-only label. HENNGE case (JPX総研, https://hennge.com/jp/service/one/case/jpx/) is outbound-side; inbound MX is IIJ Secure MX. SPF includes spf.protection.outlook.com -> Microsoft 365; spf.mta.hdems.com = HENNGE outbound. dig observed 2026-09-22."
+ },
+ {
+  "domain": "i-pex.com",
+  "company": "I-PEX株式会社",
+  "expected_platform": "iij_secure_mx",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3ai-pex.com&run=toolpage",
+  "observed_mx": [
+   "3600 mx.securemx.jp."
+  ],
+  "note": "DNS-only label (HENNGE case study exists: https://hennge.com/jp/service/one/case/i-pex/). Unusual MX preference 3600. SPF has no Google/Microsoft include -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "keio.co.jp",
+  "company": "京王電鉄株式会社",
+  "expected_platform": "trend_micro_email_security",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3akeio.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 keio.in.tmems-jp.trendmicro.com."
+  ],
+  "note": "DNS-only label. MX pattern <tenant>.in.tmems-jp.trendmicro.com = Trend Micro Email Security (JP region). HENNGE case study also exists (https://hennge.com/jp/service/one/case/keio/). SPF includes spf.protection.outlook.com -> Microsoft 365. dig observed 2026-09-22."
+ },
+ {
+  "domain": "shizuokagas.co.jp",
+  "company": "静岡ガス株式会社",
+  "expected_platform": "symantec_email_security_cloud",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3ashizuokagas.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 cluster5.us.messagelabs.com.",
+   "20 cluster5a.us.messagelabs.com."
+  ],
+  "note": "DNS-only label (HENNGE case study exists: https://hennge.com/jp/service/one/case/shizuokagas/). SPF includes spf.protection.outlook.com -> Microsoft 365; spf.mta.hdems.com = HENNGE outbound. dig observed 2026-09-22."
+ },
+ {
+  "domain": "nipponham.co.jp",
+  "company": "日本ハム株式会社",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3anipponham.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mxa-00316101.gslb.pphosted.com.",
+   "10 mxb-00316101.gslb.pphosted.com."
+  ],
+  "note": "DNS-only label (HENNGE Email DLP case study: https://hennge.com/jp/service/one/case/nipponham/). SPF includes spf.protection.outlook.com -> Microsoft 365. dig observed 2026-09-22."
+ },
+ {
+  "domain": "tsuzuki.co.jp",
+  "company": "都築電気株式会社",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3atsuzuki.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mxa-00258b01.gslb.pphosted.com.",
+   "10 mxb-00258b01.gslb.pphosted.com."
+  ],
+  "note": "DNS-only label (HENNGE case study: https://hennge.com/jp/service/one/case/tsuzuki/). SPF includes spf.protection.outlook.com -> Microsoft 365. dig observed 2026-09-22."
+ },
+ {
+  "domain": "sony.com",
+  "company": "ソニーグループ株式会社",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3asony.com&run=toolpage",
+  "observed_mx": [
+   "10 mxa-001d1709.gslb.pphosted.com.",
+   "10 mxb-001d1709.gslb.pphosted.com."
+  ],
+  "note": "DNS-only label. SPF includes spf.protection.outlook.com -> Microsoft 365. Very long multi-string SPF (truncated here). dig observed 2026-09-22."
+ },
+ {
+  "domain": "nomura.com",
+  "company": "野村ホールディングス株式会社",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3anomura.com&run=toolpage",
+  "observed_mx": [
+   "10 mxa-00006802.gslb.pphosted.com.",
+   "10 mxb-00006802.gslb.pphosted.com.",
+   "20 mx0a-00006802.pphosted.com.",
+   "20 mx0b-00006802.pphosted.com."
+  ],
+  "note": "DNS-only label. Note the two Proofpoint MX naming styles (gslb.pphosted.com and mx0a/mx0b-*.pphosted.com). SPF delegates to spf.nomura.com only -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "honda.co.jp",
+  "company": "本田技研工業株式会社",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3ahonda.co.jp&run=toolpage",
+  "observed_mx": [
+   "0 mxa-006e0602.gslb.pphosted.com.",
+   "0 mxb-006e0602.gslb.pphosted.com."
+  ],
+  "note": "DNS-only label. SPF includes spf.protection.outlook.com -> Microsoft 365; also includes spf.tmems-jp.trendmicro.com (Trend Micro used for outbound/other) - mixed-vendor example. dig observed 2026-09-22."
+ },
+ {
+  "domain": "ricoh.co.jp",
+  "company": "株式会社リコー",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3aricoh.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mxa-00245801.gslb.pphosted.com.",
+   "20 mxb-00245801.gslb.pphosted.com."
+  ],
+  "note": "DNS-only label. SPF has own IPs/include only -> backend not visible (likely on-prem/private). dig observed 2026-09-22."
+ },
+ {
+  "domain": "murata.com",
+  "company": "株式会社村田製作所",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3amurata.com&run=toolpage",
+  "observed_mx": [
+   "10 mxa-00567001.gslb.pphosted.com.",
+   "10 mxb-00567001.gslb.pphosted.com."
+  ],
+  "note": "DNS-only label. SPF is Proofpoint-hosted (powerspf.com) macro only -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "takeda.com",
+  "company": "武田薬品工業株式会社",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3atakeda.com&run=toolpage",
+  "observed_mx": [
+   "10 mxa-00297f01.gslb.pphosted.com.",
+   "10 mxb-00297f01.gslb.pphosted.com."
+  ],
+  "note": "DNS-only label. SPF includes spf.protection.outlook.com -> Microsoft 365. dig observed 2026-09-22."
+ },
+ {
+  "domain": "astellas.com",
+  "company": "アステラス製薬株式会社",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3aastellas.com&run=toolpage",
+  "observed_mx": [
+   "10 mxa-006dbe02.gslb.pphosted.com.",
+   "10 mxb-006dbe02.gslb.pphosted.com."
+  ],
+  "note": "DNS-only label. SPF is Proofpoint Hosted SPF macro (spf.has.pphosted.com) -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "nissay.co.jp",
+  "company": "日本生命保険相互会社",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3anissay.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mxa-0027e101.gslb.pphosted.com.",
+   "10 mxb-0027e101.gslb.pphosted.com."
+  ],
+  "note": "DNS-only label. SPF has own includes only -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "zozo.com",
+  "company": "株式会社ZOZO",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3azozo.com&run=toolpage",
+  "observed_mx": [
+   "10 mxa-0083b901.gslb.pphosted.com.",
+   "10 mxb-0083b901.gslb.pphosted.com."
+  ],
+  "note": "DNS-only label. SPF includes both spf.protection.outlook.com and _spf.google.com (mixed M365/Google) plus _spf.activegate-ss.jp (Qualitia Active!gate SS used outbound-only). dig observed 2026-09-22."
+ },
+ {
+  "domain": "khi.co.jp",
+  "company": "川崎重工業株式会社",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3akhi.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mxa-008a2102.gslb.pphosted.com.",
+   "10 mxb-008a2102.gslb.pphosted.com."
+  ],
+  "note": "DNS-only label. SPF own includes only -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "nitto.com",
+  "company": "日東電工株式会社",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3anitto.com&run=toolpage",
+  "observed_mx": [
+   "5 mxa-002a4d01.gslb.pphosted.com.",
+   "5 mxb-002a4d01.gslb.pphosted.com."
+  ],
+  "note": "DNS-only label. SPF includes spf.protection.outlook.com -> Microsoft 365 (plus powerspf.com Proofpoint macro). dig observed 2026-09-22."
+ },
+ {
+  "domain": "nintendo.co.jp",
+  "company": "任天堂株式会社",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3anintendo.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mxa-0039de01.gslb.pphosted.com.",
+   "10 mxb-0039de01.gslb.pphosted.com."
+  ],
+  "note": "DNS-only label. Proofpoint Hosted SPF macro only -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "suntory.co.jp",
+  "company": "サントリーホールディングス株式会社",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3asuntory.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mxa-00261501.gslb.pphosted.com.",
+   "10 mxb-00261501.gslb.pphosted.com."
+  ],
+  "note": "DNS-only label. SPF includes spf.protection.outlook.com -> Microsoft 365. dig observed 2026-09-22."
+ },
+ {
+  "domain": "meiji.com",
+  "company": "株式会社明治",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3ameiji.com&run=toolpage",
+  "observed_mx": [
+   "10 mxa-00532c02.gslb.pphosted.com.",
+   "10 mxb-00532c02.gslb.pphosted.com."
+  ],
+  "note": "DNS-only label. SPF includes spf.protection.outlook.com -> Microsoft 365. dig observed 2026-09-22."
+ },
+ {
+  "domain": "terumo.co.jp",
+  "company": "テルモ株式会社",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3aterumo.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mxa-002d7101.gslb.pphosted.com.",
+   "10 mxb-002d7101.gslb.pphosted.com."
+  ],
+  "note": "DNS-only label. No Google/Microsoft include (Proofpoint hosted SPF + marketing senders) -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "sega.co.jp",
+  "company": "株式会社セガ",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3asega.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mxa-00574101.gslb.pphosted.com.",
+   "10 mxb-00574101.gslb.pphosted.com."
+  ],
+  "note": "DNS-only label. SPF includes _spf.google.com -> Google Workspace backend behind Proofpoint (useful Google-behind-gateway sample). dig observed 2026-09-22."
+ },
+ {
+  "domain": "lion.co.jp",
+  "company": "ライオン株式会社",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3alion.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mxa-00198d01.gslb.pphosted.com.",
+   "10 mxb-00198d01.gslb.pphosted.com."
+  ],
+  "note": "DNS-only label. No Google/Microsoft include -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "ihi.co.jp",
+  "company": "株式会社IHI",
+  "expected_platform": "proofpoint",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3aihi.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mxa-002efe01.gslb.pphosted.com.",
+   "10 mxb-002efe01.gslb.pphosted.com."
+  ],
+  "note": "DNS-only label. No SPF TXT returned at apex -> backend not visible (edge case: gateway without apex SPF). dig observed 2026-09-22."
+ },
+ {
+  "domain": "trendmicro.co.jp",
+  "company": "トレンドマイクロ株式会社",
+  "expected_platform": "trend_micro_email_security",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3atrendmicro.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mad666.in.tmes.trendmicro.com."
+  ],
+  "note": "Vendor's own domain (dogfooding). Shows the global TMES MX pattern <tenant>.in.tmes.trendmicro.com (vs tmems-jp for JP region). SPF own includes only -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "kddi.com",
+  "company": "KDDI株式会社",
+  "expected_platform": "trend_micro_email_security",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3akddi.com&run=toolpage",
+  "observed_mx": [
+   "10 post-gate-kddi.in.tmems-jp.trendmicro.com."
+  ],
+  "note": "DNS-only label. SPF own includes only -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "canon.co.jp",
+  "company": "キヤノン株式会社",
+  "expected_platform": "trend_micro_email_security",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3acanon.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 canongroup.in.tmems-jp.trendmicro.com."
+  ],
+  "note": "DNS-only label. Notably Canon (parent of Canon ITS / GUARDIANWALL) uses Trend Micro for inbound. SPF own include only -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "kobelco.co.jp",
+  "company": "株式会社神戸製鋼所",
+  "expected_platform": "trend_micro_email_security",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3akobelco.co.jp&run=toolpage",
+  "observed_mx": [
+   "0 kobelco.in.tmems-jp.trendmicro.com."
+  ],
+  "note": "DNS-only label. SPF is own IPs + Trend Micro include -> backend not visible (likely on-prem). dig observed 2026-09-22."
+ },
+ {
+  "domain": "hankyu-hanshin.co.jp",
+  "company": "阪急阪神ホールディングス株式会社",
+  "expected_platform": "trend_micro_email_security",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3ahankyu-hanshin.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 hhgm24.in.tmems-jp.trendmicro.com."
+  ],
+  "note": "DNS-only label. SPF includes spf.protection.outlook.com -> Microsoft 365; also includes a Proofpoint spf-*.pphosted.com (mixed-vendor). dig observed 2026-09-22."
+ },
+ {
+  "domain": "jrkyushu.co.jp",
+  "company": "九州旅客鉄道株式会社（JR九州）",
+  "expected_platform": "trend_micro_email_security",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3ajrkyushu.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 jqs3-ex.in.tmems-jp.trendmicro.com."
+  ],
+  "note": "DNS-only label. SPF includes spf.protection.outlook.com -> Microsoft 365. dig observed 2026-09-22."
+ },
+ {
+  "domain": "tobu.co.jp",
+  "company": "東武鉄道株式会社",
+  "expected_platform": "trend_micro_email_security",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3atobu.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 tobu.in.tmems-jp.trendmicro.com."
+  ],
+  "note": "DNS-only label. No Google/Microsoft include -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "zensho.co.jp",
+  "company": "株式会社ゼンショーホールディングス",
+  "expected_platform": "trend_micro_email_security",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3azensho.co.jp&run=toolpage",
+  "observed_mx": [
+   "0 zhd.in.tmems-jp.trendmicro.com."
+  ],
+  "note": "DNS-only label. SPF includes spf.protection.outlook.com -> Microsoft 365; spf.mta.hdems.com = HENNGE outbound. dig observed 2026-09-22."
+ },
+ {
+  "domain": "izumi.co.jp",
+  "company": "株式会社イズミ",
+  "expected_platform": "trend_micro_email_security",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3aizumi.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 izumi.in.tmems-jp.trendmicro.com."
+  ],
+  "note": "DNS-only label. No SPF TXT at apex -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "kirin.co.jp",
+  "company": "キリンホールディングス株式会社",
+  "expected_platform": "symantec_email_security_cloud",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3akirin.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 cluster1.us.messagelabs.com.",
+   "20 cluster1a.us.messagelabs.com."
+  ],
+  "note": "DNS-only label. SPF is a redirect= to spf25.jp (hosted SPF) -> backend not visible without following the redirect. dig observed 2026-09-22."
+ },
+ {
+  "domain": "suzuki.co.jp",
+  "company": "スズキ株式会社",
+  "expected_platform": "symantec_email_security_cloud",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3asuzuki.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 cluster1.us.messagelabs.com.",
+   "20 cluster1a.us.messagelabs.com."
+  ],
+  "note": "DNS-only label (HENNGE case study exists: https://hennge.com/jp/service/one/case/suzuki/, outbound). SPF is a Valimail macro -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "asahigroup-holdings.com",
+  "company": "アサヒグループホールディングス株式会社",
+  "expected_platform": "symantec_email_security_cloud",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3aasahigroup-holdings.com&run=toolpage",
+  "observed_mx": [
+   "10 cluster1.us.messagelabs.com.",
+   "20 cluster1a.us.messagelabs.com."
+  ],
+  "note": "DNS-only label. SPF includes spf.protection.outlook.com -> Microsoft 365; spf.mta.hdems.com = HENNGE outbound. dig observed 2026-09-22."
+ },
+ {
+  "domain": "nec.com",
+  "company": "日本電気株式会社（NEC）",
+  "expected_platform": "cisco_secure_email",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3anec.com&run=toolpage",
+  "observed_mx": [
+   "0 mx1.hc221-79.ap.iphmx.com.",
+   "0 mx2.hc221-79.ap.iphmx.com."
+  ],
+  "note": "DNS-only label. Cisco Secure Email cloud MX pattern mx1/mx2.hcNNN-NN.ap.iphmx.com. SPF includes spf.protection.outlook.com -> Microsoft 365. dig observed 2026-09-22."
+ },
+ {
+  "domain": "jp.nec.com",
+  "company": "日本電気株式会社（NEC）",
+  "expected_platform": "cisco_secure_email",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3ajp.nec.com&run=toolpage",
+  "observed_mx": [
+   "0 mx1.hc221-79.ap.iphmx.com.",
+   "0 mx2.hc221-79.ap.iphmx.com."
+  ],
+  "note": "DNS-only label (subdomain sample sharing the same Cisco cluster as nec.com). SPF own include only -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "hitachi.co.jp",
+  "company": "株式会社日立製作所",
+  "expected_platform": "cisco_secure_email",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3ahitachi.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mx1.hc514-86.ap.iphmx.com.",
+   "20 mx2.hc514-86.ap.iphmx.com."
+  ],
+  "note": "DNS-only label. SPF includes spf.messagelabs.com (Symantec still used for outbound) plus the iphmx exists macro; no Google/Microsoft include -> backend not visible. Mixed-vendor sample. dig observed 2026-09-22."
+ },
+ {
+  "domain": "hitachi-hightech.com",
+  "company": "株式会社日立ハイテク",
+  "expected_platform": "cisco_secure_email",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3ahitachi-hightech.com&run=toolpage",
+  "observed_mx": [
+   "10 mx1.hc514-86.ap.iphmx.com.",
+   "20 mx2.hc514-86.ap.iphmx.com."
+  ],
+  "note": "DNS-only label (shares Hitachi group Cisco cluster hc514-86). No Google/Microsoft include -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "daiwa.co.jp",
+  "company": "大和証券グループ本社",
+  "expected_platform": "cisco_secure_email",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3adaiwa.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mx1.hc368-38.ap.iphmx.com.",
+   "10 mx2.hc368-38.ap.iphmx.com."
+  ],
+  "note": "DNS-only label. Own includes only -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "jreast.co.jp",
+  "company": "東日本旅客鉄道株式会社（JR東日本）",
+  "expected_platform": "cisco_secure_email",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3ajreast.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mx1.hc662-93.ap.iphmx.com.",
+   "10 mx2.hc662-93.ap.iphmx.com."
+  ],
+  "note": "DNS-only label. SPF includes spf.protection.outlook.com -> Microsoft 365. dig observed 2026-09-22."
+ },
+ {
+  "domain": "mhi.com",
+  "company": "三菱重工業株式会社",
+  "expected_platform": "cisco_secure_email",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3amhi.com&run=toolpage",
+  "observed_mx": [
+   "10 mx1.hc1076-52.ap.iphmx.com.",
+   "20 mx2.hc1076-52.ap.iphmx.com."
+  ],
+  "note": "DNS-only label. SPF includes spf.protection.outlook.com -> Microsoft 365. dig observed 2026-09-22."
+ },
+ {
+  "domain": "subaru.co.jp",
+  "company": "株式会社SUBARU",
+  "expected_platform": "cisco_secure_email",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3asubaru.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mx1.hc973-7.ap.iphmx.com.",
+   "10 mx2.hc973-7.ap.iphmx.com."
+  ],
+  "note": "DNS-only label. No Google/Microsoft include -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "jfe-holdings.co.jp",
+  "company": "JFEホールディングス株式会社",
+  "expected_platform": "cisco_secure_email",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3ajfe-holdings.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mx1.hc948-41.ap.iphmx.com.",
+   "20 mx2.hc948-41.ap.iphmx.com."
+  ],
+  "note": "DNS-only label. No Google/Microsoft include -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "asahi-kasei.com",
+  "company": "旭化成株式会社",
+  "expected_platform": "cisco_secure_email",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3aasahi-kasei.com&run=toolpage",
+  "observed_mx": [
+   "1 mx1.hc1333-60.eu.iphmx.com.",
+   "2 mx2.hc1333-60.eu.iphmx.com."
+  ],
+  "note": "DNS-only label. Note EU cluster (eu.iphmx.com) rather than ap. -> matcher must accept any region. SPF includes spf.protection.outlook.com -> Microsoft 365. dig observed 2026-09-22."
+ },
+ {
+  "domain": "sbigroup.co.jp",
+  "company": "SBIホールディングス株式会社",
+  "expected_platform": "iij_secure_mx",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3asbigroup.co.jp&run=toolpage",
+  "observed_mx": [
+   "5 mx.securemx.jp."
+  ],
+  "note": "DNS-only label. Tricky sample: inbound MX is IIJ Secure MX but SPF is Proofpoint Hosted SPF (outbound via Proofpoint) -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "epson.jp",
+  "company": "セイコーエプソン株式会社",
+  "expected_platform": "iij_secure_mx",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3aepson.jp&run=toolpage",
+  "observed_mx": [
+   "10 mx.securemx.jp."
+  ],
+  "note": "DNS-only label. SPF includes spf.protection.outlook.com -> Microsoft 365. dig observed 2026-09-22."
+ },
+ {
+  "domain": "seiko.co.jp",
+  "company": "セイコーグループ株式会社",
+  "expected_platform": "iij_secure_mx",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3aseiko.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mx.securemx.jp.",
+   "100 seiko-co-jp.mail.protection.outlook.com."
+  ],
+  "note": "DNS-only label. Useful sample: primary MX is IIJ Secure MX with a pref-100 Exchange Online fallback MX exposed -> Microsoft 365 backend visible in both MX and SPF. dig observed 2026-09-22."
+ },
+ {
+  "domain": "ngk.co.jp",
+  "company": "日本ガイシ株式会社",
+  "expected_platform": "iij_secure_mx",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3angk.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mx.securemx.jp."
+  ],
+  "note": "DNS-only label. SPF includes a Proofpoint powerspf.com macro (outbound via Proofpoint) while inbound is IIJ -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "morinaga.co.jp",
+  "company": "森永製菓株式会社",
+  "expected_platform": "iij_secure_mx",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3amorinaga.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mx.securemx.jp."
+  ],
+  "note": "DNS-only label. No Google/Microsoft include -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "calbee.co.jp",
+  "company": "カルビー株式会社",
+  "expected_platform": "iij_secure_mx",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3acalbee.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mx.securemx.jp."
+  ],
+  "note": "DNS-only label. No Google/Microsoft include -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "sumitomo-pharma.co.jp",
+  "company": "住友ファーマ株式会社",
+  "expected_platform": "iij_secure_mx",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3asumitomo-pharma.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mx.securemx.jp."
+  ],
+  "note": "DNS-only label. No Google/Microsoft include -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "smbc.co.jp",
+  "company": "株式会社三井住友銀行",
+  "expected_platform": "iij_secure_mx",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3asmbc.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mx.securemx.jp.",
+   "20 mx6.securemx.jp."
+  ],
+  "note": "DNS-only label. No Google/Microsoft include -> backend not visible (likely on-prem). dig observed 2026-09-22."
+ },
+ {
+  "domain": "jetro.go.jp",
+  "company": "日本貿易振興機構（JETRO）",
+  "expected_platform": "iij_secure_mx",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3ajetro.go.jp&run=toolpage",
+  "observed_mx": [
+   "10 mx.securemx.jp."
+  ],
+  "note": "DNS-only label (go.jp sample). SPF includes spf.protection.outlook.com -> Microsoft 365. dig observed 2026-09-22."
+ },
+ {
+  "domain": "keidanren.or.jp",
+  "company": "一般社団法人日本経済団体連合会",
+  "expected_platform": "iij_secure_mx",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3akeidanren.or.jp&run=toolpage",
+  "observed_mx": [
+   "10 mx.securemx.jp.",
+   "20 mx6.securemx.jp."
+  ],
+  "note": "DNS-only label (or.jp sample). No Google/Microsoft include -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "tis.co.jp",
+  "company": "TIS株式会社",
+  "expected_platform": "iij_secure_mx",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3atis.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mx.securemx.jp."
+  ],
+  "note": "DNS-only label. No Google/Microsoft include (Zoho include present) -> backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "pasona.co.jp",
+  "company": "株式会社パソナグループ",
+  "expected_platform": "iij_secure_mx",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3apasona.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mx.securemx.jp."
+  ],
+  "note": "DNS-only label. Inbound IIJ; SPF also includes spf.mail.system.digitalartscloud.com (m-FILTER@Cloud used outbound) -> mixed; no Google/Microsoft include, backend not visible. dig observed 2026-09-22."
+ },
+ {
+  "domain": "seibuholdings.co.jp",
+  "company": "株式会社西武ホールディングス",
+  "expected_platform": "iij_secure_mx",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3aseibuholdings.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mx.securemx.jp."
+  ],
+  "note": "DNS-only label. SPF includes spf.protection.outlook.com -> Microsoft 365. dig observed 2026-09-22."
+ },
+ {
+  "domain": "saizeriya.co.jp",
+  "company": "株式会社サイゼリヤ",
+  "expected_platform": "iij_secure_mx",
+  "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3asaizeriya.co.jp&run=toolpage",
+  "observed_mx": [
+   "10 mx.securemx.jp."
+  ],
+  "note": "DNS-only label. SPF includes spf.protection.outlook.com -> Microsoft 365. dig observed 2026-09-22."
+ },
+ {
+  "domain": "294.jp",
+  "company": "社会福祉法人つくし会",
+  "expected_platform": "line_works",
+  "evidence_url": "https://line-works.com/line-works/cases/294/",
+  "observed_mx": [
+   "10 jp1-aspmx1.worksmobile.com.",
+   "20 jp1-aspmx2.worksmobile.com."
+  ],
+  "note": "No SPF TXT published. Site title confirmed 社会福祉法人つくし会."
+ },
+ {
+  "domain": "amina-co.jp",
+  "company": "株式会社アミナコレクション",
+  "expected_platform": "line_works",
+  "evidence_url": "https://line-works.com/line-works/cases/amina-collection/",
+  "observed_mx": [
+   "10 jp1-aspmx1.worksmobile.com.",
+   "20 jp1-aspmx2.worksmobile.com."
+  ],
+  "note": "Site title confirmed."
+ },
+ {
+  "domain": "bestbuy.co.jp",
+  "company": "株式会社ベストバイ",
+  "expected_platform": "line_works",
+  "evidence_url": "https://line-works.com/line-works/cases/bestbuy/",
+  "observed_mx": [
+   "10 jp1-aspmx1.worksmobile.com.",
+   "20 jp1-aspmx2.worksmobile.com."
+  ],
+  "note": "Web still on sakura (SPF a:www1292.sakura.ne.jp) but MX moved to LINE WORKS — good test for 'SPF hoster != MX platform'."
+ },
+ {
+  "domain": "c-consul.co.jp",
+  "company": "株式会社キャリアコンサルティング",
+  "expected_platform": "line_works",
+  "evidence_url": "https://line-works.com/line-works/cases/c-consul/",
+  "observed_mx": [
+   "10 jp1-aspmx1.worksmobile.com.",
+   "20 jp1-aspmx2.worksmobile.com."
+  ],
+  "note": "Site title confirmed."
+ },
+ {
+  "domain": "fdms.co.jp",
+  "company": "FDM株式会社",
+  "expected_platform": "line_works",
+  "evidence_url": "https://line-works.com/line-works/cases/fdms/",
+  "observed_mx": [
+   "10 jp1-aspmx1.worksmobile.com.",
+   "20 jp1-aspmx2.worksmobile.com."
+  ],
+  "note": "Domain taken from the link on the case page; site is behind a Cloudflare challenge so title not verified. (fdms.jp is a different domain on Google.)"
+ },
+ {
+  "domain": "kansai-cc.com",
+  "company": "関西クリアセンター株式会社",
+  "expected_platform": "line_works",
+  "evidence_url": "https://line-works.com/line-works/cases/kansai-cc/",
+  "observed_mx": [
+   "10 jp1-aspmx1.worksmobile.com.",
+   "20 jp1-aspmx2.worksmobile.com."
+  ],
+  "note": "Site title confirmed. TXT also has a google-site-verification record."
+ },
+ {
+  "domain": "kishuburo.com",
+  "company": "有限会社紀洲風呂",
+  "expected_platform": "line_works",
+  "evidence_url": "https://line-works.com/line-works/cases/kishuburo/",
+  "observed_mx": [
+   "10 jp1-aspmx1.worksmobile.com.",
+   "20 jp1-aspmx2.worksmobile.com."
+  ],
+  "note": "Web on sakura, MX on LINE WORKS."
+ },
+ {
+  "domain": "kotani7.co.jp",
+  "company": "株式会社美伸",
+  "expected_platform": "line_works",
+  "evidence_url": "https://line-works.com/line-works/cases/bishin/",
+  "observed_mx": [
+   "10 jp1-aspmx1.worksmobile.com.",
+   "20 jp1-aspmx2.worksmobile.com."
+  ],
+  "note": "Site title '株式会社美伸 | トップページ' confirmed although domain name differs from company name."
+ },
+ {
+  "domain": "maplefarm.jp",
+  "company": "朝霧メイプルファーム有限会社",
+  "expected_platform": "line_works",
+  "evidence_url": "https://line-works.com/line-works/cases/asagiri-maple-farm/",
+  "observed_mx": [
+   "10 jp1-aspmx1.worksmobile.com.",
+   "20 jp1-aspmx2.worksmobile.com."
+  ],
+  "note": "No SPF TXT published. Site title confirmed."
+ },
+ {
+  "domain": "nai.organic",
+  "company": "中森農産株式会社",
+  "expected_platform": "line_works",
+  "evidence_url": "https://line-works.com/line-works/cases/nai-organic/",
+  "observed_mx": [
+   "10 jp1-aspmx1.worksmobile.com.",
+   "20 jp1-aspmx2.worksmobile.com."
+  ],
+  "note": "No SPF TXT. Domain taken from link on the case page; site returned no <title>. Non-.jp TLD (.organic) — useful edge case."
+ },
+ {
+  "domain": "nakai-eng.co.jp",
+  "company": "中井エンジニアリング株式会社",
+  "expected_platform": "line_works",
+  "evidence_url": "https://line-works.com/line-works/cases/nakai-engineering/",
+  "observed_mx": [
+   "10 jp1-aspmx1.worksmobile.com.",
+   "20 jp1-aspmx2.worksmobile.com."
+  ],
+  "note": "Site title confirmed."
+ },
+ {
+  "domain": "nakazawa-seimen.com",
+  "company": "有限会社中沢製麺",
+  "expected_platform": "line_works",
+  "evidence_url": "https://line-works.com/line-works/cases/nakazawa-seimen/",
+  "observed_mx": [
+   "10 jp1-aspmx1.worksmobile.com.",
+   "20 jp1-aspmx2.worksmobile.com.",
+   "50 mx01.lolipop.jp."
+  ],
+  "note": "Mixed MX: LINE WORKS primary, leftover ロリポップ MX at priority 50. No SPF TXT. Good test that the lowest-priority (primary) MX should decide."
+ },
+ {
+  "domain": "plazacreate.co.jp",
+  "company": "株式会社プラザクリエイト",
+  "expected_platform": "line_works",
+  "evidence_url": "https://line-works.com/line-works/cases/plazacreate/",
+  "observed_mx": [
+   "10 jp1-aspmx1.worksmobile.com.",
+   "20 jp1-aspmx2.worksmobile.com."
+  ],
+  "note": "Site title confirmed."
+ },
+ {
+  "domain": "realconstruction.co.jp",
+  "company": "リアル建設株式会社",
+  "expected_platform": "line_works",
+  "evidence_url": "https://line-works.com/line-works/cases/realconstruction/",
+  "observed_mx": [
+   "10 jp1-aspmx1.worksmobile.com.",
+   "20 jp1-aspmx2.worksmobile.com."
+  ],
+  "note": "Site now titled 'SSFホールディングス株式会社' (group of リアル建設); domain taken from the case page link."
+ },
+ {
+  "domain": "satsuki-hc.com",
+  "company": "医療法人賛永会 さつきホームクリニック",
+  "expected_platform": "line_works",
+  "evidence_url": "https://line-works.com/line-works/cases/satsuki-hc/",
+  "observed_mx": [
+   "10 jp1-aspmx1.worksmobile.com.",
+   "20 jp1-aspmx2.worksmobile.com."
+  ],
+  "note": "Site title confirmed."
+ },
+ {
+  "domain": "souzai-matsuoka.com",
+  "company": "株式会社まつおか",
+  "expected_platform": "line_works",
+  "evidence_url": "https://line-works.com/line-works/cases/souzai-matsuoka/",
+  "observed_mx": [
+   "10 jp1-aspmx1.worksmobile.com.",
+   "20 jp1-aspmx2.worksmobile.com."
+  ],
+  "note": "Site title confirmed."
+ },
+ {
+  "domain": "syisyu.com",
+  "company": "株式会社SyiSyu",
+  "expected_platform": "line_works",
+  "evidence_url": "https://line-works.com/line-works/cases/syisyu/",
+  "observed_mx": [
+   "10 jp1-aspmx1.worksmobile.com.",
+   "20 jp1-aspmx2.worksmobile.com."
+  ],
+  "note": "No SPF TXT published. Site title confirmed."
+ },
+ {
+  "domain": "to-sho.net",
+  "company": "株式会社東祥",
+  "expected_platform": "line_works",
+  "evidence_url": "https://line-works.com/line-works/cases/to-sho/",
+  "observed_mx": [
+   "10 jp1-aspmx1.worksmobile.com.",
+   "20 jp1-aspmx2.worksmobile.com."
+  ],
+  "note": "No SPF TXT published. Site title confirmed."
+ },
+ {
+  "domain": "77bank.co.jp",
+  "company": "株式会社七十七銀行",
+  "expected_platform": "cybermail",
+  "evidence_url": "https://www.cybersolutions.co.jp/casestudy/77bank/",
+  "observed_mx": [
+   "10 mgk.cybermail.jp."
+  ],
+  "note": "CYBERMAIL Σ. PTR of 133.186.39.32 = mgk.cybermail.jp."
+ },
+ {
+  "domain": "uacj.co.jp",
+  "company": "株式会社UACJ",
+  "expected_platform": "cybermail",
+  "evidence_url": "https://www.cybersolutions.co.jp/casestudy/uacj/",
+  "observed_mx": [
+   "0 mg.cybermail.jp."
+  ],
+  "note": "CYBERMAIL Σ. PTR of 59.84.175.228 = mg.cybermail.jp."
+ },
+ {
+  "domain": "yokorei.co.jp",
+  "company": "横浜冷凍株式会社",
+  "expected_platform": "cybermail",
+  "evidence_url": "https://www.cybersolutions.co.jp/news/post/20230509/",
+  "observed_mx": [
+   "10 mgc.cybermail.jp."
+  ],
+  "note": "CYBERMAIL Σ. PTR of 27.121.5.160 = mgspc.cybermail.jp."
+ },
+ {
+  "domain": "aiphone.co.jp",
+  "company": "アイホン株式会社",
+  "expected_platform": "cybermail",
+  "evidence_url": "https://www.cybersolutions.co.jp/news/post/20190123/",
+  "observed_mx": [
+   "10 mgc.cybermail.jp."
+  ],
+  "note": "CYBERMAIL Σ. SPF also includes outlook.com (sending only) — MX is what identifies the platform."
+ },
+ {
+  "domain": "welllink.co.jp",
+  "company": "ウェルリンク株式会社",
+  "expected_platform": "cybermail",
+  "evidence_url": "https://www.cybersolutions.co.jp/news/post/20180417/",
+  "observed_mx": [
+   "0 mgc.cybermail.jp."
+  ],
+  "note": "CYBERMAIL Σ."
+ },
+ {
+  "domain": "jbcc.co.jp",
+  "company": "JBCC株式会社",
+  "expected_platform": "cybermail",
+  "evidence_url": "https://www.cybersolutions.co.jp/news/post/20170620/",
+  "observed_mx": [
+   "30 mgc.cybermail.jp."
+  ],
+  "note": "CYBERMAIL Σ. Single MX with unusual priority 30."
+ },
+ {
+  "domain": "kibun.co.jp",
+  "company": "株式会社紀文食品",
+  "expected_platform": "cybermail",
+  "evidence_url": "https://www.cybersolutions.co.jp/news/post/20161018/",
+  "observed_mx": [
+   "10 mgc.cybermail.jp."
+  ],
+  "note": "CYBERMAIL Σ."
+ },
+ {
+  "domain": "legs.co.jp",
+  "company": "株式会社レッグス",
+  "expected_platform": "cybermail",
+  "evidence_url": "https://www.cybersolutions.co.jp/news/post/レッグス社、クラウド型メールサービス「cybermail σ」/",
+  "observed_mx": [
+   "10 mgf.cybermail.jp."
+  ],
+  "note": "CYBERMAIL Σ. PTR of 27.121.5.163 = mgf.cybermail.jp."
+ },
+ {
+  "domain": "taisei-oncho.co.jp",
+  "company": "大成温調株式会社",
+  "expected_platform": "cybermail",
+  "evidence_url": "https://www.cybersolutions.co.jp/casestudy/taiseioncho/",
+  "observed_mx": [
+   "10 mgc.cybermail.jp."
+  ],
+  "note": "CYBERMAIL Σ."
+ },
+ {
+  "domain": "leopalace21.com",
+  "company": "株式会社レオパレス21",
+  "expected_platform": "cybermail",
+  "evidence_url": "https://www.cybersolutions.co.jp/product/securitysuite/case/leopalace21/",
+  "observed_mx": [
+   "10 mgp.cybermail.jp."
+  ],
+  "note": "Product is Cloud Mail SECURITYSUITE (CyberSolutions gateway in front of Microsoft 365, 7,000 accounts), not CYBERMAIL Σ mailboxes. MX still points at a CyberSolutions host (mgp.cybermail.jp), so an MX-based classifier should say CyberSolutions; SPF does NOT include spfcm.cybermail.jp. Edge case."
+ },
+ {
+  "domain": "takayama-koumuten.co.jp",
+  "company": "有限会社高山工務店",
+  "expected_platform": "xserver",
+  "evidence_url": "https://takayama-koumuten.co.jp/about-us/",
+  "observed_mx": [
+   "0 takayama-koumuten.co.jp."
+  ],
+  "note": "Platform inferred from DNS: MX = own domain -> 202.226.37.161, PTR sv135.xserver.jp; SPF include:spf.sender.xserver.jp. Typical Xserver pattern."
+ },
+ {
+  "domain": "apuro.com",
+  "company": "株式会社アプロ・ドットコム",
+  "expected_platform": "xserver",
+  "evidence_url": "https://line-works.com/line-works/cases/apuro/",
+  "observed_mx": [
+   "5 sv728.xbiz.ne.jp."
+  ],
+  "note": "XServerビジネス variant: MX host svNNN.xbiz.ne.jp (PTR sv728.xbiz.ne.jp, 162.43.105.109), SPF include:spf.sender.xserver.jp. LINE WORKS chat customer whose mail stays on Xserver."
+ },
+ {
+  "domain": "saeki-corp.co.jp",
+  "company": "株式会社佐伯工務店",
+  "expected_platform": "sakura",
+  "evidence_url": "https://www.saeki-corp.co.jp/company/overview",
+  "observed_mx": [
+   "10 saeki-corp.co.jp."
+  ],
+  "note": "Platform inferred from DNS: MX = own domain -> 219.94.129.145, PTR www1105.sakura.ne.jp; SPF a:wwwNNNN.sakura.ne.jp. Typical さくらのレンタルサーバ pattern."
+ },
+ {
+  "domain": "syudenko.co.jp",
+  "company": "有限会社秀電工",
+  "expected_platform": "sakura",
+  "evidence_url": "https://syudenko.co.jp/",
+  "observed_mx": [
+   "10 syudenko.co.jp."
+  ],
+  "note": "Platform inferred from DNS: MX = own domain -> 210.224.185.169, PTR www2529.sakura.ne.jp."
+ },
+ {
+  "domain": "sk-daiku.co.jp",
+  "company": "有限会社鈴木工匠",
+  "expected_platform": "lolipop",
+  "evidence_url": "https://www.sk-daiku.co.jp/otoiawase/",
+  "observed_mx": [
+   "10 mx01.lolipop.jp."
+  ],
+  "note": "Platform inferred from DNS: MX mx01.lolipop.jp (157.7.107.233, no PTR); SPF include:_spf.lolipop.jp."
+ },
+ {
+  "domain": "shinme-fukushi.com",
+  "company": "株式会社シンメー",
+  "expected_platform": "onamae",
+  "evidence_url": "https://line-works.com/line-works/cases/shinme-fukushi/",
+  "observed_mx": [
+   "10 mail20.onamae.ne.jp."
+  ],
+  "note": "Platform inferred from DNS: MX mailNN.onamae.ne.jp (PTR mail20.onamae.ne.jp, 150.95.219.208); SPF include:_spf.onamae.ne.jp = お名前.com レンタルサーバー. LINE WORKS chat customer (site title 株式会社シンメー confirmed)."
+ },
+ {
+  "domain": "fmoita.co.jp",
+  "company": "株式会社エフエム大分",
+  "expected_platform": "kagoya",
+  "evidence_url": "https://line-works.com/line-works/cases/fmoita/",
+  "observed_mx": [
+   "10 dmail.kagoya.net."
+  ],
+  "note": "Platform inferred from DNS: MX dmail.kagoya.net (PTR dmail01.kagoya.net, 210.134.51.6); SPF include:kagoya.net. LINE WORKS chat customer (site title エフエム大分 confirmed). Another KAGOYA pattern seen: galilei.co.jp -> mgw33.kagoya.net."
+ },
+ {
+  "domain": "yubun.co.jp",
+  "company": "株式会社遊文舎",
+  "expected_platform": "wadax",
+  "evidence_url": "https://www.yubun.co.jp/transmission/print-company-information-summary-of-osaka-prefecture.html",
+  "observed_mx": [
+   "10 sva106.wadax-sv.jp."
+  ],
+  "note": "Platform inferred from DNS: MX svaNNN.wadax-sv.jp (PTR sva106.wadax-sv.jp, 153.123.7.23); SPF include:_spf-sd.wadax-sv.jp. Same pattern seen on welfare-mie.jp (sva102.wadax-sv.jp)."
+ },
+ {
+  "domain": "keiden-ind.co.jp",
+  "company": "有限会社圭電工業",
+  "expected_platform": "alpha_mail",
+  "evidence_url": "https://line-works.com/line-works/cases/keiden-ind/",
+  "observed_mx": [
+   "100 mxi.alpha-prm.jp."
+  ],
+  "note": "Platform inferred from DNS: MX mxi.alpha-prm.jp (PTR mxi.alpha-prm.jp, 157.205.8.22) = 大塚商会 アルファメール プレミア; SPF include:spf.alpha-prm.jp. LINE WORKS chat customer (site title 圭電工業 confirmed). Same MX seen on ishimitsu.co.jp and yahagi.co.jp."
+ },
+ {
+  "domain": "fujiwara-jp.com",
+  "company": "株式会社フジワラテクノアート",
+  "expected_platform": "cpi",
+  "evidence_url": "https://line-works.com/line-works/cases/fujiwara-jp/",
+  "observed_mx": [
+   "10 vlmx-air.secure.ne.jp."
+  ],
+  "note": "Platform inferred from DNS: MX vlmx-air.secure.ne.jp (111.96.116.216, no PTR); SPF include:spf.secure.ne.jp. CPI (KDDIウェブコミュニケーションズ) FAQ describes its mail-security servers as vlmx**.secure.ne.jp and sets spf.secure.ne.jp by default (https://faq.cpi.ad.jp/faq/show/50). Same MX seen on kishikogyo.co.jp, kyodo-edit.co.jp, newlife.or.jp, senbatsutennis.com, shibuya-foods.co.jp, youcone.co.jp. LINE WORKS chat customer (site title confirmed)."
+ },
+ {
+  "domain": "mitsui.com",
+  "company": "三井物産株式会社",
+  "expected_platform": "microsoft_365",
+  "evidence_url": "https://news.microsoft.com/source/asia/2019/04/10/190410-digital-transformation-mitsui/?lang=ja",
+  "observed_mx": [
+   "mitsui-com.mail.protection.outlook.com"
+  ],
+  "note": "autodiscover CNAME -> autodiscover.outlook.com. Clean EOP case."
+ },
+ {
+  "domain": "itochu.co.jp",
+  "company": "伊藤忠商事株式会社",
+  "expected_platform": "microsoft_365_behind_gateway",
+  "evidence_url": "https://news.microsoft.com/source/asia/2014/08/26/2014-11/?lang=ja",
+  "observed_mx": [
+   "mgw.itochu.co.jp"
+  ],
+  "note": "autodiscover CNAME -> autodiscover.outlook.com. MX is an own-domain relay (mgw.itochu.co.jp) but SPF + autodiscover point to Microsoft. Hard case: own-domain MX must NOT be auto-labelled on-prem."
+ },
+ {
+  "domain": "yamaha.com",
+  "company": "ヤマハ株式会社",
+  "expected_platform": "microsoft_365",
+  "evidence_url": "https://news.microsoft.com/source/asia/2013/08/27/2013-5/?lang=ja",
+  "observed_mx": [
+   "yamaha-com.mail.protection.outlook.com"
+  ],
+  "note": "autodiscover CNAME -> autodiscover.outlook.com."
+ },
+ {
+  "domain": "yamaha-motor.co.jp",
+  "company": "ヤマハ発動機株式会社",
+  "expected_platform": "microsoft_365",
+  "evidence_url": "https://news.microsoft.com/source/asia/2013/11/07/2013-44/?lang=ja",
+  "observed_mx": [
+   "yamahamotor-co-jp01e.mail.protection.outlook.com"
+  ],
+  "note": "autodiscover CNAME -> autodiscover.outlook.com. MX label has '01e' suffix variant."
+ },
+ {
+  "domain": "obayashi.co.jp",
+  "company": "株式会社大林組",
+  "expected_platform": "microsoft_365_behind_gateway",
+  "evidence_url": "https://news.microsoft.com/ja-jp/2013/04/24/130424-oobayashi/",
+  "observed_mx": [
+   "mx.securemx.jp"
+  ],
+  "note": "MX = IIJ SecureMX gateway; SPF includes spf.protection.outlook.com; autodiscover CNAME -> autodiscover.outlook.com."
+ },
+ {
+  "domain": "rakuten.co.jp",
+  "company": "楽天グループ株式会社",
+  "expected_platform": "microsoft_365",
+  "evidence_url": "https://news.microsoft.com/ja-jp/2012/09/28/120928-rakuten/",
+  "observed_mx": [
+   "rakuten-co-jp.mail.protection.outlook.com"
+  ],
+  "note": "No autodiscover record; top-level SPF has no outlook include (own include subdomains). MX alone must decide."
+ },
+ {
+  "domain": "marubeni.com",
+  "company": "丸紅株式会社",
+  "expected_platform": "microsoft_365",
+  "evidence_url": "https://news.microsoft.com/source/asia/2012/06/20/120621-marubeni/?lang=ja",
+  "observed_mx": [
+   "marubeni-com.mail.protection.outlook.com"
+  ],
+  "note": "No autodiscover record. SPF is a very long multi-string TXT record — parser must concatenate strings."
+ },
+ {
+  "domain": "taito.co.jp",
+  "company": "株式会社タイトー",
+  "expected_platform": "microsoft_365_behind_gateway",
+  "evidence_url": "https://news.microsoft.com/source/asia/2012/06/11/120612-taito/?lang=ja",
+  "observed_mx": [
+   "mxa-0084ad01.gslb.pphosted.com",
+   "mxb-0084ad01.gslb.pphosted.com"
+  ],
+  "note": "MX = Proofpoint (pphosted.com); SPF has NO outlook include; autodiscover CNAME -> autodiscover.outlook.com is the only Microsoft signal."
+ },
+ {
+  "domain": "kaneka.co.jp",
+  "company": "株式会社カネカ",
+  "expected_platform": "microsoft_365",
+  "evidence_url": "https://news.microsoft.com/source/asia/2013/03/05/130306-cs-kaneka/?lang=ja",
+  "observed_mx": [
+   "kaneka-co-jp.mail.eo.outlook.com"
+  ],
+  "note": "MX uses the newer *.mail.eo.outlook.com suffix (not mail.protection.outlook.com) — detector must match both. SPF is a redirect to spf25.jp. autodiscover CNAME -> autodiscover.outlook.com."
+ },
+ {
+  "domain": "jsr.co.jp",
+  "company": "JSR株式会社",
+  "expected_platform": "microsoft_365",
+  "evidence_url": "https://www.nextset.co.jp/case/case11.html",
+  "observed_mx": [
+   "jsr-co-jp.mail.eo.outlook.com",
+   "jsr-co-jp.mail.protection.outlook.com"
+  ],
+  "note": "Both EOP MX suffix variants present (pref 10 mail.eo.outlook.com, pref 20 mail.protection.outlook.com). autodiscover CNAME -> autodiscover.outlook.com. Case study (Nextset) describes Microsoft 365 migration from Notes/Domino 2019-2020."
+ },
+ {
+  "domain": "aioinissaydowa.co.jp",
+  "company": "あいおいニッセイ同和損害保険株式会社",
+  "expected_platform": "microsoft_365_behind_gateway",
+  "evidence_url": "https://news.microsoft.com/source/asia/2017/03/22/170322-office365-aioinissaydowa/?lang=ja",
+  "observed_mx": [
+   "f-aikigw02.index.or.jp",
+   "f-aikigw01.index.or.jp"
+  ],
+  "note": "MX = MS&AD group gateway (index.or.jp); SPF has no outlook include; autodiscover CNAME -> autodiscover.outlook.com is the only Microsoft signal."
+ },
+ {
+  "domain": "jbs.co.jp",
+  "company": "日本ビジネスシステムズ株式会社 (JBS)",
+  "expected_platform": "microsoft_365",
+  "evidence_url": "https://news.microsoft.com/source/asia/2018/04/26/180426-jbs-workstyle-innovation/?lang=ja",
+  "observed_mx": [
+   "jbsbpos-apac-microsoftonline-com.mail.protection.outlook.com"
+  ],
+  "note": "Non-standard EOP MX label (jbsbpos-apac-microsoftonline-com.*) — match on the mail.protection.outlook.com suffix, not on '<domain>-co-jp'. autodiscover CNAME -> autodiscover.outlook.com."
+ },
+ {
+  "domain": "city.seiyo.ehime.jp",
+  "company": "愛媛県西予市",
+  "expected_platform": "microsoft_365",
+  "evidence_url": "https://www.jbs.co.jp/case/microsoftexchangeonline_cityseiyoehime",
+  "observed_mx": [
+   "city-seiyo-ehime-jp.mail.protection.outlook.com"
+  ],
+  "note": "autodiscover CNAME -> autodiscover.outlook.com. Local government on Exchange Online (JBS case, published 2025-06-16)."
+ },
+ {
+  "domain": "meijiyasuda.co.jp",
+  "company": "明治安田生命保険相互会社",
+  "expected_platform": "microsoft_365",
+  "evidence_url": "https://www.jbs.co.jp/case/office365_meijiyasuda",
+  "observed_mx": [
+   "meijiyasuda-co-jp.mail.protection.outlook.com"
+  ],
+  "note": "autodiscover CNAME -> autodiscover.outlook.com. JBS case (2020-12-23): Exchange Online for ~48,000 users."
+ },
+ {
+  "domain": "bandainamco.co.jp",
+  "company": "株式会社バンダイナムコホールディングス",
+  "expected_platform": "microsoft_365",
+  "evidence_url": "https://www.jbs.co.jp/case/office365_bandainamco",
+  "observed_mx": [
+   "bandainamco-co-jp.mail.protection.outlook.com"
+  ],
+  "note": "autodiscover CNAME -> autodiscover.outlook.com. SPF is a redirect= record (no outlook include at top level). Evidence page not fetched (year unknown); JBS index lists it as an Office 365 case."
+ },
+ {
+  "domain": "ugitec.co.jp",
+  "company": "地中空間開発株式会社",
+  "expected_platform": "microsoft_365",
+  "evidence_url": "https://www.jbs.co.jp/case/m365e5_ugitec",
+  "observed_mx": [
+   "ugitec-co-jp.mail.protection.outlook.com"
+  ],
+  "note": "autodiscover CNAME -> autodiscover.outlook.com. JBS index lists it as a Microsoft 365 E5 case (page not fetched, year unknown)."
+ },
+ {
+  "domain": "mext.go.jp",
+  "company": "文部科学省",
+  "expected_platform": "microsoft_365_behind_gateway",
+  "evidence_url": "https://news.microsoft.com/ja-jp/2022/03/22/220322-mext-deploys-microsoft-cloud-services-for-its-infrastructure-network-system/",
+  "observed_mx": [
+   "mext-mail.in.tmems-jp.trendmicro.com"
+  ],
+  "note": "MX = Trend Micro Email Security (tmems-jp.trendmicro.com) gateway; no autodiscover record; SPF include:spf.protection.outlook.com is the only Microsoft signal. Microsoft press: Microsoft 365 E5 + Azure (2022)."
+ },
+ {
+  "domain": "nihon-u.ac.jp",
+  "company": "日本大学",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://news.microsoft.com/source/asia/2014/07/01/2014-35/?lang=ja",
+  "observed_mx": [
+   "aspmx.l.google.com",
+   "alt1.aspmx.l.google.com",
+   "alt2.aspmx.l.google.com",
+   "alt3.aspmx.l.google.com",
+   "alt4.aspmx.l.google.com"
+  ],
+  "note": "STALE-EVIDENCE / MIXED case: 2014 Office 365 Education statement; MX now Google; SPF includes both _spf.google.com and spf.protection.outlook.com; autodiscover A = 255.255.255.255 (sinkhole)."
+ },
+ {
+  "domain": "rizapgroup.com",
+  "company": "RIZAPグループ株式会社",
+  "expected_platform": "google_workspace",
+  "evidence_url": "https://www.jbs.co.jp/case/exchangeonline_rizap",
+  "observed_mx": [
+   "smtp.google.com"
+  ],
+  "note": "STALE-EVIDENCE / MIXED case: 2018 JBS Office 365 / Exchange Online case; MX now smtp.google.com (Google Workspace); SPF still includes outlook; autodiscover CNAME -> autodiscover.outlook.com left over."
+ },
+ {
+  "domain": "askul.co.jp",
+  "company": "アスクル株式会社",
+  "expected_platform": "other",
+  "evidence_url": "https://news.microsoft.com/source/asia/2013/06/26/2013-28/?lang=ja",
+  "observed_mx": [
+   "mx.securemx.jp"
+  ],
+  "note": "STALE-EVIDENCE case: 2013 Exchange Online statement, but today MX = IIJ SecureMX only, no outlook include, no autodiscover. DNS shows 'gateway only, backend unknown'."
+ },
+ {
+  "domain": "bookoff.co.jp",
+  "company": "ブックオフコーポレーション株式会社",
+  "expected_platform": "other",
+  "evidence_url": "https://news.microsoft.com/source/asia/2013/02/21/130222-cs-bookoff/?lang=ja",
+  "observed_mx": [
+   "mail.bookoff.co.jp"
+  ],
+  "note": "STALE-EVIDENCE case: 2013 Exchange Online statement; today MX is own-domain (mail.bookoff.co.jp), no autodiscover, no Microsoft signal."
+ },
+ {
+  "domain": "nitori.co.jp",
+  "company": "株式会社ニトリホールディングス",
+  "expected_platform": "other",
+  "evidence_url": "https://news.microsoft.com/source/asia/2014/03/05/2014-50/?lang=ja",
+  "observed_mx": [
+   "mx.po.2iij.net"
+  ],
+  "note": "STALE-EVIDENCE case: 2014 Office 365 statement; today MX = IIJ hosted mail (mx.po.2iij.net), no SPF TXT, no autodiscover record."
+ },
+ {
+  "domain": "hokudai.ac.jp",
+  "company": "北海道大学",
+  "expected_platform": "unknown",
+  "evidence_url": "https://news.microsoft.com/source/asia/2015/06/26/150626_office365-edu-hokudai/?lang=ja",
+  "observed_mx": [
+   "mailgate-fr1.hines.hokudai.ac.jp",
+   "mailgate-fr2.hines.hokudai.ac.jp"
+  ],
+  "note": "HARD case: public 2015 statement says Office 365 Education for students/staff, but DNS shows only own-domain gateways (hines.hokudai.ac.jp), SPF with own IPs only, no autodiscover. Not detectable from DNS; expected app output is 'own gateway / undetermined', not on-prem Exchange."
+ },
+ {
+  "domain": "omu.ac.jp",
+  "company": "大阪公立大学",
+  "expected_platform": "exchange_onprem",
+  "evidence_url": "https://www.omu.ac.jp/",
+  "observed_mx": [
+   "mgw1.omu.ac.jp",
+   "mgw2.omu.ac.jp",
+   "mgw3.omu.ac.jp"
+  ],
+  "note": "Label from DNS signals only (no public statement fetched). MX inside own domain AND autodiscover CNAME -> mail.omu.ac.jp -> 163.226.193.13 (own university IP). SPF also includes outlook (hybrid coexistence) — autodiscover to own host should win => on-prem/hybrid Exchange."
+ },
+ {
+  "domain": "fujita-hu.ac.jp",
+  "company": "藤田医科大学",
+  "expected_platform": "exchange_onprem",
+  "evidence_url": "https://www.fujita-hu.ac.jp/",
+  "observed_mx": [
+   "mx38.fujita-hu.ac.jp",
+   "mx54.fujita-hu.ac.jp"
+  ],
+  "note": "Label from DNS signals only. MX inside own domain; autodiscover has no CNAME but an A record 202.236.168.58 inside the university's own range (202.236.168.0/24 appears in SPF). Detector must check autodiscover A as well as CNAME."
+ },
+ {
+  "domain": "shionogi.co.jp",
+  "company": "塩野義製薬株式会社",
+  "expected_platform": "exchange_onprem",
+  "evidence_url": "https://www.shionogi.com/jp/ja/",
+  "observed_mx": [
+   "mx.securemx.jp"
+  ],
+  "note": "Label from DNS signals only (on-prem/hybrid Exchange behind gateway). MX = IIJ SecureMX gateway (not own domain); autodiscover CNAME -> shionogisso.shionogi.co.jp -> 202.214.8.161 (own range 202.214.8.160/27 listed in SPF). SPF also includes outlook (hybrid)."
+ },
+ {
+  "domain": "city.osaka.lg.jp",
+  "company": "大阪市",
+  "expected_platform": "exchange_onprem",
+  "evidence_url": "https://www.city.osaka.lg.jp/",
+  "observed_mx": [
+   "osakasc-fml3.utility.optage.co.jp"
+  ],
+  "note": "Label from DNS signals only. MX = OPTAGE (大阪自治体セキュリティクラウド) gateway, not own domain; autodiscover CNAME -> localex.city.osaka.lg.jp -> 202.221.131.207 (own IP). No Microsoft cloud signal anywhere => on-prem Exchange behind a security-cloud gateway."
+ },
+ {
+  "domain": "mhi.co.jp",
+  "company": "三菱重工業株式会社",
+  "expected_platform": "exchange_onprem",
+  "evidence_url": "https://www.mhi.com/jp",
+  "observed_mx": [
+   "mx1.hc1076-52.ap.iphmx.com",
+   "mx2.hc1076-52.ap.iphmx.com"
+  ],
+  "note": "Label from DNS signals only. MX = Cisco Secure Email cloud (iphmx.com) gateway; autodiscover CNAME -> mcthub.mhi.co.jp -> 126.143.177.145 / 221.241.84.177 (own IPs). No Microsoft cloud signal => on-prem Exchange behind Cisco gateway."
+ }
+]
