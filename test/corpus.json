@@ -1515,12 +1515,12 @@
  {
   "domain": "ngk.co.jp",
   "company": "日本ガイシ株式会社",
-  "expected_platform": "iij_secure_mx",
+  "expected_platform": "proofpoint",
   "evidence_url": "https://mxtoolbox.com/SuperTool.aspx?action=mx%3angk.co.jp&run=toolpage",
   "observed_mx": [
    "10 mx.securemx.jp."
   ],
-  "note": "DNS-only label. SPF includes a Proofpoint powerspf.com macro (outbound via Proofpoint) while inbound is IIJ -> backend not visible. dig observed 2026-09-22."
+  "note": "DNS-only label. SPF includes a Proofpoint powerspf.com macro (outbound via Proofpoint) while inbound is IIJ -> backend not visible. dig observed 2026-09-22. / 2026-09-25 再確認: MX は Proofpoint (mxa/mxb-0099b802.gslb.pphosted.com) に移行済み"
  },
  {
   "domain": "morinaga.co.jp",

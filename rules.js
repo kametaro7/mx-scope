@@ -5,32 +5,12 @@
   'use strict';
   const MXC = root.MXC = root.MXC || {};
 
-  // ---- 区分（hosting type）------------------------------------------------
-  // saas: クラウドSaaS（グループウェア）, hosting: レンタルサーバー/ホスティング,
-  // gateway: メールセキュリティゲートウェイ, isp: ISPメール, iaas: IaaS上の自社運用,
-  // relay: 転送/配信サービス, consumer: 個人向け, onprem: オンプレ, unknown
-  const HOSTING_JA = {
-    saas: 'クラウド (SaaS)',
-    hosting: 'クラウド (レンタルサーバー)',
-    gateway: 'ゲートウェイ経由',
-    isp: 'ISPメール',
-    iaas: 'IaaS上で自社運用',
-    relay: '転送・配信サービス',
-    consumer: '個人向けメール',
-    onprem: 'オンプレ (自社運用)',
-    onprem_maybe: 'オンプレの可能性',
-    none: 'メール未使用',
-    unknown: '不明',
-  };
-
+  // ---- 区分（hosting type）と見込み度 ------------------------------------------
+  // 区分コード: saas / hosting / gateway / isp / iaas / relay / consumer / onprem / onprem_maybe / none / unknown
   // 見込み度: A=◎有望, B=○競合SaaS(リプレース提案), C=△要確認, X=✕対象外, ?=不明
-  const PROSPECT_JA = {
-    A: { mark: '◎', label: '有望', desc: 'レンタルサーバー／ISP／自社運用メール。Google Workspace への移行提案が刺さりやすい' },
-    B: { mark: '○', label: '競合SaaS', desc: '他社クラウド利用中。リプレース提案の対象' },
-    C: { mark: '△', label: '要確認', desc: 'ゲートウェイ配下などで裏側の基盤が読み取れない' },
-    X: { mark: '✕', label: '対象外', desc: 'すでに Google Workspace、またはメール未使用' },
-    '?': { mark: '?', label: '不明', desc: '判定材料が足りない' },
-  };
+  // 表示名は i18n/<言語>.js の hosting.* / prospect.* にある。
+  const HOSTING_CODES = ['saas', 'hosting', 'gateway', 'isp', 'iaas', 'relay', 'consumer', 'onprem', 'onprem_maybe', 'none', 'unknown'];
+  const MARKS = { A: '◎', B: '○', C: '△', X: '✕', '?': '?' };
 
   // ---- ベンダー署名DB -------------------------------------------------------
   // mx / ptr: MXホスト名（小文字・末尾ドット無し）に対する JS 正規表現ソース
@@ -266,6 +246,36 @@
       mx: ['(^|\\.)ztv\\.ne\\.jp$', '(^|\\.)zaq\\.ne\\.jp$', '(^|\\.)eonet\\.ne\\.jp$', '(^|\\.)mailgw\\.jp$', '(^|\\.)bai\\.ne\\.jp$', '(^|\\.)cty-net\\.ne\\.jp$', '(^|\\.)ccsnet\\.ne\\.jp$', '(^|\\.)kcn\\.ne\\.jp$', '(^|\\.)pikara\\.ne\\.jp$', '(^|\\.)megaegg\\.ne\\.jp$', '(^|\\.)bbiq\\.jp$', '(^|\\.)commufa\\.jp$', '(^|\\.)tnc\\.ne\\.jp$', '(^|\\.)mirai\\.ne\\.jp$', '(^|\\.)air\\.ne\\.jp$', '(^|\\.)cyberhome\\.jp$', '(^|\\.)ucom\\.ne\\.jp$', '(^|\\.)vectant\\.ne\\.jp$', '(^|\\.)janis\\.or\\.jp$', '(^|\\.)jway\\.ne\\.jp$'] },
   ];
 
+  // ---- ベンダーの英語名（日本語以外の表示で使う。tag は各言語に訳す補足） ------------
+  const VENDOR_EN = {
+    gmail_consumer: ['Gmail', 'personal'], google_domains_forwarding: ['Google Domains', 'forwarding'], outlook_consumer: ['Outlook.com', 'personal'],
+    cybermail: ['CYBERMAIL Σ (Cyber Solutions)'], hennge: ['HENNGE One (Email Security)'], iij_secure_mx: ['IIJ Secure MX'],
+    sakura_vps: ['SAKURA VPS / Cloud / Dedicated', 'selfhosted'], sakura: ['SAKURA Rental Server / Mailbox'],
+    xserver_vps: ['Xserver VPS', 'selfhosted'], xserver_business: ['Xserver Business'], xserver: ['Xserver'],
+    lolipop: ['Lolipop! (GMO Pepabo)'], heteml: ['heteml (GMO Pepabo)'], muumuu: ['Muumuu Mail (GMO Pepabo)'],
+    onamae: ['Onamae.com (GMO Internet)'], conoha_vps: ['ConoHa VPS', 'selfhosted'], gmo_cloud: ['GMO Cloud shared hosting (iCLUSTA+ / RapidSite)'],
+    speever: ['Speever'], nospamcloud: ['Tsukaeru.net nospamcloud'], iij_xsp_mail: ['IIJ xSP mail outsourcing', 'isp_platform'],
+    freebit_cloud_mail: ['FreeBit Cloud Mail', 'isp_platform'], webarena: ['NTTPC WebARENA (SuiteX / mail hosting)'],
+    bizmw: ['NTT Biz Mail & Web (Business / Premium)'], alpha_mail: ['Alpha Mail (Otsuka Corporation)'], cpi: ['CPI (KDDI Web Communications)'],
+    biglobe_business: ['BIGLOBE business mail / hosting'], softbank_lg_secure_cloud: ['SoftBank local-government security cloud'],
+    kagoya_vps: ['KAGOYA CLOUD VPS', 'selfhosted'], kagoya: ['KAGOYA Japan'], zenlogic: ['Zenlogic (formerly FirstServer / IDC Frontier)'],
+    colorfulbox: ['ColorfulBox'], starserver: ['Star Server (NetOwl)'], coreserver: ['CORESERVER / XREA / Value Server (GMO Digirock)'],
+    littleserver: ['Little Server'], rakkoserver: ['Rakko Server'], chicappa: ['Chicappa (formerly GMO Pepabo)'], jimdo: ['Jimdo mail (KDDI Web)'],
+    goope: ['Goope (GMO Pepabo)'], js_hpbs: ['Homepage Builder Service (JustSystems)'], xaas3: ['iFLAG XaaS'], linkclub: ['Link Club'],
+    weblife: ['BiND / WebLiFE (Digitalstage)'], interq: ['GMO interQ MEMBERS'], presinet: ['Presinet'], ntt_smartconnect: ['NTT SmartConnect hosting'],
+    ocnk: ['Ochanoko Net', 'ecommerce'], tokai_business: ['TOKAI Communications business mail'], stnet_hosting: ['STNet hosting'],
+    squarespace: ['Squarespace', 'forwarding'], shopify_forwarding: ['Shopify', 'forwarding'], domain_parking: ['Domain parking', 'expired'],
+    trellix_email_security: ['Trellix Email Security Cloud (formerly FireEye)'], guardianwall: ['GUARDIANWALL Cloud (Canon ITS)'],
+    nec_mail_security: ['NEC Cloud Mail Security'], bbsec_aams: ['BBSec AAMS'], spamsniper: ['SPAMSNIPER Cloud (Jiran)'],
+    m_filter: ['m-FILTER Cloud (Digital Arts)'], active_gate: ['Active! gate SS (Qualitia)'], securemail_plus: ['@Securemail Plus (KTK Solutions)'],
+    cloudflare_email_routing: ['Cloudflare Email Routing', 'forwarding'], improvmx: ['ImprovMX', 'forwarding'], forwardemail: ['Forward Email', 'forwarding'],
+    mailgun: ['Mailgun', 'inbound'], sendgrid: ['SendGrid', 'inbound'], amazon_workmail: ['Amazon WorkMail / SES inbound'],
+    titan: ['Titan Email (Hostinger etc.)'], tencent_exmail: ['Tencent Exmail'], icloud: ['iCloud Mail (custom domain)'], yahoo_japan: ['Yahoo! JAPAN Mail'],
+    isp_ocn: ['OCN (NTT) hosting / mail'], isp_plala: ['Plala'], isp_iij: ['IIJ mail hosting'], isp_kddi: ['KDDI (au one net / hosting)'],
+    isp_asahinet: ['ASAHI Net'], isp_regional: ['Regional ISP / cable TV mail (ZTV, ZAQ, eo, BAI…)'],
+  };
+  for (const v of VENDORS) { const e = VENDOR_EN[v.id]; if (e) { v.en = e[0]; if (e[1]) v.tag = e[1]; } }
+
   // ---- AS番号テーブル（オンプレ/IaaS/ホスティング判定用）------------------------
   // kind: isp | hosting | cloud | cdn | saas
   const ASN_TABLE = {
@@ -492,61 +502,116 @@
   }
 
   // ---- 分類 ----------------------------------------------------------------
+  // ---- 表示名（多言語） ------------------------------------------------------
+  const tr = (lang, key, vars) => (MXC.i18n ? MXC.i18n.t(lang, key, vars) : key);
+  const pcode = (p) => (p === '?' ? 'Q' : p);
+  /** ベンダーの表示名。日本語は元の名前、それ以外は英語名＋訳した補足 */
+  function vendorName(v, lang) {
+    if (!v) return tr(lang, 'pf.unknown');
+    if (lang === 'ja' || !v.en) return v.name;
+    return v.tag ? `${v.en} (${tr(lang, 'tag.' + v.tag)})` : v.en;
+  }
+  /** 補足を除いたブランド名 */
+  function vendorBrand(v, lang) { return lang === 'ja' || !v.en ? v.name.replace(/ \(.*$/, '') : v.en; }
+  function hostingName(code, lang) { return tr(lang || 'ja', 'hosting.' + (HOSTING_CODES.includes(code) ? code : 'unknown')); }
+  function prospectLabel(code, lang) { const c = MARKS[code] ? code : '?'; return `${MARKS[c]} ${tr(lang || 'ja', 'prospect.' + pcode(c))}`; }
+  function prospectDesc(code, lang) { const c = MARKS[code] ? code : '?'; return tr(lang || 'ja', 'prospect.' + pcode(c) + '.desc'); }
+  /** Team Cymru の AS 名（"AMAZON-02 - Amazon.com, Inc., US" など）を読みやすくする */
+  function prettyAs(raw) {
+    let s = String(raw || '').trim(); if (!s) return '';
+    s = s.replace(/,\s*[A-Z]{2}$/, '');
+    const i = s.indexOf(' - ');
+    if (i > 0) return s.slice(i + 3).trim();
+    const parts = s.split(/\s+/);
+    if (parts.length > 1 && /^[A-Z0-9][A-Z0-9-]*$/.test(parts[0])) return parts.slice(1).join(' ');
+    return s;
+  }
+  /** AS 情報（表にある AS は表の名前と種別、無ければ Cymru の名前から推定） */
+  function mkAi(asn, raw) {
+    if (!asn) return null;
+    const t = ASN_TABLE[asn];
+    if (t) return Object.assign({ asn }, t, { table: true, raw: raw || '' });
+    return { asn, name: raw || '', raw: raw || '', kind: asnKind(asn, raw), table: false };
+  }
+  /** AS の表示名。日本語は表の名前、それ以外は英語表記（無ければ Cymru の名前） */
+  function asName(ai, lang) {
+    if (!ai) return '';
+    if (ai.table) {
+      if (lang === 'ja' || !/[^\x00-\x7F]/.test(ai.name)) return ai.name;   // 表の名前（英字ならどの言語でもそのまま）
+      return prettyAs(ai.raw) || `AS${ai.asn}`;                            // 日本語名しか無い AS は Cymru の英語名
+    }
+    return prettyAs(ai.raw || ai.name) || `AS${ai.asn}`;
+  }
+
   /**
    * @param {object} d lookupDomain() の結果
    *  { input, domain, checkedDomain, mxStatus:'ok'|'nomx'|'nxdomain'|'nullmx'|'error',
    *    mx:[{pref, host, ip, ptr, asn, asName, asCC}], aFallback:{ip,ptr,asn,asName}|null,
-   *    spf:{raw, includes:[...], nested:[...]}, dmarc:{raw, p}|null,
-   *    signals:{googleDkim, selector1, selector2, autodiscoverCname, autodiscoverA, msTxt}, error }
+   *    spf:{raw, includes:[...], nested:[...], aHosts:[...]}, dmarc:{raw, p}|null, ns:[...], sibling:{domain, mx}|null,
+   *    signals:{googleDkim, selector1, selector2, autodiscoverCname, autodiscoverA, msTxt, gwsRecovery, mailCname},
+   *    errorCode:'invalid'|'dns'|'rcode', errorDetail, error }
+   * @param {string} [lang='ja'] 表示言語。判定そのもの（id・区分・見込み度）は言語によらない
    */
-  function classify(d) {
+  function classify(d, lang) {
+    lang = lang || 'ja';
+    const T = (k, p) => tr(lang, k, p);
+    const VN = (v) => vendorName(v, lang);
+    const AN = (ai) => asName(ai, lang);
+    const HN = (c) => hostingName(c, lang);
+    const P = (v) => (v ? Object.assign({}, v, { name: VN(v) }) : v);   // 表示名を付けたベンダー
+    const ipp = (ip) => (ip ? ` (${ip})` : '');
+    const ptrF = (ptr) => (ptr ? T('frag.ptr', { ptr }) : '');
+    const asF = (ai) => (ai ? T('frag.as', { asn: ai.asn, name: AN(ai) }) : '');
     const ev = [];
     const out = {
-      input: d.input, domain: d.domain, checkedDomain: d.checkedDomain || d.domain,
+      input: d.input, domain: d.domain, checkedDomain: d.checkedDomain || d.domain, lang,
       platform: null, backend: null, hosting: 'unknown', hostingLabel: '', confidence: 'low',
       prospect: '?', prospectLabel: '', label: '', evidence: ev, mixed: false, notes: [],
     };
-    if (d.checkedDomain && d.checkedDomain !== d.domain) ev.push(`入力「${d.domain}」には MX が無いため、組織ドメイン「${d.checkedDomain}」で判定`);
+    if (d.checkedDomain && d.checkedDomain !== d.domain) ev.push(T('ev.checked_org', { domain: d.domain, org: d.checkedDomain }));
 
     if (d.mxStatus === 'error') {
-      out.platform = { id: 'error', name: '判定できず (DNS エラー)', cat: 'unknown' };
-      out.hosting = 'unknown'; out.label = out.platform.name; ev.push(d.error || 'DNS 問い合わせに失敗');
-      return finish(out);
+      out.platform = { id: 'error', name: T('pf.error'), cat: 'unknown' };
+      out.hosting = 'unknown'; out.label = out.platform.name;
+      ev.push(d.errorCode === 'invalid' ? T('ev.error_invalid')
+        : d.errorCode === 'rcode' ? T('ev.error_rcode', { code: d.errorDetail })
+        : T('ev.error_dns', { detail: d.errorDetail || d.error || '—' }));
+      return finish(out, lang);
     }
     if (d.mxStatus === 'nxdomain') {
-      out.platform = { id: 'nxdomain', name: 'ドメインが存在しない (NXDOMAIN)', cat: 'unknown' };
+      out.platform = { id: 'nxdomain', name: T('pf.nxdomain'), cat: 'unknown' };
       out.hosting = 'none'; out.prospect = '?'; out.label = out.platform.name; out.confidence = 'high';
-      ev.push('DNS にドメインが登録されていない（www も含めて引けない）');
-      out.notes.push('リストの URL が古い可能性（ドメイン失効・社名変更・入力ミス）');
-      return finish(out);
+      ev.push(T('ev.nxdomain'));
+      out.notes.push(T('note.nxdomain'));
+      return finish(out, lang);
     }
     if (d.mxStatus === 'nullmx') {
-      out.platform = { id: 'null_mx', name: 'メール受信なし (Null MX)', cat: 'none' };
+      out.platform = { id: 'null_mx', name: T('pf.null_mx'), cat: 'none' };
       out.hosting = 'none'; out.prospect = 'X'; out.label = out.platform.name; out.confidence = 'high';
-      ev.push('MX "." (RFC 7505 Null MX) — このドメインはメールを受け取らない宣言');
-      return finish(out);
+      ev.push(T('ev.null_mx'));
+      return finish(out, lang);
     }
 
     // --- 裏側（バックエンド）の推定: DKIM / autodiscover / SPF ---
     const s = d.signals || {};
     const backendVotes = []; // {vendor, weight, why}
-    if (s.googleDkim) backendVotes.push({ vendor: byId.get('google_workspace'), weight: 3, why: 'DKIM セレクタ google._domainkey が存在（Google Workspace の署名鍵）' });
-    if (/^ghs\.(googlehosted|google)\.com$/.test(norm(s.mailCname || ''))) backendVotes.push({ vendor: byId.get('google_workspace'), weight: 3, why: `mail.${out.checkedDomain} が ${s.mailCname}（Google Workspace のカスタム URL）` });
-    if (s.gwsRecovery) backendVotes.push({ vendor: byId.get('google_workspace'), weight: 2, why: 'TXT に google-gws-recovery-domain-verification（Workspace テナントの復旧用確認）がある' });
+    if (s.googleDkim) backendVotes.push({ vendor: byId.get('google_workspace'), weight: 3, why: T('why.google_dkim') });
+    if (/^ghs\.(googlehosted|google)\.com$/.test(norm(s.mailCname || ''))) backendVotes.push({ vendor: byId.get('google_workspace'), weight: 3, why: T('why.google_cname', { domain: out.checkedDomain, target: s.mailCname }) });
+    if (s.gwsRecovery) backendVotes.push({ vendor: byId.get('google_workspace'), weight: 2, why: T('why.gws_recovery') });
     const sel1 = norm(s.selector1 || ''), sel2 = norm(s.selector2 || '');
-    if (/\.onmicrosoft\.com$/.test(sel1) || /\.onmicrosoft\.com$/.test(sel2)) backendVotes.push({ vendor: byId.get('microsoft_365'), weight: 3, why: `DKIM selector1/2 が ${sel1 || sel2} (onmicrosoft.com) を指す` });
+    if (/\.onmicrosoft\.com$/.test(sel1) || /\.onmicrosoft\.com$/.test(sel2)) backendVotes.push({ vendor: byId.get('microsoft_365'), weight: 3, why: T('why.ms_dkim', { target: sel1 || sel2 }) });
     const adc = norm(s.autodiscoverCname || '');
-    if (/^autodiscover\.outlook\.com$/.test(adc)) backendVotes.push({ vendor: byId.get('microsoft_365'), weight: 3, why: 'autodiscover が autodiscover.outlook.com を指す（Exchange Online）' });
-    if (s.msTxt) backendVotes.push({ vendor: byId.get('microsoft_365'), weight: 1, why: 'TXT に MS=ms… (Microsoft 365 ドメイン確認) がある' });
+    if (/^autodiscover\.outlook\.com$/.test(adc)) backendVotes.push({ vendor: byId.get('microsoft_365'), weight: 3, why: T('why.ms_autodiscover') });
+    if (s.msTxt) backendVotes.push({ vendor: byId.get('microsoft_365'), weight: 1, why: T('why.ms_txt') });
     const spfIncludes = (d.spf && d.spf.includes) || [];
     const spfVendors = [];
     for (const inc of spfIncludes) {
       const v = matchSpf(inc);
-      if (v && !spfVendors.some(x => x.id === v.id)) { spfVendors.push(v); backendVotes.push({ vendor: v, weight: (v.cat === 'saas' ? 2 : 1), why: `SPF include:${inc}` }); }
+      if (v && !spfVendors.some(x => x.id === v.id)) { spfVendors.push(v); backendVotes.push({ vendor: v, weight: (v.cat === 'saas' ? 2 : 1), why: T('why.spf', { inc }) }); }
     }
     for (const inc of ((d.spf && d.spf.nested) || [])) {
       const v = matchSpf(inc);
-      if (v && !spfVendors.some(x => x.id === v.id)) { spfVendors.push(v); backendVotes.push({ vendor: v, weight: 1, why: `SPF（入れ子）include:${inc}` }); }
+      if (v && !spfVendors.some(x => x.id === v.id)) { spfVendors.push(v); backendVotes.push({ vendor: v, weight: 1, why: T('why.spf_nested', { inc }) }); }
     }
     // 集計（SaaS/ISP/ホスティングのみを裏側候補とする。ゲートウェイは裏側ではない）
     const tally = new Map();
@@ -560,9 +625,9 @@
     const dual = ranked.length >= 2 && ranked[0].score >= 3 && ranked[1].score >= 3 && ranked[0].vendor.cat === 'saas' && ranked[1].vendor.cat === 'saas' ? ranked[1] : null;
     const applyDual = () => {
       if (!dual || !out.backend || out.backend.id !== ranked[0].vendor.id) return;
-      out.backend2 = dual.vendor; ev.push(...dual.whys);
-      out.notes.push(`${ranked[0].vendor.name} と ${dual.vendor.name} の両方の設定がある（併用・移行中の可能性）`);
-      if (ranked[0].vendor.id === 'google_workspace' || dual.vendor.id === 'google_workspace') { out.prospect = 'C'; out.notes.push('Google Workspace の署名あり — 既存契約の有無を要確認'); }
+      out.backend2 = P(dual.vendor); ev.push(...dual.whys);
+      out.notes.push(T('note.dual', { a: VN(ranked[0].vendor), b: VN(dual.vendor) }));
+      if (ranked[0].vendor.id === 'google_workspace' || dual.vendor.id === 'google_workspace') { out.prospect = 'C'; out.notes.push(T('note.gws_signature')); }
     };
 
     // --- MX ホストごとのベンダー判定 ---
@@ -570,11 +635,11 @@
     const regDom = registrableDomain(out.checkedDomain);
     const analyzed = mxList.map(m => {
       const host = norm(m.host);
-      const r = { ...m, host, vendor: null, how: '', ownHost: false, asKind: null, asInfo: null };
+      const r = Object.assign({}, m, { host, vendor: null, how: '', ownHost: false, asKind: null, asInfo: null });
       r.ownHost = host === out.checkedDomain || host.endsWith('.' + out.checkedDomain) || registrableDomain(host) === regDom;
       const v = matchMx(host);
       if (v) { r.vendor = v; r.how = 'mx'; return r; }
-      r.asInfo = asnInfo(m.asn) || (m.asn ? { asn: m.asn, name: m.asName || '', kind: asnKind(m.asn, m.asName) } : null);
+      r.asInfo = mkAi(m.asn, m.asName);
       r.asKind = r.asInfo ? r.asInfo.kind : null;
       const pv = m.ptr ? matchPtr(m.ptr) : null;
       if (pv) { r.vendor = pv; r.how = 'ptr'; return r; }
@@ -588,74 +653,74 @@
     if (d.mxStatus === 'nomx') {
       const a = d.aFallback;
       if (!a || !a.ip) {
-        out.platform = { id: 'no_mail', name: 'MX なし・A レコードなし（このドメインでは受信しない）', cat: 'none' };
+        out.platform = { id: 'no_mail', name: T('pf.no_mail'), cat: 'none' };
         out.hosting = 'none'; out.prospect = 'C'; out.confidence = 'high'; out.label = out.platform.name;
-        ev.push('MX も A レコードも無く、このドメイン宛てのメールは受信できない');
-        out.notes.push('別ドメインでメール運用している可能性（会社の正式ドメインを要確認）');
-        return finish(out);
+        ev.push(T('ev.no_mail'));
+        out.notes.push(T('note.no_mail'));
+        return finish(out, lang);
       }
       // A レコードへのフォールバック配送（RFC 5321）
       const pv = a.ptr ? matchPtr(a.ptr) : null;
-      const ai = asnInfo(a.asn) || (a.asn ? { asn: a.asn, name: a.asName || '', kind: asnKind(a.asn, a.asName) } : null);
+      const ai = mkAi(a.asn, a.asName);
       if (d.sibling && d.sibling.mx && d.sibling.mx.length) {
         const sv = matchMx(d.sibling.mx[0]);
-        const sname = sv ? sv.name : `MX ${d.sibling.mx[0]}`;
+        const sname = sv ? VN(sv) : `MX ${d.sibling.mx[0]}`;
         out.sibling = { domain: d.sibling.domain, vendor: sv || null, name: sname };
-        ev.push(`関連ドメイン ${d.sibling.domain} に MX あり（${sname}）— メールはそちらで運用の可能性`);
+        ev.push(T('ev.sibling', { domain: d.sibling.domain, name: sname }));
       }
-      ev.push(`MX が無く A レコード (${a.ip}) 宛て配送になる${a.ptr ? `、逆引き ${a.ptr}` : ''}${ai ? `、AS${ai.asn} ${ai.name}` : ''}`);
+      ev.push(T('ev.a_fallback', { ip: a.ip, ptr: ptrF(a.ptr), as: asF(ai) }));
       if (pv) {
-        out.platform = { ...pv, name: pv.name + '（MXなし・Aレコード配送）' }; out.hosting = pv.cat; out.confidence = 'low';
+        out.platform = Object.assign({}, pv, { name: T('pf.via_a', { name: VN(pv) }) }); out.hosting = pv.cat; out.confidence = 'low';
       } else if (ai && (ai.kind === 'isp' || ai.kind === 'own' || ai.kind === 'colo')) {
-        out.platform = { id: 'no_mx_onprem', name: 'MX なし（自社サーバー宛て配送の可能性）', cat: 'onprem' }; out.hosting = 'onprem_maybe';
+        out.platform = { id: 'no_mx_onprem', name: T('pf.no_mx_onprem'), cat: 'onprem' }; out.hosting = 'onprem_maybe';
       } else {
-        out.platform = { id: 'no_mx', name: 'MX なし（このドメインでは受信しない）', cat: 'none' }; out.hosting = 'none';
+        out.platform = { id: 'no_mx', name: T('pf.no_mx'), cat: 'none' }; out.hosting = 'none';
       }
       // MX が無い＝受信していないので、SPF から基盤が見えても「要確認」に留める
       out.prospect = pv ? pv.prospect : 'C';
       if (ranked.length) {
-        out.backend = ranked[0].vendor; ev.push(...ranked[0].whys);
-        out.notes.push(`送信側の設定は ${ranked[0].vendor.name}。ただし MX が無いため、受信は別ドメインの可能性`);
+        out.backend = P(ranked[0].vendor); ev.push(...ranked[0].whys);
+        out.notes.push(T('note.no_mx_send', { name: out.backend.name }));
       }
-      out.label = out.platform.name + (out.backend ? ` → ${out.backend.name}` : '');
+      out.label = out.backend ? T('label.backend', { a: out.platform.name, b: out.backend.name }) : out.platform.name;
       if (out.sibling) {
         const sv = out.sibling.vendor;
-        out.label = `MX なし（関連ドメイン ${out.sibling.domain} は ${out.sibling.name}）`;
+        out.label = T('pf.no_mx_sibling', { domain: out.sibling.domain, name: out.sibling.name });
         out.platform = { id: 'no_mx_sibling', name: out.label, cat: sv ? sv.cat : 'none' };
         out.hosting = sv ? sv.cat : 'none';
-        out.hostingLabel = `関連ドメインで運用${sv ? ` → ${HOSTING_JA[sv.cat] || '不明'}` : ''}`;
+        out.hostingLabel = sv ? T('hl.to', { a: T('hl.sibling'), b: HN(sv.cat) }) : T('hl.sibling');
         out.prospect = sv ? prospectFor(sv) : 'C';
-        out.notes.push(`${out.sibling.domain} の判定を参考にしてください`);
+        out.notes.push(T('note.sibling', { domain: out.sibling.domain }));
       }
-      return finish(out);
+      return finish(out, lang);
     }
 
     // --- 主 MX（最小プリファレンス）で基盤を決める ---
     const primary = analyzed[0];
     const vendorsSeen = [...new Set(analyzed.filter(x => x.vendor).map(x => x.vendor.id))];
-    if (vendorsSeen.length > 1) { out.mixed = true; out.notes.push('MX が複数ベンダーに分散: ' + vendorsSeen.map(id => byId.get(id).name).join(' / ')); }
+    if (vendorsSeen.length > 1) { out.mixed = true; out.notes.push(T('note.mx_split', { list: vendorsSeen.map(id => VN(byId.get(id))).join(' / ') })); }
 
     if (primary.vendor) {
       const v = primary.vendor;
-      out.platform = v;
+      out.platform = P(v);
       out.confidence = primary.how === 'mx' ? 'high' : primary.how === 'ns' ? 'low' : 'medium';
-      ev.push(primary.how === 'mx' ? `MX ${primary.host} が ${v.name} のホスト`
-        : primary.how === 'ptr' ? `MX ${primary.host} (${primary.ip}) の逆引き ${primary.ptr} が ${v.name} のサーバー`
-        : primary.how === 'spf' ? `MX ${primary.host} は自社ドメイン内だが、SPF が ${v.name} のサーバー ${primary.spfHost} を許可（公式テンプレート）`
-        : primary.how === 'ns' ? `MX ${primary.host} は自社ドメイン内。ネームサーバー ${primary.nsHost} が ${v.name} のもの（推定）`
-        : `MX ${primary.host} (${primary.ip}) の AS${primary.asn} が ${v.name.replace(/ \(.*$/, '')} の保有。逆引き${primary.ptr ? ` ${primary.ptr}` : ''}は共用サーバー名ではない → 自前運用のサーバー`);
+      ev.push(primary.how === 'mx' ? T('ev.mx_match', { host: primary.host, name: VN(v) })
+        : primary.how === 'ptr' ? T('ev.ptr_match', { host: primary.host, ip: primary.ip, ptr: primary.ptr, name: VN(v) })
+        : primary.how === 'spf' ? T('ev.spf_host', { host: primary.host, name: VN(v), server: primary.spfHost })
+        : primary.how === 'ns' ? T('ev.ns_match', { host: primary.host, ns: primary.nsHost, name: VN(v) })
+        : T('ev.asn_match', { host: primary.host, ip: primary.ip, asn: primary.asn, name: vendorBrand(v, lang), ptr: primary.ptr || '—' }));
       if (v.cat === 'none') {
         out.hosting = 'none'; out.prospect = 'X';
       } else if (v.cat === 'gateway' || v.cat === 'relay') {
         out.hosting = v.cat;
         if (ranked.length) {
-          out.backend = ranked[0].vendor; ev.push(...ranked[0].whys);
-          out.hostingLabel = `${HOSTING_JA[v.cat]} → ${HOSTING_JA[ranked[0].vendor.cat] || '不明'}`;
+          out.backend = P(ranked[0].vendor); ev.push(...ranked[0].whys);
+          out.hostingLabel = T('hl.to', { a: HN(v.cat), b: HN(ranked[0].vendor.cat) });
           out.prospect = prospectFor(ranked[0].vendor);
         } else {
-          out.hostingLabel = `${HOSTING_JA[v.cat]}（裏側の基盤は不明: オンプレの可能性）`;
+          out.hostingLabel = T('hl.gateway_unknown', { gw: HN(v.cat) });
           out.prospect = 'C';
-          if (s.autodiscoverA && !adc) { ev.push(`autodiscover.${out.checkedDomain} が自社IP ${s.autodiscoverA} を指す → 裏側は Exchange Server (オンプレ) の可能性`); out.notes.push('裏側: Exchange Server オンプレ疑い'); out.prospect = 'A'; }
+          if (s.autodiscoverA && !adc) { ev.push(T('ev.exchange_behind', { domain: out.checkedDomain, ip: s.autodiscoverA })); out.notes.push(T('note.exchange_behind')); out.prospect = 'A'; }
         }
       } else {
         out.hosting = v.cat;
@@ -663,103 +728,117 @@
         // 裏側が別 SaaS を強く示す場合（移行中/併用）
         if (ranked.length && ranked[0].vendor.id !== v.id && ranked[0].score >= 3) {
           ev.push(...ranked[0].whys);
-          out.notes.push(`${ranked[0].vendor.name} の設定もある（移行中・併用の可能性）`);
+          out.notes.push(T('note.also', { name: VN(ranked[0].vendor) }));
           if (v.cat === 'saas' || v.cat === 'consumer') {
             // SaaS 同士の併用（例: MX は Google、DKIM/autodiscover は Microsoft 365）
-            out.backend2 = ranked[0].vendor;
+            out.backend2 = P(ranked[0].vendor);
             if (v.id === 'google_workspace') out.prospect = 'X';
-            else if (ranked[0].vendor.id === 'google_workspace') { out.prospect = 'C'; out.notes.push('Google Workspace の署名あり — 既存契約の有無を要確認'); }
-          } else { out.backend = ranked[0].vendor; out.prospect = prospectFor(ranked[0].vendor); out.hostingLabel = `${HOSTING_JA[v.cat]} → ${HOSTING_JA[ranked[0].vendor.cat] || '不明'}`; }
+            else if (ranked[0].vendor.id === 'google_workspace') { out.prospect = 'C'; out.notes.push(T('note.gws_signature')); }
+          } else { out.backend = P(ranked[0].vendor); out.prospect = prospectFor(ranked[0].vendor); out.hostingLabel = T('hl.to', { a: HN(v.cat), b: HN(ranked[0].vendor.cat) }); }
         }
         for (const t of ranked) if (t.vendor.id === v.id) ev.push(...t.whys);
       }
     } else if (primary.ownHost) {
       // 自社ドメイン内のホストに MX → PTR/AS で切り分け
       const ai = primary.asInfo;
-      const where = `MX ${primary.host}${primary.ip ? ` (${primary.ip})` : ''} は自社ドメイン内のホスト`;
+      const where = T('ev.own_host', { host: primary.host, ip: ipp(primary.ip) });
       if (ai && ai.kind === 'own') {
-        out.platform = { id: 'onprem', name: 'オンプレ（自社運用メールサーバー）', cat: 'onprem' }; out.hosting = 'onprem'; out.confidence = 'high';
-        ev.push(`${where}。IP の AS${ai.asn} は組織自身の AS (${ai.name}) → 自社ネットワーク上のサーバー`);
+        out.platform = { id: 'onprem', name: T('pf.onprem'), cat: 'onprem' }; out.hosting = 'onprem'; out.confidence = 'high';
+        ev.push(T('ev.as_own', { where, asn: ai.asn, name: AN(ai) }));
       } else if (ai && ai.kind === 'colo') {
-        out.platform = { id: 'onprem_colo', name: 'オンプレ（データセンター設置の自社サーバー）', cat: 'onprem' }; out.hosting = 'onprem'; out.confidence = 'medium';
-        ev.push(`${where}。IP の AS${ai.asn} はデータセンター事業者 (${ai.name}) → 自社サーバーをDCに設置`);
+        out.platform = { id: 'onprem_colo', name: T('pf.onprem_colo'), cat: 'onprem' }; out.hosting = 'onprem'; out.confidence = 'medium';
+        ev.push(T('ev.as_colo', { where, asn: ai.asn, name: AN(ai) }));
       } else if (ai && ai.kind === 'isp') {
-        out.platform = { id: 'onprem', name: 'オンプレ（自社運用メールサーバー）', cat: 'onprem' }; out.hosting = 'onprem'; out.confidence = 'medium';
-        ev.push(`${where}。IP の AS${ai.asn} は ISP/通信事業者 (${ai.name}) → 自社設置の可能性大`);
+        out.platform = { id: 'onprem', name: T('pf.onprem'), cat: 'onprem' }; out.hosting = 'onprem'; out.confidence = 'medium';
+        ev.push(T('ev.as_isp', { where, asn: ai.asn, name: AN(ai) }));
       } else if (ai && ai.kind === 'cloud') {
-        out.platform = { id: 'iaas_self', name: `IaaS 上で自社運用 (${ai.name})`, cat: 'iaas' }; out.hosting = 'iaas'; out.confidence = 'medium';
-        ev.push(`${where}。IP の AS${ai.asn} は ${ai.name} → クラウド IaaS 上の自前メールサーバー`);
+        out.platform = { id: 'iaas_self', name: T('pf.iaas_self', { name: AN(ai) }), cat: 'iaas' }; out.hosting = 'iaas'; out.confidence = 'medium';
+        ev.push(T('ev.as_cloud', { where, asn: ai.asn, name: AN(ai) }));
       } else if (ai && ai.kind === 'hosting') {
-        out.platform = { id: 'hosting_' + ai.asn, name: `${ai.name} 系ホスティング（ブランド不明）`, cat: 'hosting' }; out.hosting = 'hosting'; out.confidence = 'medium';
-        ev.push(`${where}。IP の AS${ai.asn} はホスティング事業者 (${ai.name})。逆引きからブランドは特定できず`);
+        out.platform = { id: 'hosting_' + ai.asn, name: T('pf.hosting_as', { name: AN(ai) }), cat: 'hosting' }; out.hosting = 'hosting'; out.confidence = 'medium';
+        ev.push(T('ev.as_hosting', { where, asn: ai.asn, name: AN(ai) }));
       } else {
-        out.platform = { id: 'onprem_maybe', name: 'オンプレの可能性（自社ドメイン内 MX）', cat: 'onprem' }; out.hosting = 'onprem_maybe'; out.confidence = 'low';
-        ev.push(where + (ai ? `。AS${ai.asn} ${ai.name}（種別不明）` : '。IP の AS 情報は取得できず'));
+        out.platform = { id: 'onprem_maybe', name: T('pf.onprem_maybe'), cat: 'onprem' }; out.hosting = 'onprem_maybe'; out.confidence = 'low';
+        ev.push(ai ? T('ev.as_unknown', { where, asn: ai.asn, name: AN(ai) }) : T('ev.as_none', { where }));
       }
-      if (primary.ptr) ev.push(`逆引き: ${primary.ptr}`);
-      if (s.autodiscoverA && !adc) { ev.push(`autodiscover.${out.checkedDomain} が ${s.autodiscoverA} を指す → Exchange Server (オンプレ) の可能性`); out.platform = { ...out.platform, name: out.platform.name.replace('オンプレ', 'Exchange Server オンプレ') }; }
+      if (primary.ptr) ev.push(T('ev.ptr', { ptr: primary.ptr }));
+      if (s.autodiscoverA && !adc) {
+        ev.push(T('ev.exchange_onprem', { domain: out.checkedDomain, ip: s.autodiscoverA }));
+        if (out.platform.cat === 'onprem') out.platform = Object.assign({}, out.platform, { name: T('pf.exchange', { name: out.platform.name }) });
+      }
       out.prospect = 'A';
       if (ranked.length) {
-        out.backend = ranked[0].vendor; ev.push(...ranked[0].whys);
+        out.backend = P(ranked[0].vendor); ev.push(...ranked[0].whys);
         const exchangeOnprem = !!(s.autodiscoverA && !adc);
         if (ranked[0].score >= 2 && ranked[0].vendor.cat === 'saas' && !(exchangeOnprem && ranked[0].score < 3)) {
           // 自社のリレー/ゲートウェイの裏で SaaS を利用（例: mailgate.example.ac.jp → Google Workspace）
-          out.platform = { id: 'own_relay', name: `自社リレー (${primary.host})`, cat: 'relay' };
-          out.hosting = 'relay'; out.hostingLabel = `自社ゲートウェイ経由 → ${HOSTING_JA[ranked[0].vendor.cat] || '不明'}`;
+          out.platform = { id: 'own_relay', name: T('pf.own_relay', { host: primary.host }), cat: 'relay' };
+          out.hosting = 'relay'; out.hostingLabel = T('hl.to', { a: T('hl.own_relay'), b: HN(ranked[0].vendor.cat) });
           out.prospect = prospectFor(ranked[0].vendor); out.confidence = ranked[0].score >= 3 ? 'medium' : 'low';
-          out.notes.push(ranked[0].score >= 3 ? '自社ドメイン内の MX（リレー）の裏側で SaaS を利用' : 'SPF のみの推定（DKIM/autodiscover は未検出）');
-        } else if (ranked[0].score >= 3) { out.notes.push(`${ranked[0].vendor.name} の設定もある（併用・移行中の可能性）`); out.prospect = prospectFor(ranked[0].vendor); }
+          out.notes.push(ranked[0].score >= 3 ? T('note.own_relay') : T('note.spf_only'));
+        } else if (ranked[0].score >= 3) { out.notes.push(T('note.also', { name: VN(ranked[0].vendor) })); out.prospect = prospectFor(ranked[0].vendor); }
       }
     } else {
       // 外部の未知ホスト
       const ai = primary.asInfo;
       const hostOrg = registrableDomain(primary.host);
       if (ai && ai.kind === 'cloud') {
-        out.platform = { id: 'other_cloud', name: `その他 (${hostOrg} / ${ai.name} 上)`, cat: 'relay' }; out.hosting = 'relay'; out.hostingLabel = `外部サービス経由 (${hostOrg})`;
+        out.platform = { id: 'other_cloud', name: T('pf.other_cloud', { org: hostOrg, name: AN(ai) }), cat: 'relay' }; out.hosting = 'relay'; out.hostingLabel = T('hl.external', { org: hostOrg });
       } else if (ai && ai.kind === 'hosting') {
-        out.platform = { id: 'other_hosting', name: `その他ホスティング (${hostOrg})`, cat: 'hosting' }; out.hosting = 'hosting';
+        out.platform = { id: 'other_hosting', name: T('pf.other_hosting', { org: hostOrg }), cat: 'hosting' }; out.hosting = 'hosting';
       } else if (ai && (ai.kind === 'isp' || ai.kind === 'own' || ai.kind === 'colo')) {
-        out.platform = { id: 'other_isp', name: `その他 (${hostOrg} / ${ai.kind === 'colo' ? 'データセンター' : 'ISP 回線'}上)`, cat: 'onprem' }; out.hosting = 'onprem_maybe';
+        out.platform = { id: 'other_isp', name: T(ai.kind === 'colo' ? 'pf.other_colo' : 'pf.other_isp', { org: hostOrg }), cat: 'onprem' }; out.hosting = 'onprem_maybe';
       } else {
         // 自社ドメイン外の MX ＝ 誰かのメールサービスを使っている。事業者名までは特定できないが、
         // Google Workspace への乗り換え提案の対象にはなる。
-        out.platform = { id: 'other_provider', name: `他社のメールサービス (${hostOrg})`, cat: 'hosting' };
-        out.hosting = 'hosting'; out.hostingLabel = `他社のメールサービス (${hostOrg})`;
-        out.notes.push('署名に無い事業者。逆引きや AS からも特定できず');
+        out.platform = { id: 'other_provider', name: T('pf.other_provider', { org: hostOrg }), cat: 'hosting' };
+        out.hosting = 'hosting'; out.hostingLabel = T('hl.other_provider', { org: hostOrg });
+        out.notes.push(T('note.other_provider'));
       }
       out.confidence = 'low';
-      ev.push(`MX ${primary.host}${primary.ip ? ` (${primary.ip})` : ''} は登録外のホスト${primary.ptr ? `、逆引き ${primary.ptr}` : ''}${ai ? `、AS${ai.asn} ${ai.name}` : ''}`);
+      ev.push(T('ev.unknown_host', { host: primary.host, ip: ipp(primary.ip), ptr: ptrF(primary.ptr), as: asF(ai) }));
       // 他社のメールサービス／レンタルサーバー／自社運用は、いずれも乗り換え提案の対象
       out.prospect = out.platform.id === 'other_provider' || (ai && (ai.kind === 'hosting' || ai.kind === 'isp' || ai.kind === 'own' || ai.kind === 'colo')) ? 'A' : 'C';
       if (ranked.length) {
-        out.backend = ranked[0].vendor; ev.push(...ranked[0].whys);
+        out.backend = P(ranked[0].vendor); ev.push(...ranked[0].whys);
         if (ranked[0].score >= 2) out.prospect = prospectFor(ranked[0].vendor);
         const exchangeOnprem = !!(s.autodiscoverA && !adc);
-        if (ranked[0].score >= 2 && ranked[0].vendor.cat === 'saas' && !(exchangeOnprem && ranked[0].score < 3)) { out.hostingLabel = `リレー経由 (${hostOrg}) → ${HOSTING_JA[ranked[0].vendor.cat] || '不明'}`; out.platform = { id: 'other_relay', name: `リレー経由 (${hostOrg})`, cat: 'relay' }; out.hosting = 'relay'; if (ranked[0].score < 3) out.notes.push('SPF のみの推定（DKIM/autodiscover は未検出）'); }
+        if (ranked[0].score >= 2 && ranked[0].vendor.cat === 'saas' && !(exchangeOnprem && ranked[0].score < 3)) {
+          out.hostingLabel = T('hl.to', { a: T('hl.relay', { org: hostOrg }), b: HN(ranked[0].vendor.cat) });
+          out.platform = { id: 'other_relay', name: T('pf.other_relay', { org: hostOrg }), cat: 'relay' }; out.hosting = 'relay';
+          if (ranked[0].score < 3) out.notes.push(T('note.spf_only'));
+        }
       }
     }
-    if (analyzed.length > 1) ev.push(`MX ${analyzed.length} 件: ` + analyzed.map(x => `${x.pref} ${x.host}`).join(', '));
-    if (d.dmarc && d.dmarc.p) ev.push(`DMARC p=${d.dmarc.p}`); else if (d.dmarc === null) ev.push('DMARC 未設定');
+    if (analyzed.length > 1) ev.push(T('ev.mx_count', { n: analyzed.length, list: analyzed.map(x => `${x.pref} ${x.host}`).join(', ') }));
+    if (d.dmarc && d.dmarc.p) ev.push(T('ev.dmarc', { p: d.dmarc.p })); else if (d.dmarc === null) ev.push(T('ev.dmarc_none'));
     applyDual();
     const showBackend = out.backend && out.backend.id !== out.platform.id;
-    out.label = out.platform.name + (showBackend ? ` → ${out.backend.name}` : '') + (out.backend2 ? ` ＋ ${out.backend2.name}（併用）` : '');
-    return finish(out);
+    let label = out.platform.name;
+    if (showBackend) label = T('label.backend', { a: label, b: out.backend.name });
+    if (out.backend2) label = T('label.dual', { a: label, b: out.backend2.name });
+    out.label = label;
+    return finish(out, lang);
   }
 
   function prospectFor(vendor) {
     if (!vendor) return '?';
     return vendor.prospect || (vendor.cat === 'saas' ? 'B' : vendor.cat === 'hosting' || vendor.cat === 'isp' ? 'A' : 'C');
   }
-  function finish(out) {
-    if (!out.hostingLabel) out.hostingLabel = HOSTING_JA[out.hosting] || HOSTING_JA.unknown;
-    const p = PROSPECT_JA[out.prospect] || PROSPECT_JA['?'];
-    out.prospectLabel = `${p.mark} ${p.label}`;
+  function finish(out, lang) {
+    if (!out.hostingLabel) out.hostingLabel = hostingName(out.hosting, lang);
+    out.prospectLabel = prospectLabel(out.prospect, lang);
+    out.confidenceLabel = tr(lang, 'conf.' + out.confidence);
     out.platformId = out.platform ? out.platform.id : 'unknown';
-    out.platformName = out.platform ? out.platform.name : '不明';
-    out.backendName = (out.backend ? out.backend.name : '') + (out.backend2 ? ` ＋ ${out.backend2.name}` : '');
+    out.platformName = out.platform ? out.platform.name : tr(lang, 'pf.unknown');
+    const b1 = out.backend ? out.backend.name : '', b2 = out.backend2 ? out.backend2.name : '';
+    out.backendName = b1 && b2 ? tr(lang, 'label.plus', { a: b1, b: b2 }) : (b1 || b2);
     return out;
   }
 
-  MXC.rules = { VENDORS, ASN_TABLE, AS_KEYWORDS, HOSTING_JA, PROSPECT_JA, registrableDomain, matchMx, matchPtr, matchSpf, matchNs, matchSpfHost, asnKind, asnInfo, byId };
+  MXC.rules = {
+    VENDORS, ASN_TABLE, AS_KEYWORDS, HOSTING_CODES, MARKS, registrableDomain, matchMx, matchPtr, matchSpf, matchNs, matchSpfHost,
+    asnKind, asnInfo, byId, vendorName, vendorBrand, hostingName, prospectLabel, prospectDesc, prettyAs,
+  };
   MXC.classify = classify;
 })(typeof globalThis !== 'undefined' ? globalThis : this);

@@ -76,7 +76,7 @@
         }
       }
       state.cache.delete(key);
-      const err = new Error(`DNS 問い合わせ失敗 ${type} ${name}: ${lastErr && lastErr.message}`);
+      const err = new Error(`${type} ${name}: ${lastErr && lastErr.message}`);
       err.cause = lastErr; throw err;
     })();
     state.cache.set(key, pr);
@@ -213,7 +213,7 @@
     opts = Object.assign({ deep: 'auto', maxMx: 4 }, opts || {});
     const domain = normalizeInput(input);
     const d = { input, domain, checkedDomain: domain, mxStatus: 'error', mx: [], aFallback: null, spf: null, dmarc: null, signals: {}, error: '' };
-    if (!domain) { d.error = 'ドメインとして解釈できない入力'; return d; }
+    if (!domain) { d.errorCode = 'invalid'; d.error = 'invalid input'; return d; }
     const rules = MXC.rules;
     try {
       let mxR = await resolve(domain, 'MX');
@@ -226,7 +226,7 @@
       }
       d.checkedDomain = checked;
       if (mxR.status === 3) { d.mxStatus = 'nxdomain'; return d; }
-      if (mxR.status !== 0) { d.mxStatus = 'error'; d.error = `DNS 応答コード ${mxR.status}`; return d; }
+      if (mxR.status !== 0) { d.mxStatus = 'error'; d.errorCode = 'rcode'; d.errorDetail = String(mxR.status); d.error = `DNS rcode ${mxR.status}`; return d; }
       let mx = parseMx(mxR.answers).sort((a, b) => a.pref - b.pref);
       if (mx.length === 1 && (mx[0].host === '' || mx[0].host === '.')) { d.mxStatus = 'nullmx'; d.mx = []; }
       else if (mx.length === 0) d.mxStatus = 'nomx';
@@ -312,7 +312,7 @@
       }
       return d;
     } catch (e) {
-      d.mxStatus = 'error'; d.error = e.message || String(e); return d;
+      d.mxStatus = 'error'; d.errorCode = 'dns'; d.errorDetail = e.message || String(e); d.error = d.errorDetail; return d;
     }
   }
 
