@@ -4,8 +4,11 @@
  */
 'use strict';
 const path = require('path');
+require(path.join(__dirname, '..', 'i18n.js'));
+require(path.join(__dirname, '..', 'i18n', 'ja.js'));
 require(path.join(__dirname, '..', 'rules.js'));
-const { VENDORS, ASN_TABLE, HOSTING_JA, PROSPECT_JA } = globalThis.MXC.rules;
+const { VENDORS, ASN_TABLE, MARKS, prospectLabel, prospectDesc } = globalThis.MXC.rules;
+const PROSPECT_JA = Object.fromEntries(Object.keys(MARKS).map(k => [k, { mark: MARKS[k], label: prospectLabel(k, 'ja').slice(2), desc: prospectDesc(k, 'ja') }]));
 const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const CAT_JA = { saas: 'クラウド SaaS', hosting: 'レンタルサーバー', gateway: 'セキュリティゲートウェイ', isp: 'ISP メール', iaas: 'IaaS（自社運用）', relay: '転送・配信', consumer: '個人向け' };
 const order = ['saas', 'gateway', 'hosting', 'isp', 'iaas', 'relay', 'consumer'];

@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>MXスコープ</title>
+<meta name="description" content="ドメインやメールアドレスを入れるだけで、DNS の公開情報から利用中のメールサービス（Google Workspace、Microsoft 365 など）と、オンプレ／クラウドの別を一括判定します。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d5c63'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='30' font-weight='bold' fill='%23fff' text-anchor='middle'%3EMX%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,7 +60,7 @@ textarea{width:100%;min-height:150px;resize:vertical;border:1px solid var(--line
 .drop p{margin:6px 0 0;font-size:13px}
 .csv-preview{margin-top:12px;font-size:13px;color:var(--ink-2)}
 .csv-preview table{border-collapse:collapse;font-size:12px;margin-top:6px}
-.csv-preview th,.csv-preview td{border:1px solid var(--line);padding:3px 8px;text-align:left;white-space:nowrap}
+.csv-preview th,.csv-preview td{border:1px solid var(--line);padding:3px 8px;text-align:start;white-space:nowrap}
 .csv-preview th.pick{background:var(--accent-soft);color:var(--accent)}
 .controls{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:14px}
 .opt{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--ink-2)}
@@ -90,7 +91,7 @@ button.ghost:hover{border-color:var(--accent);color:var(--accent)}
 .bars .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:260px;color:var(--ink-2)}
 .bars .b{height:14px;background:var(--neutral-soft);border-radius:3px;overflow:hidden}
 .bars .b > i{display:block;height:100%;background:var(--accent);border-radius:3px}
-.bars .c{font-variant-numeric:tabular-nums;color:var(--ink-2);min-width:2.5em;text-align:right}
+.bars .c{font-variant-numeric:tabular-nums;color:var(--ink-2);min-width:2.5em;text-align:end}
 .bars .r{cursor:pointer;display:contents}
 .bars .r:hover .n{color:var(--accent)}
 .toolbar{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-bottom:12px}
@@ -98,7 +99,7 @@ button.ghost:hover{border-color:var(--accent);color:var(--accent)}
 .toolbar .sp{flex:1}
 .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
 table.res{border-collapse:collapse;width:100%;font-size:13px;min-width:1120px}
-table.res th,table.res td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+table.res th,table.res td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:start;vertical-align:top}
 table.res th{background:var(--surface-2);position:sticky;top:0;font-size:12px;color:var(--ink-2);white-space:nowrap;cursor:pointer;user-select:none}
 table.res th.sorted::after{content:" ▾";color:var(--accent)}
 table.res th.sorted.asc::after{content:" ▴"}
@@ -112,22 +113,49 @@ table.res td.lab small{display:block;font-weight:400;color:var(--muted);font-siz
 .chip{display:inline-flex;align-items:center;gap:5px;padding:2px 9px;border-radius:999px;font-size:12px;white-space:nowrap;border:1px solid transparent}
 .chip.host{background:var(--surface-2);border-color:var(--line-2);color:var(--ink-2)}
 .chip.p-A{background:var(--good-soft);color:var(--good)}.chip.p-B{background:var(--warn-soft);color:var(--warn)}.chip.p-C{background:var(--info-soft);color:var(--info)}.chip.p-X{background:var(--neutral-soft);color:var(--neutral)}.chip.p-Q{background:var(--neutral-soft);color:var(--muted);border-style:dashed;border-color:var(--line-2)}
-.conf{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.conf{display:inline-block;width:8px;height:8px;border-radius:50%;margin-inline-end:6px;vertical-align:middle}
 .conf.high{background:var(--good)}.conf.medium{background:var(--warn)}.conf.low{background:var(--neutral)}
 tr.detail td{background:var(--surface-2);font-size:12.5px;color:var(--ink-2)}
-tr.detail ul{margin:4px 0 0;padding-left:18px}
+tr.detail ul{margin:4px 0 0;padding-inline-start:18px}
 tr.detail code{font-family:var(--mono);font-size:12px;background:var(--neutral-soft);padding:0 4px;border-radius:4px}
 .dl{display:grid;grid-template-columns:max-content 1fr;gap:2px 12px}
 .dl dt{color:var(--muted);font-size:12px}
 .dl dd{margin:0;font-family:var(--mono);font-size:12px;word-break:break-all}
 button.exp{background:none;border:0;color:var(--accent);cursor:pointer;padding:0;font-size:12px;text-decoration:underline}
 .about{font-size:13px;color:var(--ink-2)}
-.about ol,.about ul{padding-left:20px;margin:6px 0}
+.about ol,.about ul{padding-inline-start:20px;margin:6px 0}
 .about details summary{cursor:pointer;color:var(--accent);font-weight:700}
 .legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:8px}
 .empty{padding:30px;text-align:center;color:var(--muted)}
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:8px 16px;border-radius:8px;font-size:13px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:opacity .2s}
 .toast.show{opacity:1}
+/* ---- 言語別フォント（日本語以外は OS の標準書体。中国語・韓国語は漢字の字形が合う書体を優先） ---- */
+:root:not(:lang(ja)){--sans:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial,sans-serif}
+:root:lang(zh-CN){--sans:system-ui,-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans SC","Noto Sans CJK SC",sans-serif}
+:root:lang(zh-TW){--sans:system-ui,-apple-system,"PingFang TC","Microsoft JhengHei","Noto Sans TC","Noto Sans CJK TC",sans-serif}
+:root:lang(ko){--sans:system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR","Noto Sans CJK KR",sans-serif}
+:root:lang(ar),:root:lang(fa),:root:lang(ur){--sans:system-ui,-apple-system,"Segoe UI","Noto Naskh Arabic","Noto Sans Arabic",Tahoma,sans-serif}
+:root:lang(ur){--sans:system-ui,"Noto Nastaliq Urdu","Noto Naskh Arabic",Tahoma,sans-serif}
+/* ドメインや DNS の値は、右から左の言語でも左から右で表示する */
+.dom bdi,.mono,code,.dl dd,textarea,.csv-preview td{direction:ltr;unicode-bidi:isolate}
+[dir="rtl"] .mono,[dir="rtl"] .dl dd{text-align:end}
+/* ---- 言語メニュー ---- */
+.hdr-tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.lang-wrap{position:relative}
+.lang-btn{display:inline-flex;align-items:center;gap:6px}
+.lang-btn svg{flex:none}
+.lang-menu{position:absolute;inset-inline-end:0;top:calc(100% + 6px);z-index:30;background:var(--surface);border:1px solid var(--line-2);border-radius:10px;box-shadow:var(--shadow);padding:6px;width:min(calc(100vw - 32px),360px);max-height:min(70vh,540px);overflow:auto;display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.lang-menu button{display:flex;flex-direction:column;align-items:flex-start;text-align:start;background:none;border:0;border-radius:6px;padding:6px 10px;cursor:pointer;color:var(--ink);line-height:1.35}
+.lang-menu button span{font-size:14px}
+.lang-menu button small{color:var(--muted);font-size:11px}
+.lang-menu button:hover{background:var(--surface-2)}
+.lang-menu button.active{background:var(--accent-soft);color:var(--accent)}
+.lang-menu button.active small{color:var(--accent)}
+.lang-menu button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+@media (max-width:420px){.lang-menu{grid-template-columns:1fr}}
+.detail-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:8px 24px}
+.det-h{display:block;margin-top:8px}
+.csv-scroll{overflow-x:auto}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media (max-width:600px){.tiles{grid-template-columns:1fr 1fr}.tile .v{font-size:22px}.brand h1{font-size:19px}}
 </style>
@@ -138,37 +166,44 @@ button.exp{background:none;border:0;color:var(--accent);cursor:pointer;padding:0
   <div class="brand">
     <span class="logo">MX</span>
     <div>
-      <h1>MXスコープ</h1>
-      <p>ドメインの DNS からメール基盤のブランドと、オンプレ／クラウドを見抜く</p>
+      <h1 data-i18n="app.name">MXスコープ</h1>
+      <p data-i18n="hdr.tagline">ドメインの DNS からメール基盤のブランドと、オンプレ／クラウドを見抜く</p>
     </div>
   </div>
-  <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+  <div class="hdr-tools">
     <span id="resolverBadge" class="badge"><span class="dot"></span>DNS: 確認中</span>
     <button id="restoreBtn" class="ghost" hidden>前回の結果を復元</button>
+    <div class="lang-wrap">
+      <button id="langBtn" class="ghost lang-btn" type="button" aria-haspopup="listbox" aria-expanded="false" data-i18n-title="lang.tip" title="表示言語" aria-label="表示言語">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.4 2.6 3.7 5.6 3.7 9s-1.3 6.4-3.7 9c-2.4-2.6-3.7-5.6-3.7-9S9.6 5.6 12 3z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span id="langLabel" lang="ja">日本語</span>
+      </button>
+      <div id="langMenu" class="lang-menu" role="listbox" hidden></div>
+    </div>
   </div>
 </header>
 
 <section class="panel">
   <div class="tabs" role="tablist">
-    <button role="tab" id="tabPaste" aria-selected="true" data-tab="paste">貼り付け</button>
-    <button role="tab" id="tabCsv" aria-selected="false" data-tab="csv">CSV アップロード</button>
+    <button role="tab" id="tabPaste" aria-selected="true" data-tab="paste" data-i18n="tab.paste">貼り付け</button>
+    <button role="tab" id="tabCsv" aria-selected="false" data-tab="csv" data-i18n="tab.csv">CSV アップロード</button>
   </div>
   <div id="panePaste" class="tabpanel">
-    <label class="lbl" for="inputText">URL・メールアドレス・ドメインを貼り付け。1 行に 1 つでも、<b>区切りの無いまま URL がつながっていても</b>（<code class="ex">…co.jp/https://…</code>）1 件ずつ取り出します。Excel の列をそのまま貼れば、会社名など他の列は結果に引き継ぎます</label>
-    <textarea id="inputText" spellcheck="false" placeholder="https://www.example.co.jp/company/&#10;info@example.co.jp&#10;株式会社サンプル,example.jp&#10;https://a.example.jp/https://b.example.jp/ ← つながっていても OK"></textarea>
+    <label class="lbl" for="inputText" data-i18n-html="paste.label_html">URL・メールアドレス・ドメインを貼り付け。1 行に 1 つでも、<b>区切りの無いまま URL がつながっていても</b>（<code class="ex">…co.jp/https://…</code>）1 件ずつ取り出します。Excel の列をそのまま貼れば、会社名など他の列は結果に引き継ぎます</label>
+    <textarea id="inputText" spellcheck="false" data-i18n-ph="paste.placeholder" placeholder="https://www.example.co.jp/company/&#10;info@example.co.jp&#10;株式会社サンプル,example.jp&#10;https://a.example.jp/https://b.example.jp/ ← つながっていても OK"></textarea>
   </div>
   <div id="paneCsv" class="tabpanel" hidden>
     <div class="drop" id="dropZone">
       <input type="file" id="csvFile" accept=".csv,.tsv,.txt,text/csv,text/plain">
-      <p>CSV / TSV / テキストをここにドロップ。文字コードは UTF-8・Shift_JIS を自動判別。<br>ドメイン（URL・メール）の列は自動検出し、会社名などの他の列は結果 CSV にそのまま引き継ぎます。</p>
+      <p data-i18n-html="csv.drop_html">CSV / TSV / テキストをここにドロップ。文字コードは UTF-8・Shift_JIS を自動判別。<br>ドメイン（URL・メール）の列は自動検出し、会社名などの他の列は結果 CSV にそのまま引き継ぎます。</p>
     </div>
     <div id="csvPreview" class="csv-preview" hidden></div>
   </div>
   <div class="controls">
-    <button id="runBtn" class="primary">判定する</button>
-    <button id="cancelBtn" class="ghost" hidden>中止</button>
-    <label class="opt"><input type="checkbox" id="optDeep" checked> DKIM / autodiscover も調べる（ゲートウェイの裏側を推定）</label>
-    <label class="opt">並列数 <select id="optConc"><option>4</option><option selected>8</option><option>12</option><option>16</option><option>24</option></select></label>
+    <button id="runBtn" class="primary" data-i18n="run.btn">判定する</button>
+    <button id="cancelBtn" class="ghost" hidden data-i18n="run.cancel">中止</button>
+    <label class="opt"><input type="checkbox" id="optDeep" checked> <span data-i18n="opt.deep">DKIM / autodiscover も調べる（ゲートウェイの裏側を推定）</span></label>
+    <label class="opt"><span data-i18n="opt.conc">並列数</span> <select id="optConc"><option>4</option><option selected>8</option><option>12</option><option>16</option><option>24</option></select></label>
     <span id="inputCount" class="muted"></span>
   </div>
   <div class="progress" id="progress" hidden><div class="bar"><div id="progressBar"></div></div><span id="progressText" class="muted"></span></div>
@@ -176,42 +211,42 @@ button.exp{background:none;border:0;color:var(--accent);cursor:pointer;padding:0
 
 <section id="summary" class="summary" hidden>
   <div class="tiles">
-    <div class="tile total"><span class="v" id="tTotal">0</span><span class="s">件を判定<span id="tSub" class="muted"></span></span></div>
-    <div class="tile"><span class="k"><span class="mark A">◎</span>有望</span><span class="v" id="tA">0</span><span class="s">レンタルサーバー・ISP・自社運用</span></div>
-    <div class="tile"><span class="k"><span class="mark B">○</span>競合 SaaS</span><span class="v" id="tB">0</span><span class="s">Microsoft 365・LINE WORKS など</span></div>
-    <div class="tile"><span class="k"><span class="mark X">✕</span>Google Workspace 利用中</span><span class="v" id="tG">0</span><span class="s">既存ユーザー（対象外）</span></div>
-    <div class="tile"><span class="k"><span class="mark C">△</span>要確認・不明</span><span class="v" id="tC">0</span><span class="s">ゲートウェイ配下・材料不足・メール未使用</span></div>
+    <div class="tile total"><span class="v" id="tTotal">0</span><span class="s"><span data-i18n="tile.total">件を判定</span><span id="tSub" class="muted"></span></span></div>
+    <div class="tile"><span class="k"><span class="mark A">◎</span><span data-i18n="tile.A">有望</span></span><span class="v" id="tA">0</span><span class="s" data-i18n="tile.A_sub">レンタルサーバー・ISP・自社運用</span></div>
+    <div class="tile"><span class="k"><span class="mark B">○</span><span data-i18n="tile.B">競合 SaaS</span></span><span class="v" id="tB">0</span><span class="s" data-i18n="tile.B_sub">Microsoft 365・LINE WORKS など</span></div>
+    <div class="tile"><span class="k"><span class="mark X">✕</span><span data-i18n="tile.G">Google Workspace 利用中</span></span><span class="v" id="tG">0</span><span class="s" data-i18n="tile.G_sub">既存ユーザー（対象外）</span></div>
+    <div class="tile"><span class="k"><span class="mark C">△</span><span data-i18n="tile.C">要確認・不明</span></span><span class="v" id="tC">0</span><span class="s" data-i18n="tile.C_sub">ゲートウェイ配下・材料不足・メール未使用</span></div>
   </div>
   <div class="chart">
-    <h3>メール基盤の内訳 <span>クリックで絞り込み</span></h3>
+    <h3><span data-i18n="chart.title">メール基盤の内訳</span> <span data-i18n="chart.hint">クリックで絞り込み</span></h3>
     <div class="bars" id="bars"></div>
   </div>
 </section>
 
 <section id="results" class="panel" hidden>
   <div class="toolbar">
-    <input type="search" id="fText" placeholder="ドメイン・会社名・判定で検索">
+    <input type="search" id="fText" data-i18n-ph="f.search" placeholder="ドメイン・会社名・判定で検索">
     <select id="fProspect"><option value="">見込み: すべて</option><option value="A">◎ 有望</option><option value="B">○ 競合SaaS</option><option value="C">△ 要確認</option><option value="X">✕ 対象外</option><option value="?">? 不明</option></select>
     <select id="fHosting"><option value="">区分: すべて</option></select>
     <select id="fPlatform"><option value="">基盤: すべて</option></select>
     <span class="sp"></span>
     <span id="shownCount" class="muted"></span>
-    <button id="copyBtn" class="ghost">表をコピー (TSV)</button>
-    <button id="csvBtn" class="ghost">CSV ダウンロード</button>
-    <button id="jsonBtn" class="ghost">JSON</button>
-    <button id="clearBtn" class="ghost">クリア</button>
+    <button id="copyBtn" class="ghost" data-i18n="btn.copy">表をコピー (TSV)</button>
+    <button id="csvBtn" class="ghost" data-i18n="btn.csv">CSV ダウンロード</button>
+    <button id="jsonBtn" class="ghost" data-i18n="btn.json">JSON</button>
+    <button id="clearBtn" class="ghost" data-i18n="btn.clear">クリア</button>
   </div>
   <div class="tablewrap">
     <table class="res" id="resTable">
       <thead><tr>
-        <th data-k="domain">ドメイン</th>
-        <th data-k="label">判定（メール基盤）</th>
-        <th data-k="hostingLabel">区分</th>
-        <th data-k="prospect">見込み</th>
-        <th data-k="mx">MX（主）</th>
-        <th data-k="spf">SPF include</th>
-        <th data-k="dmarc">DMARC</th>
-        <th>根拠</th>
+        <th data-k="domain" data-i18n="th.domain">ドメイン</th>
+        <th data-k="label" data-i18n="th.label">判定（メール基盤）</th>
+        <th data-k="hostingLabel" data-i18n="th.hosting">区分</th>
+        <th data-k="prospect" data-i18n="th.prospect">見込み</th>
+        <th data-k="mx" data-i18n="th.mx">MX（主）</th>
+        <th data-k="spf" data-i18n="th.spf">SPF include</th>
+        <th data-k="dmarc" data-i18n="th.dmarc">DMARC</th>
+        <th data-i18n="th.evidence">根拠</th>
       </tr></thead>
       <tbody id="resBody"></tbody>
     </table>
@@ -219,30 +254,33 @@ button.exp{background:none;border:0;color:var(--accent);cursor:pointer;padding:0
 </section>
 
 <section class="panel about">
-  <h2>判定の仕組みと注意</h2>
+  <h2 data-i18n="about.title">判定の仕組みと注意</h2>
   <ol>
-    <li>入力を組織ドメインに正規化（URL・メールアドレス・www を除去）。MX が無ければ上位の組織ドメイン（例: sub.example.co.jp → example.co.jp）でも試します。</li>
-    <li>MX レコードのホスト名をベンダー署名（<span id="vendorCount"></span> 種）と照合。一致しない場合（Xserver やさくらは MX を自社ドメインに向けるのが標準）は、MX の IP の<b>逆引き（PTR）</b>、SPF の <b>a:sv####.xserver.jp</b> のようなサーバー名、<b>AS 番号</b>（Team Cymru）、ネームサーバーから、レンタルサーバー事業者か、ISP 回線上の自社サーバー（オンプレ）か、IaaS 上の自前サーバーかを推定します。</li>
-    <li>SPF の include、DKIM セレクタ（google / selector1・2）、autodiscover を見て、ゲートウェイの<b>裏側</b>で使われている基盤（Google Workspace / Microsoft 365 など）を推定します。</li>
+    <li data-i18n="about.1">入力を組織ドメインに正規化（URL・メールアドレス・www を除去）。MX が無ければ上位の組織ドメイン（例: sub.example.co.jp → example.co.jp）でも試します。</li>
+    <li data-i18n-html="about.2_html">MX レコードのホスト名をベンダー署名と照合。一致しない場合（Xserver やさくらは MX を自社ドメインに向けるのが標準）は、MX の IP の<b>逆引き（PTR）</b>、SPF の <b>a:sv####.xserver.jp</b> のようなサーバー名、<b>AS 番号</b>（Team Cymru）、ネームサーバーから、レンタルサーバー事業者か、ISP 回線上の自社サーバー（オンプレ）か、IaaS 上の自前サーバーかを推定します。</li>
+    <li data-i18n-html="about.3_html">SPF の include、DKIM セレクタ（google / selector1・2）、autodiscover を見て、ゲートウェイの<b>裏側</b>で使われている基盤（Google Workspace / Microsoft 365 など）を推定します。</li>
   </ol>
   <div class="legend">
-    <span><span class="conf high"></span>高: MX 署名に一致</span>
-    <span><span class="conf medium"></span>中: 逆引き / AS から推定</span>
-    <span><span class="conf low"></span>低: 材料不足・ヒューリスティック</span>
+    <span><span class="conf high"></span><span data-i18n="legend.high">高: MX 署名に一致</span></span>
+    <span><span class="conf medium"></span><span data-i18n="legend.medium">中: 逆引き / AS から推定</span></span>
+    <span><span class="conf low"></span><span data-i18n="legend.low">低: 材料不足・ヒューリスティック</span></span>
   </div>
-  <details style="margin-top:10px"><summary>限界と読み方</summary>
+  <details style="margin-top:10px"><summary data-i18n="about.limits">限界と読み方</summary>
     <ul>
-      <li>MX は「受信の入口」です。ゲートウェイ配下では裏側が読めないことがあり、その場合は <b>△ 要確認</b> になります。</li>
-      <li>Web サイトのドメインとメールのドメインが違う会社（グループ持株会社など）は判定できません。</li>
-      <li>自社ドメイン内の MX ＋ ISP 回線の IP は「オンプレ濃厚」ですが、データセンターに預けた自社サーバーの可能性も含みます。</li>
-      <li>DNS の問い合わせは Google / Cloudflare の DNS over HTTPS（またはローカルの Node サーバー）経由で行い、対象のメールサーバーには一切接続しません。</li>
+      <li data-i18n-html="limits.1_html">MX は「受信の入口」です。ゲートウェイ配下では裏側が読めないことがあり、その場合は <b>△ 要確認</b> になります。</li>
+      <li data-i18n="limits.2">Web サイトのドメインとメールのドメインが違う会社（グループ持株会社など）は判定できません。</li>
+      <li data-i18n="limits.3">自社ドメイン内の MX ＋ ISP 回線の IP は「オンプレ濃厚」ですが、データセンターに預けた自社サーバーの可能性も含みます。</li>
+      <li data-i18n="limits.4">DNS の問い合わせは Google / Cloudflare の DNS over HTTPS（またはローカルの Node サーバー）経由で行い、対象のメールサーバーには一切接続しません。</li>
     </ul>
   </details>
 </section>
 </div>
-<div class="toast" id="toast"></div>
-<script src="rules.js?v=3"></script>
-<script src="dns.js?v=3"></script>
-<script src="app.js?v=3"></script>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="i18n.js?v=4"></script>
+<script src="i18n/ja.js?v=4"></script>
+<script src="i18n/en.js?v=4"></script>
+<script src="rules.js?v=4"></script>
+<script src="dns.js?v=4"></script>
+<script src="app.js?v=4"></script>
 </body>
 </html>

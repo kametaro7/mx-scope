@@ -5,6 +5,8 @@
  */
 'use strict';
 const fs = require('fs'); const path = require('path');
+require(path.join(__dirname, '..', 'i18n.js'));
+require(path.join(__dirname, '..', 'i18n', 'ja.js'));
 require(path.join(__dirname, '..', 'rules.js'));
 const { matchMx, matchSpf, asnInfo, matchPtr } = globalThis.MXC.rules;
 const j = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
