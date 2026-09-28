@@ -62,24 +62,38 @@ async function resolveJson(name, type) {
   return out;
 }
 
+const ALLOWED_HOSTS = new Set([`127.0.0.1:${PORT}`, `localhost:${PORT}`]);
+const ALLOWED_ORIGINS = new Set([`http://127.0.0.1:${PORT}`, `http://localhost:${PORT}`]);
+
 const server = http.createServer(async (req, res) => {
-  const u = new URL(req.url, 'http://localhost');
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  if (u.pathname === '/api/ping') { res.setHeader('Content-Type', 'application/json'); res.end(JSON.stringify({ ok: true, servers })); return; }
-  if (u.pathname === '/api/resolve') {
-    const name = String(u.searchParams.get('name') || '').replace(/\.$/, '').toLowerCase();
-    const type = u.searchParams.get('type') || '15';
-    if (!/^[a-z0-9_.-]{1,253}$/.test(name)) { res.statusCode = 400; res.end('bad name'); return; }
-    try { const j = await resolveJson(name, type); res.setHeader('Content-Type', 'application/json'); res.end(JSON.stringify(j)); }
-    catch (e) { res.statusCode = 500; res.end(String(e)); }
-    return;
+  try {
+    if (!ALLOWED_HOSTS.has(req.headers.host || '')) { res.statusCode = 403; res.end('forbidden'); return; }
+    const origin = req.headers.origin;
+    if (origin && !ALLOWED_ORIGINS.has(origin)) { res.statusCode = 403; res.end('forbidden'); return; }
+    const u = new URL(req.url, `http://${req.headers.host}`);
+    if (u.pathname === '/api/ping') { res.setHeader('Content-Type', 'application/json'); res.end(JSON.stringify({ ok: true, servers })); return; }
+    if (u.pathname === '/api/resolve') {
+      const fetchSite = req.headers['sec-fetch-site'];
+      if (fetchSite && fetchSite !== 'same-origin' && fetchSite !== 'none') { res.statusCode = 403; res.end('forbidden'); return; }
+      const name = String(u.searchParams.get('name') || '').replace(/\.$/, '').toLowerCase();
+      const type = u.searchParams.get('type') || '15';
+      if (!/^[a-z0-9_.-]{1,253}$/.test(name)) { res.statusCode = 400; res.end('bad name'); return; }
+      try { const j = await resolveJson(name, type); res.setHeader('Content-Type', 'application/json'); res.end(JSON.stringify(j)); }
+      catch (e) { res.statusCode = 500; res.end(String(e)); }
+      return;
+    }
+    let p;
+    try { p = decodeURIComponent(u.pathname); } catch { res.statusCode = 400; res.end('bad path'); return; }
+    if (p === '/') p = '/index.html';
+    if (p.split('/').some(seg => seg.startsWith('.'))) { res.statusCode = 403; res.end('forbidden'); return; }
+    const file = path.normalize(path.join(ROOT, p));
+    if (!file.startsWith(ROOT + path.sep) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) { res.statusCode = 404; res.end('not found'); return; }
+    res.setHeader('Content-Type', MIME[path.extname(file)] || 'application/octet-stream');
+    res.setHeader('Cache-Control', 'no-store');
+    fs.createReadStream(file).pipe(res);
+  } catch (e) {
+    if (!res.headersSent) { res.statusCode = 500; res.end('internal error'); }
   }
-  let p = decodeURIComponent(u.pathname); if (p === '/') p = '/index.html';
-  const file = path.normalize(path.join(ROOT, p));
-  if (!file.startsWith(ROOT) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) { res.statusCode = 404; res.end('not found'); return; }
-  res.setHeader('Content-Type', MIME[path.extname(file)] || 'application/octet-stream');
-  res.setHeader('Cache-Control', 'no-store');
-  fs.createReadStream(file).pipe(res);
 });
 server.listen(PORT, '127.0.0.1', () => {
   console.log(`MXスコープ: http://localhost:${PORT}  (DNS: ${servers.join(', ')})  Ctrl+C で終了`);
